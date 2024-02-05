@@ -1,0 +1,265 @@
+user input 
+
+23 
+65
+-23
+1.56
+0.8
+-2.752
+t
+123456
+o
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        System.out.println("The value is "+a);
+        System.out.println("Enter the value");
+        int b = sc.nextInt();
+        System.out.println("The value is "+b);
+        System.out.println("Enter the value");
+        float c = sc.nextFloat();
+        System.out.println("The value is "+c);
+        System.out.println("Enter the value");
+        char e = sc.next().charAt(0);
+        System.out.println("The value is "+e);
+    }
+}
+
+-----------------------------------------------------------
+34 +89 
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c = a+b;
+        System.out.println("The addition is "+c);
+
+    }
+}
+
+-----------------------------------------------------------------------------
+
+2*2 
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value b");
+        int b = sc.nextInt();
+        int c = a*b;
+        System.out.println("The value of c is "+c);
+
+    }
+}
+
+---------------------------------------------------------------------------------
+
+67-4
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value b");
+        int b = sc.nextInt();
+        int c = a-b;
+        System.out.println("The value of c is "+c);
+
+    }
+}
+--------------------------------------------------------------------------------
+
+24/2 
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value b");
+        int b = sc.nextInt();
+        int c = a/b;
+        System.out.println("The value of c is "+c);
+
+    }
+}
+--------------------------------------------------------------------------------
+2+6+1 +5+78+12
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value c");
+        int c = sc.nextInt();
+        System.out.println("Enter the value d");
+        int d = sc.nextInt();
+        System.out.println("Enter the value e");
+        int e = sc.nextInt();
+        System.out.println("Enter the value f");
+        int f = sc.nextInt();
+        int g = a+b+c+d+e+f;
+        System.out.println("The value of g is "+g);
+
+    }
+}
+
+------------------------------------------------------------------------------
+23*2-9+34 
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value c");
+        int c = sc.nextInt();
+        System.out.println("Enter the value d");
+        int d = sc.nextInt();
+        int e = a*b-c+d;
+        System.out.println("The value of e is "+e);
+
+    }
+}
+
+---------------------------------------------------------------------------
+
+12+(34*2)-45
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value c");
+        int c = sc.nextInt();
+        System.out.println("Enter the value d");
+        int d = sc.nextInt();
+        int e = a+(b*c)-d;
+        System.out.println("The value of e is "+e);
+
+    }
+}
+
+----------------------------------------------------------------------------
+1.2*(34+1)/2+45
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value a");
+        float a = sc.nextFloat();
+        System.out.println("Enter the value b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value c");
+        int c = sc.nextInt();
+        System.out.println("Enter the value d");
+        int d = sc.nextInt();
+        System.out.println("Enter the value e");
+        int e = sc.nextInt();
+        float f = a*(b+c)/d+e;
+        System.out.println("The value of f is "+f);
+    }
+}
+
+-----------------------------------------------------------------------
+4.5*2+8.9*1.2-89/2+34 
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value a");
+        float a = sc.nextFloat();
+        System.out.println("Enter the value b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value c");
+        float c = sc.nextInt();
+        System.out.println("Enter the value d");
+        float d = sc.nextInt();
+        System.out.println("Enter the value e");
+        int e = sc.nextInt();
+        System.out.println("Enter the value f");
+        int f = sc.nextInt();
+        System.out.println("Enter the value g");
+        int g = sc.nextInt();
+        float h = a*b+c*d-e/f+g;
+        System.out.println("The addition is "+h);
+    }
+}
+
+-------------------------------------------------------------------------------
+hello world 
+
+Ans)
+public class Main{
+    public static void main(String[] args){
+        System.out.println("hello world");
+    }
+}
+--------------------------------------------------------------------------
+name :kajal 
+kajal is a java trainer 
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String");
+        String name = sc.next();
+        System.out.println("Kajal is a trainer");
+    }
+}
+
+-------------------------------------------------------------------------
+input :regex 
+
+regex is a learning platform and regex is a service based company 
+
+Ans)
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String");
+        String name = sc.next();
+        System.out.println("regex is a learning platform and regex is a service based company");
+    }
+}
