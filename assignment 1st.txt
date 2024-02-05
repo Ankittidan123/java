@@ -1,0 +1,14 @@
+ mkdir regex
+  304  ls
+  305  cd 
+  306  cd regex
+  307  mkdir aa.txt bb.txt cc.txt dd.txt
+  308  ls
+  309  touch f1 f2 f3 f4 f5
+  310  ls
+  311  rm f2 f3
+  312  ls
+  313  rm aa.txt bb.txt cc.txt
+  314  rmdir aa.txt bb.txt cc.txt
+  315  ls
+  316  history
