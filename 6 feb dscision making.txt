@@ -1,0 +1,297 @@
+Question 1: Tax Calculator
+Write a Java program that calculates income tax for individuals based on the following criteria:
+
+Income <= $10,000: No tax
+$10,001 - $30,000: 10% tax
+$30,001 - $50,000: 20% tax
+Income > $50,000: 30% tax
+
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+       System.out.print("enter the income");
+       float sal=sc.nextFloat();
+       if(sal<=10000){
+           System.out.print("no tax");
+       }
+       else if(sal>=10001 && sal<=30000){
+           float tax=(sal/100)*10;
+           System.out.print("the salary is"+(sal-tax));
+       }
+       else if(sal>=30001 && sal<=50000){
+           float tax=(sal/100)*20;
+           System.out.print("the salary is"+(sal-tax));
+       }
+       else if(sal>=50000){
+           float tax=(sal/100)*30;
+           System.out.print("the salary is"+(sal-tax));
+       }
+       }
+   }
+--------------------------------------------------------------------------------
+
+Question 2: BMI Calculator
+Create a program that calculates the Body Mass Index (BMI) based on a person's weight and height. Categorize the BMI using the following ranges:
+
+
+BMI < 18.5: Underweight
+18.5 <= BMI < 24.9: Normal weight
+25 <= BMI < 29.9: Overweight
+BMI >= 30: Obesity
+
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+       System.out.print("enter the height in m :");
+       float h=sc.nextFloat();
+       System.out.print("enter the weight in kg :");
+       float w=sc.nextFloat();
+       float bmi=w/(h*h);
+       if(bmi<18.5){
+           System.out.print("under weight");
+       }
+       else if(bmi>=18.5 && bmi<=24.9){
+           System.out.print("normal weight");
+       }
+       else if(bmi>=25 && bmi<=29.9){
+           System.out.print("over weight");
+       }
+       else if(bmi>=30){
+           System.out.print("obesity");
+       }
+       }
+   }
+----------------------------------------------------------------------------------
+
+Question 3: Leap Year Checker
+Write a Java program that checks if a given year is a leap year or not. Leap years are divisible by 4, but years divisible by 100 are not leap years unless they are also divisible by 400.
+
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the year ");
+        int year = sc.nextInt();
+        if(year%4==0){
+                if(year%100==0){
+                    if(year%400==0){
+                        System.out.println("leap year");
+                    }
+                    else{
+                        System.out.println("Not leap year");
+                    }
+                }
+                else{
+                    System.out.println("leap year");
+                }
+        }
+        else{
+            System.out.println("Not leap year");
+        }
+    }
+}
+-----------------------------------------------------------------------------------
+
+
+Question 4: Time of Day Greeting
+Create a program that asks for the time of day (morning, afternoon, evening) and then greets the user accordingly. For example, "Good morning!" if the time is morning.
+
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the time :");
+        String time=sc.nextLine();
+        if(time.equals("morning")){
+            System.out.println("good morning!");
+        }
+        else if(time.equals("afternoon")){
+        System.out.println("good afternoon !");
+    }
+    else if(time.equals("evening")){
+    System.out.println("goog evening !");
+}
+}
+}
+-------------------------------------------------------------------------------------------------
+
+
+Question 5: Menu Selection
+Design a simple restaurant menu system that takes a customer's choice (1-3) and displays the selected food item and its price. Use if-else if-else statements.
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int food=sc.nextInt();
+		if(food==1){
+		    System.out.println("ice cream of rs-20");
+		}
+		else if(food==2){
+		    System.out.println("samosa of rs-30");
+		}
+		else if(food==3){
+		    System.out.println("kachori of rs-40");
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------------------
+
+Question 6: Temperature Converter
+Write a Java program to convert temperatures between Celsius and Fahrenheit. The program should ask the user for the input temperature and the unit (C or F) and provide the converted temperature.
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a temp type");
+        String temp=sc.nextLine();
+        if(temp.equals("calsius")){
+            System.out.println("enter the temp for calsius");
+            float a=sc.nextFloat();
+            System.out.println("the value of temp in fehr"+(a-32)*5/9);
+        }
+        else if(temp.equals("fehranite")){
+            System.out.println("enter the temp for fehranite");
+            float a=sc.nextFloat();
+            System.out.println("the value of tempin celsius"+(a-32)*5/9);
+        }
+        }
+    }
+-------------------------------------------------------------------------------------------------
+
+
+Question 7: Number Comparison
+Create a program that takes two numbers as input and uses if-else if-else statements to determine and print which number is greater or if they are equal.
+
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number a ");
+        int a = sc.nextInt();
+        System.out.println("enter the number b");
+        int b = sc.nextInt();
+        if(a>b){
+            System.out.println("A is Greater");
+        }
+        else if(b>a){
+            System.out.println("B is Greater");
+        }
+        else{
+            System.out.println("All equal");
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------
+
+
+Question 8: Ticket Booking System
+Design a ticket booking system for a cinema that calculates the ticket price based on the age of the customer. Children (age < 12) get a 50% discount, while seniors (age >= 65) get a 30% discount.
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("the movie ticket is of 200rs");;
+		System.out.println("enter the age");
+		int age=sc.nextInt();
+		int ticket=200;
+		if(age<=12){
+		    int dis=(ticket/100)*50;
+		    System.out.println("discount"+dis);
+		    System.out.println("effective price"+(ticket-dis));
+		}
+		else if(age>=65){
+		    int dis=(ticket/100)*30;
+		    System.out.println("discount"+dis);
+		    System.out.println("effective price"+(ticket-dis));
+		}
+		else{
+		    System.out.println("no discount");
+		    System.out.println("price is 200rs");
+		}
+	}
+}
+---------------------------------------------------------------------------------------------------
+
+
+
+Question 9: Letter Grade Calculator
+Write a program that accepts a student's score as input and calculates their letter grade using if-else if-else statements. Consider the standard letter grading system (A, B, C, D, F).
+
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the marks of English ");
+        int eng = sc.nextInt();
+        System.out.println("Enter the marks of hindi ");
+        int hin = sc.nextInt();
+        System.out.println("Enter the marks of Maths ");
+        int math = sc.nextInt();
+        System.out.println("Enter the marks of science ");
+        int sci = sc.nextInt();
+        System.out.println("Enter the marks of sst ");
+        int sst = sc.nextInt();
+        int per = sc.nextInt();
+        per = (eng+hin+math+sci+sst)/5;
+        System.out.println("The percentage of the student is "+ per);
+        if(per<25){
+            System.out.println("The grade is F");
+        }
+        else if(per>=25 && per<=45){
+            System.out.println("The grade is E");
+        }
+        else if(per>=45 && per<=50){
+            System.out.println("The grade is D");
+        }
+        else if(per>=50 && per<=60){
+            System.out.println("The grade is C");
+        }
+        else if(per>=60 && per<=80){
+            System.out.println("The grade is B");
+        }
+        else if(per>80){
+            System.out.println("The grade is A");
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------
+
+
+
+Question 10: Vowel or Consonant Checker
+Create a program that takes a single alphabet character as input and checks if it is a vowel (A, E, I, O, U) or a consonant.
+
+mport java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number a ");
+        char alph = sc.next().charAt(0);
+        if(alph=='a'||alph=='e'||alph=='i'||alph=='o'||alph=='u'){
+            System.out.println("vowal");
+        }
+        else{
+            System.out.println("consonent");
+        }
+        
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
