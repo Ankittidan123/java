@@ -1,0 +1,403 @@
+while : 
+reverse number 
+657
+756 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter the number");
+	    int num=sc.nextInt();
+	    int sum=0;
+	    int rem;
+	    while(num>0){
+	        rem=num%10;
+	        sum=sum*10+rem;
+	        num=num/10;
+	    }
+	    System.out.println(sum);
+	}
+}
+
+-------------------------------------------------------------------------------
+pallindrome number 
+12321 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.printf("enter the number");
+	    int num=sc.nextInt();
+	    int sum=0;
+	    int rem;
+	    int temp=num;
+	    while(num>0){
+	        rem=num%10;
+	        sum=sum*10+rem;
+	        num=num/10;
+	    }
+	    System.out.println(sum);
+	    if(temp==sum){
+	       System.out.println("pallindrome");
+	    }
+	    else{
+	        System.out.println("not a pallindrome");
+	    }
+	}
+}
+
+---------------------------------------------------------------------------------------
+armstrong number 
+153 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.printf("enter the number");
+	    int num=sc.nextInt();
+	    int sum=0;
+	    int rem;
+	    int temp=num;
+	    while(num>0){
+	        rem=num%10;
+	        sum=sum+rem*rem*rem;
+	        num=num/10;
+	    }
+	    System.out.println(sum);
+	    if(temp==sum){
+	       System.out.println("armstrong");
+	    }
+	    else{
+	        System.out.println("not a not a armstrong");
+	    }
+	}
+}
+
+-----------------------------------------------------------------
+neon number 
+9 ka square 
+81 => 8+1=(9) 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter the number");
+	    int num=sc.nextInt();
+	   int rem;
+	   int sum=0;
+	   int temp=num;
+	   num=num*num;
+	   while(num>0){
+	       rem=num%10;
+	       sum=sum+rem;
+	       num=num/10;
+	   }
+	   if(sum==temp){
+	       System.out.println("neon number");
+	   }
+	   else{
+	       System.out.println("not a neon number");
+	   }
+	}
+}
+
+-----------------------------------------------------------------
+prime number
+a)check number prime 
+b)1--->100 prime number 
+
+  import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+           int num=1;
+            int i = 2;
+            while(num<=100){
+            while(num>=i){
+                if(num%i==0){
+                    break;
+                }
+                if(num-1==i){
+                    System.out.println("prime"+i);
+                }
+                i++;
+            }
+            num++;
+        }
+    }
+    }
+----------------------------------------------------------------------
+factorial 
+5 
+1*2*3*4*5
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.printf("enter the number");
+	    int num=sc.nextInt();
+	   int fact=1;
+	   for(int i=1; i<=num; i++){
+	       fact=fact*i;
+	   }
+	   System.out.println(fact);
+	}
+}
+
+-------------------------------------------
+fibonacci series 
+0 1 1 2 3 5
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter the number");
+	    int num=sc.nextInt();
+	  int n1=0;
+	  int n2=1;
+	  int n3;
+	  System.out.println(n1);
+	  System.out.println(n2);
+	  for(int i=1; i<=num; i++){
+	      n3=n1+n2;
+	      System.out.println(n3);
+	      n1=n2;
+	      n2=n3;
+	  }
+	}
+}
+ 
+---------------------------------------------------------------------------
+use input :6743 =>4 digit
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter the number");
+	    int num=sc.nextInt();
+	 int count=0;
+	 while(num>0){
+	     num=num/10;
+	     count++;
+	 }
+	 System.out.println(count);
+	}
+}
+
+ 
+------------------------------------------------------------------------
+user : 342 => 354 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter the number");
+	    int num=sc.nextInt();
+	 int sum=0;
+	 int rem;
+	 while(num>0){
+	     rem=num%10;
+	     sum=sum*10+rem+1;
+	     num=num/10;
+	 }
+	 System.out.println(sum);
+	}
+}
+ 
+---------------------------------------------------------------------------
+user: 342 =>453 
+
+import java.util.*;
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a number");
+            int num = sc.nextInt();
+            int rem;
+            int count = 0;
+            while(num>0){
+                rem = num%10;
+                count = count*10+rem;
+                num = num/10;
+            }
+            int temp=0;
+            while(count>0){
+                rem = count%10;
+                temp = temp*10+rem+1;
+                count = count/10;
+            }
+            System.out.println(temp);
+        }
+    }
+---------------------------------------------------------------------
+
+even number 
+type1 : 1-->100 
+type2 : 1--->100 even number ka sum 
+type3 : random value 34--->89 =>even number 
+type4 : randome value k sabi ka sum aa jaye 
+
+odd number 
+type1: 1-->100 odd numbers 
+type2: 1--100 odd number ka sum 
+type3 : random value 34--->89 =>odd number 
+type4 : randome value k sabi ka sum aa jaye 
+
+ import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a character for even and odd number ");
+            String e = sc.nextLine();
+            if(e.equals("even")){
+                System.out.println("Enter the type");
+                String ty = sc.nextLine();
+                if(ty.equals("type1")){
+                        for(int i=1; i<=100; i++){
+                            System.out.println(i);
+                        }
+                }
+                else if(ty.equals("type2")){
+                    int sum = 0;
+                    for(int i=1; i<=100; i++){
+                        if(i%2==0){
+                            sum += i;
+                        }
+                    }
+                    System.out.println(sum);
+                }
+                else if(ty.equals("type3")){
+                    System.out.println("Enter the starting point");
+                    int a = sc.nextInt();
+                    System.out.println("Enter the ending point");
+                    int b = sc.nextInt();
+                    for(;a<=b;){
+                        if(a%2==0){
+                            System.out.println("Even number");
+                        }
+                        a++;
+                    }
+                }
+                else if(ty.equals("type4")){
+                    System.out.println("Enter the starting point");
+                    int a = sc.nextInt();
+                    System.out.println("Enter the ending point");
+                    int b = sc.nextInt();
+                    int sum = 0;
+                    for(;a<=b;){
+                        sum += a;
+                        a++;
+                    }
+                    System.out.println(sum);
+                }
+            }
+            else if(e.equals("odd")){
+                System.out.println("Enter the type");
+                String ty = sc.nextLine();
+                if(ty.equals("type1")){
+                        for(int i=1; i<=100; i++){
+                            if(i%2==1){
+                                System.out.println(i);
+                            }
+                        }
+                }
+                else if(ty.equals("type2")){
+                    int sum = 0;
+                    for(int i=1; i<=100; i++){
+                        if(i%2==1){
+                            sum += i;
+                        }
+                    }
+                    System.out.println(sum);
+                }
+                else if(ty.equals("type3")){
+                    System.out.println("Enter the starting point");
+                    int a = sc.nextInt();
+                    System.out.println("Enter the ending point");
+                    int b = sc.nextInt();
+                    for(;a<=b;){
+                        if(a%2==1){
+                            System.out.println("Even number");
+                        }
+                        a++;
+                    }
+                }
+                else if(ty.equals("type4")){
+                    System.out.println("Enter the starting point");
+                    int a = sc.nextInt();
+                    System.out.println("Enter the ending point");
+                    int b = sc.nextInt();
+                    int sum = 0;
+                    for(;a<=b;){
+                        sum += a;
+                        a++;
+                    }
+                    System.out.println(sum);
+                }
+            }
+        }
+    }
+
+----------------------------------------------------------------------------------------------
+perfect number : 
+6 
+1 2 3 
+1 + 2 + 3 => 6 
+
+8 
+2 2 2 =>6 not perfect number 
+
+ import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the number");
+            int num=sc.nextInt();
+            int sum=0;
+            int temp=num;
+            for(int i=1; i<=10; i++){
+                if(num%i==0){
+                    if(num!=i){
+                        sum=sum+i;
+                    }
+                } 
+            }
+            if(sum==temp){
+                System.out.println("perfect number");
+            }
+            else{
+                System.out.println("not perfect");
+            }
+        }
+    }
+
+
+--------------------------------------------------------------------------------------------
+
