@@ -1,0 +1,146 @@
+1)
+
+XYZ Technologies is in the process of increment the salary of the employees. This
+increment is done based on their salary and their performance appraisal rating.
+If the appraisal rating is between 1 and 3, the increment is 10% of the salary.
+If the appraisal rating is between 3.1 and 4, the increment is 25% of the salary.
+If the appraisal rating is between 4.1 and 5, the increment is 30% of the salary.
+Help them to do this, by writing a program that displays the incremented salary. Write a
+class “IncrementCalculation.java” and write the main method in it.
+Note : If either the salary is 0 or negative (or) if the appraisal rating is not in the range 1 to
+5 (inclusive), then the output should be “Invalid Input”.
+Sample Input 1 :
+Enter the salary
+8000
+Enter the Performance appraisal rating
+3
+Sample Output 1 :
+8800
+Sample Input 2 :
+Enter the salary
+7500
+Enter the Performance appraisal rating
+4.3
+Sample Output 2 :
+9750
+Sample Input 3 :
+Enter the salary
+-5000
+Enter the Performance appraisal rating
+6
+Sample Output 3 :
+Invalid Input
+
+ import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the salary");
+            float sal=sc.nextFloat();
+            System.out.println("enter the performance appraisal rating");
+            float ap=sc.nextFloat();
+            if(ap>=1 && ap<=3){
+                float inc=(sal/100)*10;
+                System.out.println("the salary is"+(sal+inc));
+            }
+            else if(ap>=3.1 && ap<=4){
+                float inc=(sal/100)*25;
+                 System.out.println("the salary is"+(sal+inc));
+            }
+            else if(ap>=4.1 && ap<=5){
+                float inc=(sal/100)*30;
+                 System.out.println("the salary is"+(sal+inc));
+            }
+        }
+    }
+----------------------------------------------------------------------------------
+
+2)Problem Statement – Goutam and Tanul plays by telling numbers. Goutam says a number
+to Tanul. Tanul should first reverse the number and check if it is same as the original. If yes,
+Tanul should say “Palindrome”. If not, he should say “Not a Palindrome”. If the number is
+negative, print “Invalid Input”. Help Tanul by writing a program.
+Sample Input 1 :
+21212
+Sample Output 1 :
+Palindrome
+Sample Input 2 :
+6186
+Sample Output 2 :
+Not a Palindrome
+
+ import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the number ");
+            int num = sc.nextInt();
+            int rem;
+            int sum = 0;
+            int temp = num;
+            while(num>0){
+                rem = num%10;
+                sum = sum*10+rem;
+                num = num/10;
+            }
+            if(sum==temp){
+                System.out.println("Yes Goutam it is a pallindrom!");
+            }
+            else{
+                System.out.println("No goutam it is not a pallindrom");
+            }
+        }
+    }
+------------------------------------------------------------------------------------------
+
+
+3)
+In a theater, there is a discount scheme announced where one gets a 10% discount
+on the total cost of tickets when there is a bulk booking of more than 20 tickets, and
+a discount of 2% on the total cost of tickets if a special coupon card is submitted.
+Develop a program to find the total cost as per the scheme. The cost of the k class
+ticket is Rs.75 and q class is Rs.150. Refreshments can also be opted by paying an
+additional of Rs. 50 per member.
+Hint: k and q and You have to book minimum of 5 tickets and maximum of 40 at a
+time. If fails display “Minimum of 5 and Maximum of 40 Tickets”. If circle is given a
+value other than ‘k’ or ‘q’ the output should be “Invalid Input”.
+The ticket cost should be printed exactly to two decimal places.
+Sample Input 1:
+Enter the no of ticket:35
+Do you want refreshment:y
+Do you have coupon code:y
+Enter the circle:k
+Sample Output 1:
+Ticket cost:4065.25
+Sample Input 2:
+Enter the no of ticket:1
+Sample Output 2:
+Minimum of 5 and Maximum of 40 Tickets
+
+import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the number of ticket ");
+            int num = sc.nextInt();
+            int cost = 50;
+            cost = cost*num;
+            if(num>=20 && num<=40){
+                int dis = (cost/100)*10;
+                cost = cost-dis;
+                System.out.println("Do you want coupan");
+                boolean coup = sc.nextBoolean();
+                if(coup==true){
+                    int dis2 = (cost/100)*5;
+                    cost = cost-dis2;
+                }
+            }
+            else{
+                System.out.println("No discount");
+            }
+            System.out.println("The payable amount is "+cost);
+        }
+    }
+------------------------------------------------------------------------------
