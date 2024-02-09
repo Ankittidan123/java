@@ -1,0 +1,417 @@
+for loop basic questions : 
+1)Write a program to print numbers from 1 to 10.
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int a=1;
+        while(a<=100){
+            System.out.println(a);
+            a++;
+        }
+    }
+}
+
+---------------------------------------------------
+2)Write a program to calculate the sum of first 10 natural number.
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       int a=1;
+       int sum=0;
+       while(a<=10){
+           sum+=a;
+           a++;
+           
+       }
+           System.out.println(sum);
+       }
+}
+----------------------------------------------------------------------------------------
+3)Write a program that prompts the user to input a positive integer. It should then print the multiplication table of that number. 
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       Scanner sc=new Scanner(System.in);
+       System.out.print("enter the number");
+       int a=sc.nextInt();
+       int n=1;
+       while(n<=10){
+           System.out.print(a*n+" ");
+           n++;
+       }
+       }
+}
+----------------------------------------------------------------------------------------------------------------------
+4)Write a program to find the factorial value of any number entered through the keyboard.
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    System.out.print("enter the number");
+    int a=sc.nextInt();
+    int fact=1;
+    for(int i=1; i<=a; i++){
+        fact=fact*i;
+    }
+    System.out.print(fact);
+   }
+}
+
+---------------------------------------------------------------------------------
+5)1--->100 number print 
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       for(int i=1; i<=100; i++){
+           System.out.print(i);
+       System.out.print("\n");
+       }
+       }
+}
+--------------------------------------------------------------------------------
+6)100--->1 number print 
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       for(int i=100; i>=1; i--){
+           System.out.print(i);
+       System.out.print("\n");
+       }
+       }
+}
+------------------------------------------------------------------------------
+7)1--->100 even number print sum
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       int sum=0;
+       for(int i=1; i<=100; i++){
+           sum=sum+i;
+       }
+        System.out.print(sum);
+       }
+}
+-----------------------------------------------------------------------------
+
+8)100---->1odd number print sum
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       int sum=0;
+       for(int i=100; i>=1; i--){
+           sum=sum+i;
+       }
+        System.out.print(sum);
+       }
+}
+-----------------------------------------------------------------------------
+9)50--->1000 even number sum
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       int sum=0;
+       for(int i=50; i<=1000; i++){
+           sum=sum+i;
+       }
+        System.out.print(sum);
+       }
+}
+----------------------------------------------------------------------------
+10)1000--->500 odd numbers sum
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+       int sum=0;
+       for(int i=1000; i>=500; i--){
+           sum=sum+i;
+       }
+        System.out.print(sum);
+       }
+}
+--------------------------------------------------------------------------------------------------
+average level: 
+1)table 2 to 10 
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+      int a=2;
+      while(a<=10){
+          for(int b=1; b<=10; b++){
+              System.out.print(a*b+" ");
+          }
+           a++;
+         System.out.print("\n");
+      }
+       }
+}
+----------------------------------------------------------------------------------
+2)table print between range from user input 
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+     Scanner sc=new Scanner(System.in);
+     System.out.print("enter the starting number :");
+     int a=sc.nextInt();
+     System.out.print("enter the ending number :");
+     int b=sc.nextInt();
+     for(;a<=b;){
+         for(int c=1; c<=10; c++){
+         System.out.println(a*c+" ");
+     }
+     a++;
+         System.out.print("\n");
+       }
+   }
+}
+------------------------------------------------------------------------------
+3)1-->100 those type of numbers print (divisible by the multiple of any two numbers from user input ) 
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+     Scanner sc=new Scanner(System.in);
+     System.out.print("enter the second number :");
+     int a=sc.nextInt();
+     System.out.print("enter the first number :");
+     int b=sc.nextInt();
+     int c=a*b;
+     for(int i=1; i<=100; i++){
+         if(i%c==0){
+             System.out.print(i);
+         }
+         }
+   }
+}
+------------------------------------------------------------------------------
+4)1--->100 print numbers id divisible by 11and 5 both 
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+    for(int a=1; a<=100; a++){
+        if(a%5==0 && a%11==0){
+        System.out.print(a);
+    }
+   }
+
+
+   }
+   }
+
+--------------------------------------------------------------------------------
+5)print 2 table opposite 
+like : 20 18 16.......2 
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+    int a=10;
+    while(a>=1){
+            System.out.print(a*2+" ");
+        a--;
+       }
+   }
+}
+---------------------------------------------------------------------------------
+6)print 2 table : 
+like this format : 
+2 X 1 =2 
+2 X 2 =4
+
+import java.util.*;
+
+public class Main{
+   public static void main(String[] args){
+    int n=2;
+      for(int a=1; a<=10; a++){
+            System.out.print(n+"X"+a+"="+a*n);
+        System.out.print("\n");
+      }
+   }
+} 
+.---------------------------------------------------------------------........
+7)write and make a program user input armstrong = then check number is armstrong and not , when user input pallindrome =check number is pallindrome or not , when user input reverse then check number is reverse or not (through user input ) (use if else if else and while loop and for loop only ) 
+import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter what you want to check");
+            String check = sc.nextLine();
+            if(check.equals("armstromg")){
+                System.out.println("Enter a value ");
+                int a = sc.nextInt();
+                int rem;
+                int sum = 0;
+                int temp = a;
+                while(a>0){
+                    rem = a%10;
+                    sum = sum+rem*rem*rem;
+                    a = a/10;
+                }
+                if(temp==sum){
+                    System.out.println("Armstromg");
+                }
+                else{
+                    System.out.println("Not armstromg");
+                }
+            }
+            else if(check.equals("pallindrome")){
+                System.out.println("Enter a value ");
+                int a = sc.nextInt();
+                int rem;
+                int sum = 0;
+                int temp = a;
+                while(a>0){
+                    rem = a%10;
+                    sum = sum*10+rem;
+                    a = a/10;
+                }
+                if(temp==sum){
+                    System.out.println("pallindrome");
+                }
+                else{
+                    System.out.println("Not pallindrome");
+                }
+            }
+            else if(check.equals("reverse")){
+                System.out.println("Enter a value ");
+                int a = sc.nextInt();
+                int rem;
+                int sum = 0;
+                int temp = a;
+                while(a>0){
+                    rem = a%10;
+                    sum = sum*10+rem;
+                    a = a/10;
+                }
+                if(temp==sum){
+                    System.out.println("reverse");
+                }
+                else{
+                    System.out.println("Not reverse");
+                }
+            }
+        }
+    }
+-------------------------------------------------------------------------------
+8) write and make a program user input any number and user input like factorial then calculate a factorial of code and user input a string like reverse then calculate a reverse number only.
+
+import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter what you want to check");
+            String m = sc.nextLine();
+            if(m.equals("reverse")){
+                System.out.println("Enter a value ");
+                int a = sc.nextInt();
+                int rem;
+                int sum = 0;
+                int temp = a;
+                while(a>0){
+                    rem = a%10;
+                    sum = sum*10+rem;
+                    a = a/10;
+                }
+                if(temp==sum){
+                    System.out.println("reverse");
+                }
+                else{
+                    System.out.println("Not reverse");
+                }
+            }
+            else if(m.equals("factorial")){
+                System.out.println("Enter a value ");
+                int a = sc.nextInt();
+                int fact= 1;
+                for(int i=1; i<=a; i++){
+                    fact = fact*i;
+                }
+                System.out.println(fact);
+            }
+        }
+    }
+------------------------------------------------------------------------------- 
+9)write and make a program user give two string like even and odd even denoted even number and odd denoted odd number when user input odd then input a range and calculate even and odd number in java ?(use if else if and for loop)  
+
+import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter what you want to check");
+            String m = sc.nextLine();
+            System.out.println("Ente the range end point");
+            int e = sc.nextInt();
+            if(m.equals("even")){
+                for(int i=1; i<=e; i++){
+                    if(i%2==0){
+                        System.out.println(i);
+                    }
+                }
+            }           
+            else if(m.equals("odd")){
+                for(int i=1; i<=e; i++){
+                    if(i%2==1){
+                        System.out.println(i);
+                    }
+                }
+            }           
+        }
+    }
+-----------------------------------------------------------------------------
+10)write a java prgram user input neon number :then calucate neon number or user input perfect number then calculate perfect number or user input prime number then agin user input is one or more when a user input one then check a input is prime or not otherwise userinput more then print 1 to 100 prime numbers or when user input a one digit the user input again : count ya sumofdigit when a user input count then count the digit and user input sumofdigit then addition of all the digits when user input fibonacci the user again input to lastnumber ya series of nth term when user input last number then print last number of a sum of fibonacci and user input a series then print a series of fibonacci	
+-------------------------------------------------------------------
+more advance question :
+Problem Statement – Chaman planned to choose a four digit lucky number for his car. His
+lucky numbers are 3,5 and 7. Help him find the number, whose sum is divisible by 3 or 5 or
+7. Provide a valid car number, Fails to provide a valid input then display that number is not a
+valid car number.
+Note : The input other than 4 digit positive number[includes negative and 0] is considered as
+invalid.
+Refer the samples, to read and display the data.
+
+Sample Input 1:
+Enter the car no:1234
+Sample Output 1:
+Lucky Number
+Sample Input 2:
+Enter the car no:1214
+Sample Output 2:
+Sorry its not my lucky number
+Sample Input 3:
+Enter the car no:14
+Sample Output 3:
+14 is not a valid car number
+
+import java.util.*;
+ 
+public class Main {
+    public static void main(String[] args)
+    {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter the four digit number :");
+      int a=sc.nextInt();
+      if(a%3==0 || a%5==0 || a%7==0){
+        System.out.print("this is lucky number :"+a);
+    }
+    else{
+        System.out.println("invalid number"+a);
+    }
+    }
+}
+-----------------------------------------------------------------------------
