@@ -8,6 +8,7 @@ public class Main {
         for(int j=1; j<=4; j++){
             System.out.print(a++);
         }
+    
         System.out.println();
        }
     }
