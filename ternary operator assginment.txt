@@ -1,0 +1,229 @@
+1)voter id 
+=>user input
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the age :");
+        int a = sc.nextInt();
+        String name = (a>=18) ? "valid for vote" : "not valid for vote";
+        System.out.println(name);
+    }
+}
+-------------------------------------------------------------------------------- 
+2)one number max a>10 
+one number : 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the value ");
+        int a = sc.nextInt();
+        String name = (a > 10) ? "greater" : "no greater";
+        System.out.println(name);
+    }
+}
+--------------------------------------------------------------------------------------
+3)two number max a b 
+a ya b dono mey se bda konsa hey 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        String name = (a>b)?"A is grater":"B is grater";
+        System.out.println(name);
+
+	}
+}
+
+-----------------------------------------------------------------------------------------
+4)three number max a b c 
+tenno mey se konsa badha hey 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        System.out.println("enter the value of c ");
+        int c=sc.nextInt();
+        String name = (a>b && a>c)?"A is grater":(b>a && b>c)?"B is grater":(c>a && c>a)?"c is greater":"all equal";
+        System.out.println(name);
+
+	}
+}
+
+--------------------------------------------------------------
+5)five number max abcde
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        System.out.println("enter the value of c ");
+        int c=sc.nextInt();
+        System.out.println("enter the value of d ");
+        int d=sc.nextInt();
+        System.out.println("enter the value of e ");
+        int e=sc.nextInt();
+        String name = (a>b && a>c && a>d && a>e)?"A is grater":(b>a && b>c && b>d && b>e)?"B is grater":
+        (c>a && c>b && c>d && c>e)?"c is greater":(d>a && d>b && d>c && d>e)?"D is greater":
+        (e>a && e>b && e>c && e>d)?"e is greater":"all equal";
+        System.out.println(name);
+        
+
+	}
+}
+-------------------------------------------------------------------------------
+
+
+
+6) user 
+-9 negative integer 
+5 positive integer 
+0 =zero 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        String name = (a<0)?"Negative":(a>0)?"positive":"Zero";
+        System.out.println(name);
+	}
+}
+-------------------------------------------------------------------------
+
+7) vowel and consonat 
+->a e i o u vowel 
+consonant 
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the character ");
+        char a = sc.next().charAt(0);
+        String name = (a=='a'||a=='e'||a=='i'||a=='o'||a=='u')?"vowel":"Consonent";
+        System.out.println(name);
+	}
+}
+---------------------------------------------------------------
+
+8)divisible 5 and 11 
+	a)num dono se divide ho jb process ho 
+	b)num kisi se bhi divide ho jb process ho 
+import java.util.*;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        String name = (a%5==0 && a%11==0)?"Number is divided by both":
+        (a%5==0||a%11==0)?"Number is divided by 5 or 11":"Not divided by any";
+        System.out.println(name);
+    }
+}
+---------------------------------------------------------------
+
+
+m =you are 
+f = female 
+other
+
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the character ");
+        char a = sc.next().charAt(0);
+        String name = (a=='m')?"male":(a=='f')?"female":"others";
+        System.out.println(name);
+    }
+}
+-------------------------------------------------------------------------
+
+numnumber 
+1 =>sunday 
+2 =>monday 
+3 =>tuesday 
+
+
+import java.util.*;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        String name = (a==1)?"sunday":(a==2)?"monday":(a==3)?"tuesday":(a==4)?"wednesday":(a==5)?"thursday":(a==6)?"friday":
+        (a==7)?"saturday":"Not match";
+        System.out.println(name);
+    }
+}
+
+--------------------------------------------------------------
+
+
+check number :even odd 
+
+
+import java.util.*;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        String name = (a%2==0)?"even":(a%2==1)?"odd":"";
+        System.out.println(name);
+    }
+}
+
+-----------------------------------------------------------------
+
+char match 
+a =>apple 
+b :ball 
+c :cat 
+not match 
+
+import java.util.*;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        char a  = sc.next().charAt(0);
+        String name = (a=='a')?"Apple":(a=='b')?"ball":(a=='c')?"cat":"Not match";
+        System.out.println(name);
+    }
+}
