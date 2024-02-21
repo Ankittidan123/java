@@ -1,0 +1,583 @@
+Main class 
+add()
+sub()
+div()
+multi()
+mod() 
+
+main method :access
+user input 
+
+import java.util.*;
+ 
+public class Mnc{
+    void add(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the value of a");
+        int a=sc.nextInt();
+        System.out.println("enter the value of b");
+        int b=sc.nextInt();
+        int c=a+b;
+        System.out.println("the addition is"+c);
+    }
+    void sub(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a-b;
+        System.out.println("The substraction is "+c);
+    }
+    void multi(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a*b;
+        System.out.println("The answer is "+c);
+    }
+    void div(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a/b;
+        System.out.println("The answer is "+c);
+}
+    void mod(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a%b;
+        System.out.println("The answer is "+c);
+}
+    public static void main(String[] args) {
+        Mnc k=new Mnc();
+        k.add();
+        k.sub();
+        k.multi();
+        k.div();
+        k.mod();
+    }
+}
+--------------------------------------------------------------------------
+-----------------------------------------
+Main 
+
+swap()
+pallindrome()
+neon()
+armstrong()
+perfect()
+revrse()
+sumofdigit()
+count()
+factorial()
+fibonacci()
+vowel()
+gender()
+email passwrod valid abc 123 
+table()
+sumof even number
+sum of odd number
+
+main access 
+
+import java.util.*;
+ 
+public class Mnc{
+  void swap(){
+  Scanner sc=new Scanner(System.in);
+  System.out.println("enter the value of a :");
+  int a=sc.nextInt();
+  System.out.println("enter the value of b:");
+  int b=sc.nextInt();
+  int c;
+  c=a;
+  a=b;
+  b=c; 
+  System.out.println("the swap value of a :"+a);
+  System.out.println("the swap value of b :"+b); 
+  }  
+  void pallindrome(){
+    Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to find pallindrom ");
+        int c = sc.nextInt();
+        int rem;
+        int sum = 0;
+        int temp = c;
+        while(c>0){
+            rem = c%10;
+            sum = sum*10+rem;
+            c = c/10; 
+  }
+      String name = (sum==temp)?"pallindrom":"Not pallindrom";
+        System.out.println(name);
+    }
+  void neon(){
+
+   Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to check the neon number ");
+        int a = sc.nextInt();
+        int b = a*a;
+        int temp = a;
+        int sum = 0;
+        while(a>0){
+            sum = sum + a;
+            a = a/10;
+        }
+        String name = (temp==sum)?"Yes it is a neon number":"its not an neon number";
+        System.out.println(name);
+    }
+    void armstrong(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to check armstrom number ");
+        int a = sc.nextInt();
+        int rem;
+        int sum = 0;
+        int temp = a;
+        while(a>0){
+            rem = a%10;
+            sum = sum+rem*rem*rem;
+            a = a/10;
+        }
+        String name = (temp==sum)?"Yes it is a armstrong number":"its not an armstrong number";
+        System.out.println(name);
+    }
+    void perfect(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to check perfect number");
+        int a = sc.nextInt();
+        int sum = 0;
+        while(a>0){
+            for(int i=1; i<=a; i++){
+                if(a%i==0 && a%a!=0){
+                    sum = sum+i;
+                }
+            }
+            a = a/10;
+        }
+        String name = (a==sum)?"Yes it is a perfect number":"its not a perfect number";
+        System.out.println(name);
+    }
+    void reverse(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to reverse ");
+        int a = sc.nextInt();
+        int rem;
+        int sum = 0;
+        while(a>0){
+            rem = a%10;
+            sum = sum*10+rem;
+            a = a/10;
+        }
+        System.out.println("This is the reverse "+sum);
+    }
+    void sumofdigit(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to sum up the digits ");
+        int a = sc.nextInt();
+        int sum = 0;
+        while(a>0){
+            sum = sum+a;
+            a = a/10;
+        }
+        System.out.println("The sum of the digits is "+sum);
+    }
+    void count(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to count its digit ");
+        int a = sc.nextInt();
+        int count = 0;
+        while(a>0){
+            count++;
+            a = a/10;
+        }
+        System.out.println("The count is "+count);
+    }
+    void fact(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to factorial");
+        int a = sc.nextInt();
+        int fact = 1;
+        for(int i=1; i<=a; i++){
+            fact = fact*i;
+        }
+        System.out.println("The factorial is "+fact);
+    }
+    void fibo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to print fibonacci ");
+        int a = sc.nextInt();
+        int n0 = 0;
+        int n1 = 1;
+        int n3;
+        System.out.print(n0+" ");
+        System.out.print(n1+" ");
+        for(int i=1; i<=a; i++){
+            n3 = n0+n1;
+            System.out.print(n3+" ");
+            n0=n1;
+            n1=n3;
+        }
+    }
+    void vowel(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the character to check it is vowel ");
+        char a = sc.next().charAt(0);
+        String name = (a=='a'||a=='e'||a=='i'||a=='o'||a=='u')?"Vowel":"Consonent";
+        System.out.println(name);
+    }
+    void gender(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the character to check the gender");
+        char a = sc.next().charAt(0);
+        String name = (a=='m')?"Male":(a=='f')?"Female":"other";
+        System.out.println(name);
+    }
+    void check(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the username ");
+        String user = sc.nextLine();
+        System.out.println("Enter the pass ");
+        String pass = sc.nextLine();
+        String name = (user.equals("abc"))?"Correct user name":(pass.equals("123"))?"Correct pass":"Incorrect pass";
+        System.out.println(name);
+    }
+    void table(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to print its table ");
+        int a = sc.nextInt();
+        for(int i=1; i<=10; i++){
+            System.out.println(a+"X"+i+"="+i*a);
+        }
+    }
+    void sumeven(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value till you want the sum of even");
+        int a = sc.nextInt();
+        int sum = 0;
+        for(int i=1; i<=a; i++){
+            if(i%2==0){
+                sum += i;
+            }
+        }
+        System.out.println("The sum of the even numbers is "+sum);
+    }
+    void sumodd(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to sum the odd numbers");
+        int a = sc.nextInt();
+        int sum = 0;
+        for(int i=1; i<=a; i++){
+            if(i%2==1){
+                sum += i;
+            }
+        }
+        System.out.println("The sum of all the odd numbers till a is "+sum);
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        k.swap();
+        k.pallindrom();
+        k.neon();
+        k.armstrong();
+        k.perfect();
+        k.reverse();
+        k.sumofdigit();
+        k.count();
+        k.fact();
+        k.fibo();
+        k.vowel();
+        k.gender();
+        k.check();
+        k.table();
+        k.sumeven();
+        k.sumodd();
+    }
+}
+
+-----------------------------------------------------
+class A
+swap()
+pallindrome()
+
+import java.util.Scanner;
+
+class A{
+    void swap(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        a = a+b;
+        b = a-b;
+        a = a-b;
+        System.out.println("The answer of a "+a);
+        System.out.println("The answer of b "+b);
+    }
+    void pallindrom(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to find pallindrom ");
+        int c = sc.nextInt();
+        int rem;
+        int sum = 0;
+        int temp = c;
+        while(c>0){
+            rem = c%10;
+            sum = sum*10+rem;
+            c = c/10;
+        }
+        String name = (sum==temp)?"pallindrom":"Not pallindrom";
+        System.out.println(name);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        A k = new A();
+        k.swap();
+        k.pallindrom();
+    }
+}
+---------------------------------------------------------------------------------------
+
+
+class B
+sumof even number
+sum of odd number
+
+import java.util.Scanner;
+
+class B{
+    void sumeven(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value till you want the sum of even");
+        int a = sc.nextInt();
+        int sum = 0;
+        for(int i=1; i<=a; i++){
+            if(i%2==0){
+                sum += i;
+            }
+        }
+        System.out.println("The sum of the even numbers is "+sum);
+    }
+    void sumodd(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to sum the odd numbers");
+        int a = sc.nextInt();
+        int sum = 0;
+        for(int i=1; i<=a; i++){
+            if(i%2==1){
+                sum += i;
+            }
+        }
+        System.out.println("The sum of all the odd numbers till a is "+sum);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        B k = new B();
+        k.sumeven();
+        k.sumodd();
+    }
+}
+--------------------------------------------------------------------------
+
+class C
+email passwrod valid abc 123 
+table()
+
+import java.util.Scanner;
+
+Ans)
+class C{
+    void check(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the username ");
+        String user = sc.nextLine();
+        System.out.println("Enter the pass ");
+        String pass = sc.nextLine();
+        String name = (user.equals("abc"))?"Correct user name":(pass.equals("123"))?"Correct pass":"Incorrect pass";
+        System.out.println(name);
+    }
+    void table(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to print its table ");
+        int a = sc.nextInt();
+        for(int i=1; i<=10; i++){
+            System.out.println(a+"X"+i+"="+i*a);
+        }
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        C k = new C();
+        k.check();
+        k.table();
+    }
+}
+-------------------------------------------------------------------------------
+
+class D
+factorial()
+fibonacci()
+
+import java.util.Scanner;
+
+class D{
+    void fact(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to factorial");
+        int a = sc.nextInt();
+        int fact = 1;
+        for(int i=1; i<=a; i++){
+            fact = fact*i;
+        }
+        System.out.println("The factorial is "+fact);
+    }
+    void fibo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to print fibonacci ");
+        int a = sc.nextInt();
+        int n0 = 0;
+        int n1 = 1;
+        int n3;
+        System.out.print(n0+" ");
+        System.out.print(n1+" ");
+        for(int i=1; i<=a; i++){
+            n3 = n0+n1;
+            System.out.print(n3+" ");
+            n0=n1;
+            n1=n3;
+        }
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        D k = new D();
+        k.fact();
+        k.fibo();
+    }
+}
+------------------------------------------------------------------------------------
+class E 
+armstrong()
+perfect()
+
+import java.util.Scanner;
+
+class E{
+    void armstrong(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to check armstrom number ");
+        int a = sc.nextInt();
+        int rem;
+        int sum = 0;
+        int temp = a;
+        while(a>0){
+            rem = a%10;
+            sum = sum+rem*rem*rem;
+            a = a/10;
+        }
+        String name = (temp==sum)?"Yes it is a armstrong number":"its not an armstrong number";
+        System.out.println(name);
+    }
+    void perfect(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to check perfect number");
+        int a = sc.nextInt();
+        int sum = 0;
+        while(a>0){
+            for(int i=1; i<=a; i++){
+                if(a%i==0 && a%a!=0){
+                    sum = sum+i;
+                }
+            }
+            a = a/10;
+        }
+        String name = (a==sum)?"Yes it is a perfect number":"its not a perfect number";
+        System.out.println(name);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        E k = new E();
+        k.armstrong();
+        k.perfect();
+    }
+}
+
+-------------------------------------------------------------
+
+
+class Main 
+neon()
+armstrong()
+perfect()
+
+main method access
+
+import java.util.Scanner;
+
+class Main{
+    void neon(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to check the neon number ");
+        int a = sc.nextInt();
+        int b = a*a;
+        int temp = a;
+        int sum = 0;
+        while(a>0){
+            sum = sum + a;
+            a = a/10;
+        }
+        String name = (temp==sum)?"Yes it is a neon number":"its not an neon number";
+        System.out.println(name);
+    }
+    void armstrong(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to check armstrom number ");
+        int a = sc.nextInt();
+        int rem;
+        int sum = 0;
+        int temp = a;
+        while(a>0){
+            rem = a%10;
+            sum = sum+rem*rem*rem;
+            a = a/10;
+        }
+        String name = (temp==sum)?"Yes it is a armstrong number":"its not an armstrong number";
+        System.out.println(name);
+    }
+    void perfect(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to check perfect number");
+        int a = sc.nextInt();
+        int sum = 0;
+        while(a>0){
+            for(int i=1; i<=a; i++){
+                if(a%i==0 && a%a!=0){
+                    sum = sum+i;
+                }
+            }
+            a = a/10;
+        }
+        String name = (a==sum)?"Yes it is a perfect number":"its not a perfect number";
+        System.out.println(name);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        Main k = new Main();
+        k.neon();
+        k.armstrong();
+        k.perfect();
+    }
+}
+----------------------------------------------------------------------------------

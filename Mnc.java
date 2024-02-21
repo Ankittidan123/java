@@ -1,14 +1,24 @@
 import java.util.*;
  
-public class Main {
-    public static void main(String[] args)
-    {
-       int a=1;
-       for(int i=4; i>=1; i--){
-        for(int j=1; j<=4; j++){
-            System.out.print(a++);
-        }
-        System.out.println();
-       }
-    }
+public class Mnc{
+  void swap(){
+  Scanner sc=new Scanner(System.in);
+  System.out.println("enter the value of a :");
+  int a=sc.nextInt();
+  System.out.println("enter the value of b:");
+  int b=sc.nextInt();
+  int c;
+  c=a;
+  a=b;
+  b=c; 
+  System.out.println("the swap value of a :"+a);
+  System.out.println("the swap value of b :"+b); 
+  }  
+  void pallindrome(){
+    
+  }
+  public static void main(String[] args) {
+    Mnc k=new Mnc();
+    k.swap();
+  }
 }
