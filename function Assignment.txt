@@ -1,0 +1,816 @@
+show1 :two number additon :no return and argument 
+show2 :two number sub:no return and argument 
+show3 :two number multi :no return and argument 
+show4 :two number div :no return and argument 
+show5 :two number mod :no return and argument 
+user input 
+Ans)
+#include<stdio.h>
+void show1(int a, int b);
+void show2(int a, int b);
+void show3(int a, int b);
+void show4(int a, int b);
+int main(){
+    int num1;
+    int num2;
+    printf("Enter the first number : ");
+    scanf("%d",&num1);
+    printf("Enter the second number : ");
+    scanf("%d",&num2);
+    show1(num1,num2);
+    show2(num1,num2);
+    show3(num1,num2);
+    show4(num1,num2);
+    return 0;
+}
+void show1(int a, int b){
+    printf("The addition is %d\n",a+b);
+}
+void show2(int a, int b){
+    printf("The subtraction is %d\n",a-b);
+}
+void show3(int a, int b){
+    printf("The multiplication is %d\n",a*b);
+}
+void show4(int a, int b){
+    printf("The divide is %d",a/b);
+}
+------------------------------------------------------------------
+no return and argument :
+factorial 
+fibonacci 
+reverse 
+pallindrome 
+swap 
+count 
+armstrong
+sumofdigit
+table 
+even :1-->10 
+vowel 
+user input 
+Ans)
+#include<stdio.h>
+void factorial(int a);
+void fibo(int a);
+void reverse(int a);
+void pallindrom(int a);
+void swap(int a, int b);
+void count;
+void count(int a);
+int main(){
+    int f;
+    printf("Enter the number : ");
+    scanf("%d",&f);
+    factorial(f);
+    fibo(f);
+    int r;
+    printf("Enter the value to reverse and pallindromor not : ");
+    scanf("%d",&r);
+    reverse(r);
+    pallindrom(r);
+    int a;
+    int b;
+    printf("Enter first number : ");
+    scanf("%d",&a);
+    printf("Enter second number : ");
+    scanf("%d",&b);
+    swap(a,b);
+    return 0;
+}
+void factorial(int a){
+    int fact = 1;
+    for(int i=1; i<=a; i++){
+        fact = fact*i;
+    }
+    printf("The factorial is : %d\n",fact);
+}
+void fibo(int a){
+    int n1 = 0;
+    int n2 = 1;
+    int n3;
+    printf("The fibonacci is : %d %d",n1,n2);
+    for(int i=1; i<=a-2; i++){
+        n3=n1+n2;
+        printf(" %d",n3);
+        n1=n2;
+        n2=n3;
+    }
+    printf("\n");
+}
+void reverse(int a){
+    int sum = 0;
+    int rem;
+    while(a>0){
+        rem = a%10;
+        sum = sum*10+rem;
+        a = a/10;
+    }
+    printf("The reverse is : %d\n",sum);
+}
+void pallindrom(int a){
+    int sum = 0;
+    int rem;
+    int temp = a;
+    while(a>0){
+        rem = a%10;
+        sum = sum*10+rem;
+        a = a/10;
+    }
+    if(temp==sum){
+        printf("It is pallindrom\n");
+    }
+    else{
+        printf("Not a pallindrom\n");
+    }
+}
+void swap(int a,int b){
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("The number a after swap is : %d\n",a);
+    printf("The number b after swap is : %d\n",b);
+}
+------------------------------------------------------------------
+return and no argument :
+int show() 
+78 print krna hey 
+
+Ans)
+#include<stdio.h>
+int show();
+int main(){
+    printf("%d",show());
+}
+int show(){
+    return 78;
+}
+
+------------------------------------------------------------------
+return and no argument :
+
+ show() 
+7.8 print krna hey 
+
+Ans)
+#include<stdio.h>
+float show();
+int main(){
+    printf("%f",show());
+}
+float show(){
+    return 7.8;
+}
+
+------------------------------------------------------------------
+return and no argument :
+
+ show() 
+t print krna hey 
+
+Ans)
+#include<stdio.h>
+char show();
+int main(){
+    printf("%c",show());
+}
+char show(){
+    return 't';
+}
+
+------------------------------------------------------------------
+return and no argument :
+
+show1 :two number additon 
+show2 :two number sub
+show3 :two number multi 
+show4 :two number div 
+show5 :two number mod 
+
+user input 
+
+Ans)
+#include<stdio.h>
+int show1();
+int show2();
+int show3();
+float show4();
+int show5();
+int main(){
+    printf("Add = %d\n",show1());
+    printf("Sub = %d\n",show2());
+    printf("Multiplication = %d\n",show3());
+    printf("Division = %f\n",show4());
+    printf("Mod = %d",show5());
+}
+int show1(){
+    int a = 2;
+    int b= 3;
+    return a+b;
+}
+int show2(){
+    int a =3;
+    int b=1;
+    return a-b;
+}
+int show3(){
+    int a = 2;
+    int b = 3;
+    return a*b;
+}
+float show4(){
+    int a = 3;
+    int b = 2;
+    return a/b;
+}
+int show5(){
+    int a = 4;
+    int b = 2;
+    return a%b;
+}
+
+-------------------------------------------------------------------
+return and no argument :
+
+factorial 
+fibonacci 
+reverse 
+pallindrome 
+swap 
+count 
+armstrong
+sumofdigit
+table 
+even :1-->10 
+vowel 
+
+user input 
+
+Ans)
+#include <stdio.h>
+int factorial();
+void fibonacci();
+int reverse();
+char pallindrome();
+void swap();
+int countofdigits();
+char armstrong();
+int sumofdigit();
+void table();
+char even();
+char vowel();
+int main(){
+    printf("%d\n",factorial());
+    fibonacci();
+    printf("%d\n",reverse());
+    printf("%c\n",pallindrome());
+    swap();
+    printf("%d\n",countofdigits());
+    printf("%c\n",armstrong());
+    printf("%d\n",sumofdigit());
+    table();
+    printf("%c\n",even());
+    printf("%c\n",vowel());
+    return 0;
+}
+int factorial(){
+    int a;
+    printf("enter no whom to find factorial:\n");
+    scanf("%d",&a);
+    int fact = 1;
+    for(int i=1;i<=a;i++){
+        fact = fact * i;
+    }
+    return fact;
+}
+void fibonacci(){
+    int a;
+    printf("enter no of elements for fabinacci:\n");
+    scanf("%d",&a);
+    int i = 0, j = 1, l;
+    printf("%d ",i); printf("%d ",j);
+    for(int k=1;k<=(a-2);k++){
+        l=i+j;
+        printf("%d ",l);
+        i=j;
+        j=l;
+    }
+    printf("\n");
+}
+int reverse(){
+    int a;
+    printf("enter number for reverse:\n");
+    scanf("%d",&a);
+    int sum = 0;
+    int rem;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum * 10 + rem;
+    }
+    return sum;
+}
+char pallindrome(){
+    int a;
+    printf("enter number for pallindrome:\n");
+    scanf("%d",&a);
+    int sum = 0, rem;
+    int temp = a;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum * 10 + rem;
+    }
+    if(temp == sum){ return 'p'; }
+    else{ return 'n'; }
+}
+void swap(){
+    int a = 2; int b = 3;
+    int c = a;
+    a = b;
+    b = c;
+    printf("Swap values are %d and %d\n",a,b);
+}
+
+int countofdigits(){
+    int a;
+    printf("enter number whom to count the digits:\n");
+    scanf("%d",&a);
+    int count = 0, rem;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        count++;
+    }
+    return(count);
+}
+char armstrong(){
+    int a;
+    printf("enter number for armstrong:\n");
+    scanf("%d",&a);
+    int sum = 0, rem;
+    int temp = a;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum + rem * rem * rem;
+    }
+    if(temp == sum){ return 'a'; }
+    else{ return 'n'; }
+}
+int sumofdigit(){
+    int a;
+    printf("enter number whom to find sum:\n");
+    scanf("%d",&a);
+    int sum = 0, rem; while(a>0){ rem = a % 10; a = a / 10; sum = sum + rem; }
+    return sum;
+}
+
+void table(){     
+    int a;
+    printf("enter number whom to find table:\n");
+    scanf("%d",&a);
+    for(int i=1;i<=10;i++){ printf("%d ",a*i); } 
+    printf("\n"); 
+}
+
+char even(){     
+    int a;
+    printf("enter number for even/odd check:\n");
+    scanf("%d",&a);
+    if(a%2==0){ return 'e'; } else{ return 'o'; } 
+}
+char vowel(){
+    char c;
+    printf("enter character for vowel check:\n");
+    scanf("%c",&c);
+    if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){ return 'v'; }
+    else{ return 'c'; }
+}
+
+---------------------------------------------------
+-------------------------------------------------------
+return and  argument :
+
+int show() 
+78 print krna hey 
+
+Ans)
+#include<stdio.h>
+int show( int a );
+int main(){
+    int a = 50;
+    printf("%d",show(a));
+    return 0;
+}
+int show(int a){
+    return 78;
+}
+
+------------------------------------------------------------------
+return and  argument :
+
+ show() 
+7.8 print krna hey 
+
+Ans)
+#include<stdio.h>
+float show( int a );
+int main(){
+    float a = 50;
+    printf("%f",show(a));
+    return 0;
+}
+float show(int a){
+    return 7.8;
+}
+
+------------------------------------------------------------------
+return and argument :
+
+ show() 
+t print krna hey 
+
+Ans)
+#include<stdio.h>
+char show( int a );
+int main(){
+    float a = 50;
+    printf("%c",show(a));
+    return 0;
+}
+char show(int a){
+    return 't';
+}
+
+-----------------------------------------------------------
+return and  argument :
+
+factorial 
+fibonacci 
+reverse 
+pallindrome 
+swap 
+count 
+armstrong
+sumofdigit
+table 
+even :1-->10 
+vowel 
+
+user input 
+
+Ans)
+#include <stdio.h>
+int factorial(int a);
+char fibonacci(int a);
+int reverse(int a);
+char pallindrome(int a);
+char swap(int a, int b);
+int countofdigits(int a);
+char armstrong(int a);
+int sumofdigit(int a);
+int table(int a);
+char even(int a);
+char vowel(char c);
+int main()
+{
+    int a,b;
+    char c;
+    printf("enter no whom to find factorial:\n");
+    scanf("%d",&a); 
+    factorial(a);
+
+    printf("enter no of elements for fabinacci:\n");
+    scanf("%d",&a);
+    fibonacci(a);
+
+    printf("enter number for reverse:\n");
+    scanf("%d",&a);
+    reverse(a);
+
+    printf("enter number for pallindrome:\n");
+    scanf("%d",&a);
+    pallindrome(a);
+
+    printf("enter number1:\n");
+    scanf("%d",&a);    
+    printf("enter number2:\n");
+    scanf("%d",&b);
+    swap(a,b);
+
+    printf("enter number whom to count the digits:\n");
+    scanf("%d",&a);
+    countofdigits(a);
+
+    printf("enter number for armstrong:\n");
+    scanf("%d",&a);
+    armstrong(a);
+
+    printf("enter number whom to find sum:\n");
+    scanf("%d",&a);
+    sumofdigit(a);
+
+    printf("enter number whom to find table:\n");
+    scanf("%d",&a);
+    table(a);
+
+    printf("enter number for even/odd check:\n");
+    scanf("%d",&a);
+    even(a);
+
+    printf("enter character for vowel check:\n");
+    scanf(" %c ",&c);
+    vowel(c);
+    return 0;
+}
+int factorial(int a){
+    int fact = 1;
+    for(int i=1;i<=a;i++){
+        fact = fact * i;
+    }
+    printf("result = %d\n",fact);
+    return fact;
+}
+char fibonacci(int a){
+    int i = 0, j = 1, l;
+    printf("%d ",i); printf("%d ",j);
+    for(int k=1;k<=(a-2);k++){
+        l=i+j;
+        printf("%d ",l);
+        i=j;
+        j=l;
+    }
+    printf("\n");
+    return 'f';
+}
+int reverse(int a){
+    int sum = 0;
+    int rem;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum * 10 + rem;
+    }
+    printf("reverse = %d\n",sum);
+    return sum;
+}
+char pallindrome(int a){
+    int sum = 0, rem;
+    int temp = a;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum * 10 + rem;
+    }
+    if(temp == sum){ printf("Pallindrome\n"); return 'p'; }
+    else{ printf("Not a Pallindrome\n"); return 'n'; }
+}
+char swap(int a, int b){
+    int c = a;
+    a = b;
+    b = c;
+    printf("Swap values are %d and %d\n",a,b);
+    return 's';
+}
+int countofdigits(int a){
+    int count = 0, rem;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        count++;
+    }
+    printf("No of digits = %d\n",count);
+    return count;
+}
+char armstrong(int a){
+    int sum = 0, rem;
+    int temp = a;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum + rem * rem * rem;
+    }
+    if(temp == sum){printf("%d is armstrong\n",temp); return 'a'; }
+    else{ printf("Not an armstrong No."); return 'n'; }
+}
+int sumofdigit(int a){
+    int sum = 0, rem; while(a>0){ rem = a % 10; a = a / 10; sum = sum + rem; }
+    printf("sum of digits = %d\n",sum); return sum;
+}
+int table(int a){ for(int i=1;i<=10;i++){ printf("%d ",a*i); } printf("\n"); return 0; }
+char even(int a){ 
+    if(a%2==0){ printf("even"); return 'e'; } else{ printf("odd"); return 'o'; }
+}
+char vowel(char c){
+    if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){ printf("vowel"); return 'v'; }
+    else{ printf("consonant"); return 'c'; }
+}
+
+-------------------------------
+return and  argument :
+
+show1 :two number additon 
+show2 :two number sub
+show3 :two number multi 
+show4 :two number div 
+show5 :two number mod 
+
+user input 
+
+Ans)
+#include <stdio.h>
+int show1(int a, int b);
+int show2(int a, int b);
+int show3(int a, int b);
+int show4(int a, int b);
+int show5(int a, int b);
+int main()
+{
+    int a,b;
+    printf("enter a & b\n");
+    scanf("%d %d",&a,&b); 
+    printf("%d\n",show1(a,b));
+    printf("%d\n",show2(a,b));
+    printf("%d\n",show3(a,b));
+    printf("%d\n",show4(a,b));
+    printf("%d\n",show5(a,b));
+    return 0;
+}
+int show1(int a, int b){ return a+b; }
+int show2(int a, int b){ return a-b; }
+int show3(int a, int b){ return a*b; }
+int show4(int a, int b){ return a/b; }
+int show5(int a, int b){ return a%b; }
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------
+function :
+factorial :no return and no argument 
+fibonacci :no return and  argument 
+reverse : return and no argument 
+pallindrome : return and  argument 
+swap : return and no argument 
+count :no return and  argument 
+armstrong: return and  argument 
+sumofdigit:no return and no argument 
+table : return and no argument 
+even :1-->10 :no return and  argument 
+vowel :no return and no argument 
+area : return and  argument 
+user input 
+
+Ans)
+#include <stdio.h>
+void factorial();
+void fibonacci();
+void reverse();
+void pallindrome();
+void swap();
+void countofdigits();
+void armstrong();
+void sumofdigit();
+void table();
+void even();
+void vowel();
+void area();
+int main(){
+    factorial();
+    fibonacci();
+    reverse();
+    pallindrome();
+    swap();
+    countofdigits();
+    armstrong();
+    sumofdigit();
+    table();
+    even();
+    vowel();
+    area();
+    return 0;
+}
+void factorial(){
+	int a;
+	printf("enter no whom to find factorial:\n");
+    scanf("%d",&a);
+    int fact = 1;
+    for(int i=1;i<=a;i++){
+        fact = fact * i;
+    }
+    printf("result = %d\n",fact);
+}
+void fibonacci(){
+	int a;
+	    printf("enter no of elements for fabinacci:\n");
+    scanf("%d",&a);
+    int i = 0, j = 1, l;
+    printf("%d ",i); printf("%d ",j);
+    for(int k=1;k<=(a-2);k++){
+        l=i+j;
+        printf("%d ",l);
+        i=j;
+        j=l;
+    }
+    printf("\n");
+}
+void reverse(){
+	int a;
+    printf("enter number for reverse:\n");
+    scanf("%d",&a);
+    int sum = 0;
+    int rem;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum * 10 + rem;
+    }
+    printf("reverse = %d\n",sum);
+}
+void pallindrome(){
+	int a;
+	    printf("enter number for pallindrome:\n");
+    scanf("%d",&a);
+    int sum = 0, rem;
+    int temp = a;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum * 10 + rem;
+    }
+    if(temp == sum){ printf("Pallindrome\n"); }
+    else{ printf("Not a Pallindrome\n"); }
+}
+void swap(){
+    int a; int b;
+    printf("enter number1:\n");
+    scanf("%d",&a);    
+    printf("enter number2:\n");
+    scanf("%d",&b);
+    int c = a;
+    a = b;
+    b = c;
+    printf("Swap values are %d and %d\n",a,b);
+}
+void countofdigits(){
+	int a;
+	    printf("enter number whom to count the digits:\n");
+    scanf("%d",&a);
+    int count = 0, rem;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        count++;
+    }
+    printf("No of digits = %d\n",count);
+}
+void armstrong(){
+	int a;
+	printf("enter number for armstrong:\n");
+    scanf("%d",&a);
+    int sum = 0, rem;
+    int temp = a;
+    while(a>0){
+        rem = a % 10;
+        a = a / 10;
+        sum = sum + rem * rem * rem;
+    }
+    if(temp == sum){printf("%d is armstrong\n",temp); }
+    else{ printf("Not an armstrong No."); }
+}
+void sumofdigit(){
+	int a;
+	printf("enter number whom to find sum:\n");
+    scanf("%d",&a);
+    int sum = 0, rem; while(a>0){ rem = a % 10; a = a / 10; sum = sum + rem; }
+    printf("sum of digits = %d\n",sum);
+}
+void table(){ 
+	int a; 
+	printf("enter number whom to find table:\n");
+    	scanf("%d",&a);
+	for(int i=1;i<=10;i++){ printf("%d ",a*i); }
+	printf("\n"); 
+}
+void even(){ 
+	int a;
+    printf("enter number for even/odd check:\n");
+    scanf("%d",&a);
+    if(a%2==0){ printf("even"); } else{ printf("odd"); }
+}
+void vowel(){
+	char c;
+    printf("enter character for vowel check:\n");
+    scanf("%c ",&c);
+    if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){ printf("vowel"); }
+    else{ printf("consonant"); }
+}
+void area(){
+    int l,b;
+    printf("enter length\n");
+    scanf("%d",&l);
+    printf("enter length\n");
+    scanf("%d",&b);
+    printf("area = %d", l*b);
+}
+
+-------------------------------------------------------------
