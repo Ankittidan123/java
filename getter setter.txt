@@ -1,0 +1,547 @@
+###########################################################
+instance variable :
+-------------------------------------------------------------
+Main class :parameterised : : two number addition 
+user input 
+
+Ans)
+import java.util.Scanner;
+public class Mnc {
+    int a;
+    int b;
+    Mnc(int a, int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        new Mnc(a, b);
+    }
+}
+
+---------------------------------------------------------
+Main class :parameterised : : two number sub 
+user input
+
+Ans)
+import java.util.Scanner;
+public class Mnc {
+    int a;
+    int b;
+    Mnc(int a, int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a-b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        new Mnc(a, b);
+    }
+}
+
+---------------------------------------------------------
+ Main class :parameterised : : two number multi
+show() :divide 
+show1() :modular  
+user input
+
+Ans)
+import java.util.Scanner;
+public class Mnc {
+    int a;
+    int b;
+    Mnc(int a, int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a*b);
+    }
+    void show(int a, int b){
+        System.out.println(a/b);
+    }
+    void show1(int a, int b){
+        System.out.println(a%b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc(a, b);
+        k.show(a, b);
+        k.show1(a, b);
+    }
+}
+
+---------------------------------------------------------
+class A 
+A class :parameterised : : two number addition 
+show() :divide 
+user input 
+
+Main class :parameterised : : two number sub 
+user input
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+    void show(int a, int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a/b);
+    }
+}
+public class Mnc {
+    int a;
+    int b;
+    Mnc(int a, int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a-b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc(a, b);
+        A k1 = new A(a, b);
+        k1.show(a, b);
+    }
+}
+
+---------------------------------------------------------
+class A 
+A class :parameterised : : two number addition 
+show() :divide 
+user input 
+
+class B
+B class :parameterised : : two number addition 
+show1() :mul 
+user input 
+
+
+Main class :parameterised : : two number sub 
+show2() :add  
+
+user input
+main()
+A 
+B
+Main access 
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+    void show(int a, int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a/b);
+    }
+}
+class B{
+    int a;
+    int b;
+    B(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+    void show(int a, int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a*b);
+    }
+}
+public class Mnc {
+    int a;
+    int b;
+    Mnc(int a, int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a-b);
+    }
+    void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc(a, b);
+        k.show(a, b);
+        A k1 = new A(a, b);
+        k1.show(a, b);
+        B k2 = new B(a, b);
+        k2.show(a, b);
+    }
+}
+
+--------------------------------------------------
+##################################################################
+getter setter :
+##############################################################
+Main class : : : two number addition 
+user input 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    private int a;
+    private int b;
+    void setA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a+b;
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value ");
+        int b = sc.nextInt();
+        k.setA(a, b);
+        System.out.println("The sum is "+k.getA());
+    }
+}
+
+---------------------------------------------------------
+Main class : : : two number sub 
+user input
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    private int a;
+    private int b;
+    void setA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a-b;
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value ");
+        int b = sc.nextInt();
+        k.setA(a, b);
+        System.out.println("The sub is "+k.getA());
+    }
+}
+
+---------------------------------------------------------
+ Main class : : : two number multi
+show() :divide 
+show1() :modular  
+user input
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    private int a;
+    private int b;
+    void setA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a*b;
+    }
+    void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a/b);
+    }
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a%b);
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value ");
+        int b = sc.nextInt();
+        k.setA(a, b);
+        System.out.println("The sum is "+k.getA());
+        k.show(a, b);
+        k.show1(a, b);
+    }
+}
+
+---------------------------------------------------------
+class A 
+A class : : : two number addition 
+show() :divide 
+user input 
+
+Main class : : : two number sub 
+user input
+
+Ans)
+import java.util.Scanner;
+class A{
+    private int a;
+    private int b;
+    void setA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a+b;
+    }
+    void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a/b);
+    }
+}
+public class Mnc {
+    private int a;
+    private int b;
+    void setA(int a, int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a-b;
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value ");
+        int b = sc.nextInt();
+        k.setA(a, b);
+        System.out.println("The sum is "+k.getA());
+        A k1 = new A();
+        k1.setA(a, b);
+        System.out.println(k1.getA());
+        k1.show(a, b);
+    }
+}
+
+---------------------------------------------------------
+class A 
+A class : : : two number addition 
+show() :divide 
+user input 
+
+class B
+B class : : : two number addition 
+show1() :mul 
+user input 
+
+
+Main class : : : two number sub 
+show2() :add  
+
+user input
+main()
+A 
+B
+Main access
+
+Ans)
+import java.util.Scanner;
+class A{
+    private int a;
+    private int b;
+    void setA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a+b;
+    }
+    void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a/b);
+    }
+}
+class B{
+    private int a;
+    private int b;
+    void setA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a+b;
+    }
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a*b);
+    }
+}
+public class Mnc {
+    private int a;
+    private int b;
+    void setA(int a, int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a-b;
+    }
+    void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value ");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.setA(a, b);
+        System.out.println("The sum is "+k.getA());
+        k.show2(a, b);
+        A k1 = new A();
+        k1.setA(a, b);
+        System.out.println(k1.getA());
+        k1.show(a, b);
+        B k2 = new B();
+        k2.setA(a, b);
+        System.out.println(k2.getA());
+        k2.show1(a, b);
+    }
+}
+ 
+---------------------------------------------------------------
+anonymous block
+static block 
+consructor block
+
+Ans)
+import java.util.Scanner;
+public class Mnc {
+    {
+        System.out.println("This is anonymous block");
+    }
+    static{
+        System.out.println("This is static block");
+    }
+    Mnc(){
+        System.out.println("This is constracter");
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+    }
+}
+
+output/
+This is static block
+This is anonymous block
+This is constracter
+
+---------------------------------------------------------
+anonymous block
+consructor block
+static block 
+
+Ans)
+import java.util.Scanner;
+public class Mnc {
+    {
+        System.out.println("This is anonymous block");
+    }
+    Mnc(){
+        System.out.println("This is constracter");
+    }
+    static{
+        System.out.println("This is static block");
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+    }
+}
+
+output/
+This is static block
+This is anonymous block
+This is constracter
+---------------------------------------------------------
+static block 
+consructor block
+anonymous block
+
+Ans)
+import java.util.Scanner;
+public class Mnc {
+    static{
+        System.out.println("This is static block");
+    }
+    Mnc(){
+        System.out.println("This is constracter");
+    }
+    {
+        System.out.println("This is anonymous block");
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+    }
+}
+
+output/
+This is static block
+This is anonymous block
+This is constracter
+---------------------------------------------------------
+
+1)why jvm read main method firstly ? 
+
+2)why main method is static in java ? 
+
+3)can we execute a java program without static keyword ?
+
+
+4)can we execute a java program without main method ?
+
+5)can we execute a java program without class name ?
