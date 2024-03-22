@@ -1,0 +1,1179 @@
+user input :
+------------------------------------------------------------
+class A
+
+show1() :no return and no argument :addition  
+show2() :no return and argument :multiplication 
+
+class B 
+show3() : return and no argument :division
+
+show4() : return and argument :modular 
+
+
+class Main 
+
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show2(int a,int b){
+        System.out.println(a*b);
+    }
+}
+class B extends A{
+    int show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        int c = a/b;
+        return c;
+    }
+    int show4(int a,int b){
+        int c = a%b;
+        return c;
+    }
+}
+public class Mnc {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1();
+        k.show2(a, b);
+        k.show3();
+        k.show4(a, b);
+    }
+}
+
+---------------------------------------------------------------------
+class A
+show1() :no return and no argument :addition  
+show2() :no return and argument :multiplication 
+
+class B ex A
+show3() : return and no argument :division
+
+show4() : return and argument :modular 
+
+
+class Main 
+show5() : return and no argument :four number add
+
+show6() : return and argument :four number multiplication 
+
+
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show2(int a,int b){
+        System.out.println(a*b);
+    }
+}
+class B extends A{
+    int show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        int c = a/b;
+        return c;
+    }
+    int show4(int a,int b){
+        int c = a%b;
+        return c;
+    }
+}
+public class Mnc {
+    int show5(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println("Enter the number ");
+        int c = sc.nextInt();
+        System.out.println("Enter the number ");
+        int d = sc.nextInt();
+        int e = a+b+c+d;
+        return e;
+    }
+    int show6(int a,int b,int c,int d){
+        int e = a*b*c*d;
+        return e;
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println("Enter the number ");
+        int c = sc.nextInt();
+        System.out.println("Enter the number ");
+        int d = sc.nextInt();
+        B k = new B();
+        k.show1();
+        k.show2(a, b);
+        k.show3();
+        k.show4(a, b);
+        Mnc k1 = new Mnc();
+        k1.show5();
+        k1.show6(a, b, c, d);
+    }
+}
+-----------------------------------------------------------
+class A
+show1() :no return and no argument :   division
+show2() :no return and argument :multiplication 
+covairant return type method 
+
+class B ex A
+show3() : return and no argument :addition
+
+show4() : return and argument :modular 
+covairant return type method 
+
+class Main 
+show5() : return and no argument :four number add
+
+show6() : return and argument :four number multiplication 
+covairant return type method 
+
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show2(int a,int b){
+        System.out.println(a*b);
+    }
+    A get(){
+        return this;
+    }
+}
+class B extends A{
+    int show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        int c = a+b;
+        return c;
+    }
+    int show4(int a,int b){
+        int c = a%b;
+        return c;
+    }
+    B get(){
+        return this;
+    }
+}
+public class Mnc {
+    int show5(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println("Enter the number ");
+        int c = sc.nextInt();
+        System.out.println("Enter the number ");
+        int d = sc.nextInt();
+        int e = a+b+c+d;
+        return e;
+    }
+    int show6(int a,int b,int c,int d){
+        int e = a*b*c*d;
+        return e;
+    }
+    Mnc get(){
+        return this;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println("Enter the number ");
+        int c = sc.nextInt();
+        System.out.println("Enter the number ");
+        int d = sc.nextInt();
+        B k = new B();
+        k.show1();
+        k.show2(a, b);
+        k.show3();
+        k.show4(a, b);
+        Mnc k1 = new Mnc();
+        k1.show5();
+        k1.show6(a, b, c, d);
+    }
+}
+----------------------------------------------------------------------
+class A
+A() :default :
+show1() :no return and no argument :division  
+show2() :no return and argument :modular
+covairant return type method 
+
+class B ex A
+B() :default 
+show3() : return and no argument :addition
+
+show4() : return and argument : multiplication 
+covairant return type method 
+
+class Main 
+Main() :default 
+
+show5() : return and no argument :four number add
+
+show6() : return and argument :four number multiplication 
+covairant return type method 
+
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    A(){
+        System.out.println("Constracter");
+    }
+    void show1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show2(int a,int b){
+        System.out.println(a*b);
+    }
+    A get(){
+        return this;
+    }
+}
+class B extends A{
+    B(){
+        System.out.println("B constracter");
+    }
+    int show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        int c = a+b;
+        return c;
+    }
+    int show4(int a,int b){
+        int c = a%b;
+        return c;
+    }
+    B get(){
+        return this;
+    }
+}
+public class Mnc {
+    Mnc(){
+        System.out.println("Mnc constracter");
+    }
+    int show5(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println("Enter the number ");
+        int c = sc.nextInt();
+        System.out.println("Enter the number ");
+        int d = sc.nextInt();
+        int e = a+b+c+d;
+        return e;
+    }
+    int show6(int a,int b,int c,int d){
+        int e = a*b*c*d;
+        return e;
+    }
+    Mnc get(){
+        return this;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println("Enter the number ");
+        int c = sc.nextInt();
+        System.out.println("Enter the number ");
+        int d = sc.nextInt();
+        B k = new B();
+        k.show1();
+        k.show2(a, b);
+        k.show3();
+        k.show4(a, b);
+        Mnc k1 = new Mnc();
+        k1.show5();
+        k1.show6(a, b, c, d);
+    }
+}
+-----------------------------------------------------------------
+class A
+instance variable :normal 
+getter setter method :two number addition 
+
+class B 
+instance variable :normal 
+getter setter method :two number addition 
+
+
+class Main 
+instance variable :normal 
+getter setter method :two number addition 
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    void setA(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA(int a,int b) {
+        return a+b;
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void setA(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA(int a,int b) {
+        return a+b;
+    }
+}
+public class Mnc {
+    int a;
+    int b;
+    void setA(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA(int a,int b) {
+        return a+b;
+    }
+    public static void main(String[] args) {
+        B k = new B();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number a");
+        int a = sc.nextInt();
+        System.out.println("Enter the number b");
+        int b = sc.nextInt();
+        k.setA(a, b);
+        System.out.println(k.getA(a, b));
+        Mnc k1 = new Mnc();
+        k1.setA(a, b);
+        System.out.println(k1.getA(a, b));
+    }
+}
+-----------------------------------------------------------------
+class A
+instance variable :private 
+getter setter method :two number addition 
+
+class B 
+instance variable :private 
+getter setter method :two number addition 
+
+
+class Main 
+instance variable :private 
+getter setter method :two number addition 
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    private int a;
+    private int b;
+    void setA(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA(int a,int b) {
+        return a+b;
+    }
+}
+class B extends A{
+    private int a;
+    private int b;
+    void setA(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA(int a,int b) {
+        return a+b;
+    }
+}
+public class Mnc {
+    private int a;
+    private int b;
+    void setA(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA(int a,int b) {
+        return a+b;
+    }
+    public static void main(String[] args) {
+        B k = new B();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number a");
+        int a = sc.nextInt();
+        System.out.println("Enter the number b");
+        int b = sc.nextInt();
+        k.setA(a, b);
+        System.out.println(k.getA(a, b));
+        Mnc k1 = new Mnc();
+        k1.setA(a, b);
+        System.out.println(k1.getA(a, b));
+    }
+}
+-----------------------------------------------------------------
+class A
+instance variable :value deni hey through this 
+:two number addition 
+
+class B 
+instance variable : 
+ :two number addition 
+
+
+class Main 
+instance variable : 
+ :two number addition 
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+public class Mnc {
+    int a;
+    int b;
+    void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a, b);
+        k.show(a, b);
+        Mnc k1 = new Mnc();
+        k1.show2(a, b);
+    }
+}
+-----------------------------------------------------------------
+class A
+protected instance variable :value deni hey through this 
+:two number addition 
+
+class B 
+instance variable : 
+ :two number addition 
+
+
+class Main 
+instance variable : 
+ :two number addition 
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    protected int a;
+    protected int b;
+    void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+class B extends A{
+    protected int a;
+    protected int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+public class Mnc {
+    protected int a;
+    protected int b;
+    void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a, b);
+        k.show(a, b);
+        Mnc k1 = new Mnc();
+        k1.show2(a, b);
+    }
+}
+
+-----------------------------------------------------------------
+class A
+instance variable :value deni hey through this 
+public :two number addition 
+
+class B 
+instance variable : 
+ :two number addition 
+
+
+class Main 
+instance variable : 
+ :two number addition 
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    protected int a;
+    protected int b;
+    public void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+class B extends A{
+    protected int a;
+    protected int b;
+    public void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+public class Mnc {
+    protected int a;
+    protected int b;
+    public void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a, b);
+        k.show(a, b);
+        Mnc k1 = new Mnc();
+        k1.show2(a, b);
+    }
+}
+-----------------------------------------------------------------
+class A
+instance variable :value deni hey through this 
+default:two number addition 
+
+class B 
+instance variable : 
+ :two number addition 
+
+
+class Main 
+instance variable : 
+ :two number addition 
+
+single level child k through access:main()
+
+Ans)
+Not possible
+-------------------------------------------------------
+class A
+show1() :public method 
+
+class B 
+show2()
+
+class Main 
+
+single level child k through access:main()
+
+B k through kya show1 access ho jaega kya 
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    public void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    public void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a, b);
+        k.show(a, b);
+    }
+}
+
+-------------------------------------------------------
+class A
+show1() :private method 
+
+class B 
+show2()
+
+class Main 
+
+single level child k through access:main()
+
+B k through kya show1 access ho jaega kya 
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    private void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a, b);
+        k.show(a, b);// error at this point 
+    }
+}
+-------------------------------------------------------
+class A
+show1() :protected method 
+
+class B 
+show2()
+
+class Main 
+
+single level child k through access:main()
+
+B k through kya show1 access ho jaega kya
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    protected void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a, b);
+        k.show(a, b);
+    }
+} 
+-------------------------------------------------------
+class A
+show1() :default method 
+
+class B 
+show2()
+
+class Main 
+
+single level child k through access:main()
+
+B k through kya show1 access ho jaega kya 
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    default void show(int a,int b){//error at this point (not possible task)
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a, b);
+        k.show(a, b);
+    }
+}
+------------------------------------------------------------------
+----------------------------------------------------------------------
+class A
+A() :default :addition two number user input 
+
+show1() :no return and no argument :division  
+show2() :no return and argument :modular
+covairant return type method 
+
+class B ex A
+B() :default :substraction two number user input 
+
+show3() : return and no argument :addition
+
+show4() : return and argument : multiplication 
+covairant return type method 
+
+class Main 
+Main() :default 
+
+show5() : return and no argument :four number add
+
+show6() : return and argument :four number multiplication 
+covairant return type method 
+
+
+single level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    default A(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+    void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Result : "+a+b);
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a, b);
+        k.show(a, b);
+    }
+}
+
+
+//this code will not work because we can not make a default constracter.
+----------------------------------------------------------------------
+		MULTILEVEL INHERITANCE 
+class A
+show1() :no return and no argument :division  
+
+class B
+show2() :no return and argument :modular
+
+
+class C
+show6() : return and argument :four number multiplication 
+
+
+Main class 
+
+multilevel  level child k through access:main()
+----------------------------------------------------------------------
+class A
+addition :getter setter
+
+class B
+sub :getter setter
+
+
+class C
+div :getter setter
+
+
+Main class 
+
+multilevel  level child k through access:main()
+----------------------------------------------------------------------
+class A
+covairant return type method
+ 
+class B 
+covairant return type method 
+
+class C
+covairant return type method 
+
+class D
+covairant return type method 
+
+class E
+covairant return type method 
+
+class Main 
+multilevel  level child k through access:main()
+----------------------------------------------------------------------
+class A
+protected instance variable :value deni hey through this 
+:two number addition 
+
+class B 
+instance variable : 
+ :two number sub 
+
+class C 
+ :two number div 
+
+class Main 
+instance variable : 
+ :two number mul 
+
+child C class 
+multilevel  level child k through access:main()
+----------------------------------------------------------------------
+class A
+protected instance variable :value deni hey through this 
+:two number addition 
+
+class B 
+instance variable : 
+ :two number sub 
+
+class C 
+ :two number div 
+
+class Main 
+instance variable : 
+ :two number mul 
+
+child Main class 
+multilevel  level child k through access:main()
+----------------------------------------------------------------------
+class A
+private instance variable :value deni hey through this 
+:two number addition 
+
+class B 
+instance variable : 
+ :two number sub 
+
+class C 
+ :two number div 
+
+class Main
+
+multilevel  level child k through access:main()
+----------------------------------------------------------------------
+class A
+public instance variable :value deni hey through this 
+:two number addition 
+
+class B 
+instance variable : 
+ :two number sub 
+
+class C 
+ :two number div 
+
+class Main 
+instance variable : 
+ :two number mul 
+
+child C class 
+multilevel  level child k through access:main()
+----------------------------------------------------------------------
+class A
+default instance variable :value deni hey through this 
+:two number addition 
+
+class B 
+instance variable : 
+ :two number sub 
+
+class C 
+ :two number div 
+
+class Main 
+instance variable : 
+ :two number mul 
+
+child C class 
+multilevel  level child k through access:main()
+--------------------------------------------------------------
+class A
+show1() :public 
+
+class B
+show2()
+
+class C 
+show3()
+
+class Main 
+multilevel  level child k through access:main()
+--------------------------------------------------------------
+class A
+show1() :private 
+
+class B
+show2()
+
+class C 
+show3()
+
+class Main 
+multilevel  level child k through access:main()
+--------------------------------------------------------------
+class A
+show1() :protected 
+
+class B
+show2()
+
+class C 
+show3()
+
+class Main 
+multilevel  level child k through access:main()
+
+--------------------------------------------------------------
+class A
+show1() :default 
+
+class B
+show2()
+
+class C 
+show3()
+
+class Main 
+multilevel  level child k through access:main()
+------------------------------------------------------------
+class A 
+instance variable : private 
+method :protected :print :variable 
+
+class B
+method :protected :print :variable 
+
+class C
+method :public :print :variable 
+
+class Main 
+multilevel  level child k through access:main()
+------------------------------------------------------------
+class A 
+instance variable : protected 
+method :protected :print :variable 
+
+class B
+method :protected :print :variable 
+
+class C
+method :public :print :variable 
+
+class Main 
+multilevel  level child k through access:main()
+------------------------------------------------------------
+class A 
+instance variable : protected 
+method :private :print :variable 
+
+class B
+method :protected :print :variable 
+
+class C
+method :public :print :variable 
+
+class Main 
+multilevel  level child k through access:main()
+------------------------------------------------------------
+class A
+covariant return type :public 
+
+class B
+covariant return type :public 
+
+class C 
+covariant return type :public 
+
+class Main 
+multilevel  level child k through access:main()
+
+------------------------------------------------------------
+class A
+covariant return type :private 
+
+class B
+covariant return type :protected 
+
+class C 
+covariant return type :default 
+
+class Main 
+multilevel  level child k through access:main()
+---------------------------------------------------------------------

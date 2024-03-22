@@ -1,0 +1,728 @@
+1)
+Problem Statement – Chaman planned to choose a four digit lucky number for his car. His
+lucky numbers are 3,5 and 7. Help him find the number, whose sum is divisible by 3 or 5 or
+7. Provide a valid car number, Fails to provide a valid input then display that number is not a
+valid car number.
+Note : The input other than 4 digit positive number[includes negative and 0] is considered as
+invalid.
+Refer the samples, to read and display the data.
+
+
+Sample Input 1:
+Enter the car no:1234
+Sample Output 1:
+Lucky Number
+
+
+Sample Input 2:
+Enter the car no:1214
+Sample Output 2:
+Sorry its not my lucky number
+
+
+Sample Input 3:
+Enter the car no:14
+Sample Output 3:
+14 is not a valid car number
+
+import java.util.*;
+public class Test {
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the car number :");
+    int num=sc.nextInt();
+    if(num>=1000 && num<=9999){
+        int rem,sum=0;
+        while(num>0){
+            rem=num%10;
+            sum=sum+rem;
+            num=num/10;
+        }
+        if(sum%3==0||sum%5==0||sum%7==0){
+            System.out.println("this is a lucky number");
+        }
+        else {
+            System.out.println("this is not a lucky number");
+        }
+    }
+    else {
+        System.out.println("not a valid input");
+    }
+}
+    
+}
+-------------------------------------------------------------------
+
+2)
+Problem Statement – Rhea Pandey’s teacher has asked her to prepare well for the
+lesson on seasons. When her teacher tells a month, she needs to say the season
+corresponding to that month. Write a program to solve the above task.
+Spring – March to May,
+Summer – June to August,
+Autumn – September to November and,
+Winter – December to February.
+Month should be in the range 1 to 12. If not the output should be “Invalid month”.
+Sample Input 1:
+Enter the month:11
+Sample Output 1:
+Season:Autumn
+Sample Input 2:
+Enter the month:13
+Sample Output 2:
+Invalid month
+
+import java.util.*;
+public class Test {
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the months parameters :");
+    String name=sc.nextLine();
+    if(name.equals("march to may")){
+        System.out.println("spring");
+    }
+    else if(name.equals("september to november")){
+    System.out.println("autumn");
+    }
+    else if(name.equals("december to february")){
+        System.out.println("winter ");
+    }
+    else {
+        System.out.println("invalid");
+    }
+}
+    
+}
+-------------------------------------------------------------------------
+
+3)
+Write a method that takes two parameters (int x and int y) and returns their sum.
+
+import java.util.*;
+public class Test {
+    int add(int x,int y){
+        
+        int c=x+y;
+        System.out.println("addition  : "+c);
+        return c;
+    }
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the value of a and b for addition :");
+    int a=sc.nextInt();
+    int b=sc.nextInt();
+    Test aj=new Test();
+    aj.add(a, b);
+}
+    
+}
+-----------------------------------------------------------------------
+
+4)
+Create a method that checks whether a given number is even or odd.
+
+import java.util.*;
+public class Test {
+    int check(int x){
+        if(x%2==0){
+            System.out.println("even");
+        }
+        else{
+            System.out.println("odd");
+        }
+       
+        return x;
+    }
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the number :");
+    int x=sc.nextInt();
+    Test aj=new Test();
+    aj.check(x);
+}
+    
+}
+---------------------------------------------------------------------------
+5)
+
+
+Implement a method to calculate the factorial of a given number.
+
+import java.util.*;
+public class Test {
+    int fact(int a){
+       
+        int fact=1;
+        for(int i=1;i<=a;i++){
+        fact=fact*i;
+        }
+        System.out.println("factorial : "+fact);
+        
+        return a;
+    }
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the number :");
+    int a=sc.nextInt();
+    Test aj=new Test();
+    aj.fact(a);
+}
+    
+}
+------------------------------------------------------------------------------
+
+6)
+Create a method that calculates the power of a number (x^y).
+
+  || NOT STUDIED YET ||
+
+------------------------------------------------------------------------
+
+7)
+Create a method that prints the Fibonacci series up to a given limit.
+
+import java.util.*;
+public class Test {
+    int fibo(int a){
+       
+        int n0=0;
+        int n1=1;
+        int n3;
+        System.out.print(n0+" ");
+        System.out.print(n1+" ");
+        for(int i=1;i<=a;i++){
+            n3=n0+n1;
+            System.out.print(n3+" ");
+            n0=n1;
+            n1=n3;
+        }
+        return a;
+    }
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the number :");
+    int a=sc.nextInt();
+    Test aj=new Test();
+    aj.fibo(a);
+}
+    
+}
+----------------------------------------------------------------------------
+
+8)
+Write a method to check if a given number  is a palindrome.
+Write a Java method called swapValues that takes two integer parameters and swaps their values
+import java.util.*;
+public class Test {
+    void palli(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to find pallindrom ");
+        int c = sc.nextInt();
+        int rem;
+        int sum = 0;
+        int temp = c;
+        while(c>0){
+            rem = c%10;
+            sum = sum*10+rem;
+            c = c/10;
+        }
+        String name = (sum==temp)?"pallindrome":"Not pallindrom";
+        System.out.println(name);
+        }
+        void swap(){
+            int c;
+            Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a and b :");
+        int a=sc.nextInt();
+        int b = sc.nextInt();
+        c=a;
+        a=b;
+        b=c;
+        System.out.println("the swap value of a if :"+a);
+        System.out.println("the swap valure of b  is :"+b);
+        }
+public static void main(String[] args) {
+    
+    Test aj=new Test();
+    aj.palli();
+    aj.swap();
+}
+    
+}
+---------------------------------------------------------------------------
+
+9)
+Default Constructor:
+Write a Java class with a default constructor. Print a message inside the constructor to indicate that it has been called.
+
+import java.util.*;
+public class Test{
+    Test(){
+        System.out.println("this is default costractor");
+    }
+    public static void main(String[] args) {
+        Test aj=new Test();
+    }
+}
+------------------------------------------------------------------------
+
+
+10)
+Parameterized Constructor:
+Create a class with a parameterized constructor that takes two integers as parameters and initializes two instance variables.
+
+import java.util.*;
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+}
+public class Test {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the value of a and b :");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        A aj=new A(a, b);
+
+    }
+}
+----------------------------------------------------------------------------
+
+11)
+Initialization Block:
+Use an instance initialization block to initialize an instance variable in a class.
+
+   import java.util.*;
+
+public class Test {
+    int a;
+    {
+        System.out.println(a);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the value of a  :");
+        int a=sc.nextInt();
+        
+        Test aj=new Test();
+
+    }
+}
+----------------------------------------------------------------------------------
+
+12)
+java program to enter student marks and find percentage and grade
+A college has the following rules for the grading system:
+5 marks (grade + %)
+1. Below 25 – F
+2. 25 to 45 – E
+3. 45 to 50 – D
+4. 50 to 60 – C
+5. 60 to 80 – B 
+6. Above 80 – A
+
+import java.util.*;
+public class Test {
+    public static void main(String[] args) {
+        
+    
+    
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Enter the marks for each of the five subjects:");
+    int m1 = input.nextInt();
+    int m2 = input.nextInt();
+    int m3 = input.nextInt();
+    int m4 = input.nextInt();
+    int m5 = input.nextInt();
+
+    int totalMarks = m1 + m2 + m3 + m4 + m5;
+    float percentage = totalMarks / 5.0f;
+
+    System.out.println("Total Marks: " + totalMarks);
+    System.out.println("Percentage: " + percentage);
+    if (percentage >= 90) {
+        System.out.println("Grade: A");
+    } 
+    else if (percentage >= 80) {
+        System.out.println("Grade: B");
+    } 
+    else if (percentage >= 70) {
+        System.out.println("Grade: C");
+    }
+     else if (percentage >= 60) {
+        System.out.println("Grade: D");
+    }
+     else if (percentage >= 40) {
+        System.out.println("Grade: E");
+    }
+    else {
+        System.out.println("Grade: F");
+    }
+       
+}
+    
+}
+-----------------------------------------------------------------------------
+
+13)
+Write a java program to read the roll no, name,fnname and marks of three subjects and calculate the total, percentage and division.
+Test Data :
+Input the Roll Number of the student :784
+student name : 
+fname:
+mname:
+address:
+contact:
+Input the marks of Physics, Chemistry and Computer Application : 70 80 90
+total: 
+precentage : % 
+division:
+
+import java.util.*;
+public class Test {
+    public static void main(String[] args) {
+            
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Input the Roll Number of the student: ");
+        int rollNumber = input.nextInt();
+        input.nextLine(); 
+
+        System.out.print("Input the Name of the Student: ");
+        String studentName = input.nextLine();
+
+        System.out.print("Input the marks of Physics, Chemistry, and Computer Application: ");
+        int physics = input.nextInt();
+        int chemistry = input.nextInt();
+        int computer = input.nextInt();
+
+        int total = physics + chemistry + computer;
+        float percentage = (float) total / 300 * 100;
+
+        String division;
+        if (percentage >= 80) {
+            division = "First";
+        } else if (percentage >= 60) {
+            division = "Second";
+        } else if (percentage >= 48) {
+            division = "Pass";
+        } else {
+            division = "Fail";
+        }
+
+        System.out.println("\nRoll Number: " + rollNumber);
+        System.out.println("Name of Student: " + studentName);
+        System.out.println("Marks in Physics: " + physics);
+        System.out.println("Marks in Chemistry: " + chemistry);
+        System.out.println("Marks in Computer Application: " + computer);
+        System.out.println("Total Marks: " + total);
+        System.out.println("Percentage: " + percentage + "%");
+        System.out.println("Division: " + division);
+}
+    
+}
+----------------------------------------------------------------------------------
+
+14)
+Write a program in your preferred programming language that includes functions/methods to perform the following tasks:
+
+Check if a given number is a palindrome.
+Determine whether a number is an Armstrong number.
+Calculate the factorial of a given number.
+Check if a number is prime.
+Generate the Fibonacci series up to a specified term.
+
+import java.util.*;
+public class Test {
+
+    void palli(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value to find pallindrom ");
+        int c = sc.nextInt();
+        int rem;
+        int sum = 0;
+        int temp = c;
+        while(c>0){
+            rem = c%10;
+            sum = sum*10+rem;
+            c = c/10;
+        }
+        String name = (sum==temp)?"pallindrom":"Not pallindrom";
+        System.out.println(name);
+        }  
+        void armstrong(){
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter the number to check  is a armstrong :");
+            int a=sc.nextInt();
+            int rem;
+            int sum=0;
+            int temp=a;
+            while(a>0){
+                rem=a%10;
+                sum=sum+rem*rem*rem;
+                a=a/10;
+            }
+            String ankit=(temp==sum)?"yes armstong":"not a armstrong";
+            System.out.println(ankit);
+        }
+        void prime(){    
+        Scanner scanner = new Scanner(System.in);
+                System.out.print("Enter a number: ");
+                int num = scanner.nextInt();
+                boolean isPrime = true;
+        
+                for (int i = 2; i <= num / 2; ++i) {
+                    if (num % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+        
+                if (isPrime) {
+                    System.out.println(num + " is a prime number.");
+                } else {
+                    System.out.println(num + " is not a prime number.");
+                }
+            
+            }
+         void fact(){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the value to find pallindrom ");
+            int a=sc.nextInt();
+            int fact=1;
+            for(int i=1;i<=a;i++){
+            fact=fact*i;
+            }
+            System.out.println("factorial"+fact);
+        }
+        void fibo(){
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter the number to print fibonacci :");
+            int a=sc.nextInt();
+            int n0=0;
+            int n1=1;
+            int n3;
+            System.out.println(n0+" ");
+            System.out.println(n1+" ");
+            for(int i=1;i<=a;i++){
+                n3=n0+n1;
+                System.out.println(n3+" ");
+                n0=n1;
+                n1=n3;
+            }
+        }
+        public static void main(String[] args) {
+            Test aj=new Test();
+            aj.palli();
+            aj.armstrong();
+            aj.fact();
+            aj.fibo();
+            aj.prime();
+        }
+
+}
+-------------------------------------------------------------------------------
+
+15)
+     1 
+    2 2 
+   3 3 3 
+  4 4 4 4 
+ 5 5 5 5 5 
+6 6 6 6 6 6 
+
+import java.util.*;
+ 
+public class Test {
+    public static void main(String[] args)
+    {
+        for (int i=1; i<=6; i++) {
+            for (int s=5; s>=i; s--) {
+                    System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+            System.out.print( " "+i);
+        }
+        System.out.println();
+        }
+        }
+    }
+
+---------------------------------------------------------------------
+
+16)
+1 
+0 1 
+1 0 1 
+0 1 0 1 
+1 0 1 0 1 
+0 1 0 1 0 1
+
+import java.util.*;
+ 
+public class Test {
+    public static void main(String[] args)
+    {
+        int rows = 6;
+        
+
+        for (int i = 0; i < rows; i++) {
+            int num = i % 2 == 0 ? 1 : 0;
+            
+           
+            for (int j = 0; j <= i; j++) {
+                System.out.print(num + " ");
+                num = (num +1 ) % 2; 
+            }
+            
+            
+            System.out.println();
+        }
+        }
+    }
+
+------------------------------------------------------------------------- 
+
+17)
+XYZ Technologies is in the process of increment the salary of the employees. This
+increment is done based on their salary and their performance appraisal rating.
+If the appraisal rating is between 1 and 3, the increment is 10% of the salary.
+If the appraisal rating is between 3.1 and 4, the increment is 25% of the salary.
+If the appraisal rating is between 4.1 and 5, the increment is 30% of the salary.
+Help them to do this, by writing a program that displays the incremented salary. Write a
+class “IncrementCalculation.java” and write the main method in it.
+Note : If either the salary is 0 or negative (or) if the appraisal rating is not in the range 1 to
+5 (inclusive), then the output should be “Invalid Input”.
+Sample Input 1 :
+Enter the salary
+8000
+Enter the Performance appraisal rating
+3
+Sample Output 1 :
+8800
+Sample Input 2 :
+Enter the salary
+7500
+Enter the Performance appraisal rating
+4.3
+Sample Output 2 :
+9750
+Sample Input 3 :
+Enter the salary
+-5000
+Enter the Performance appraisal rating
+6
+Sample Output 3 :
+Invalid Input
+
+import java.util.*;
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the salary");
+        float sal=sc.nextFloat();
+        System.out.println("enter the performance appraisal rating");
+        float ap=sc.nextFloat();
+        if(ap>=1 && ap<=3){
+            float inc=(sal/100)*10;
+            System.out.println("the salary is"+(sal+inc));
+        }
+        else if(ap>=3.1 && ap<=4){
+            float inc=(sal/100)*25;
+             System.out.println("the salary is"+(sal+inc));
+        }
+        else if(ap>=4.1 && ap<=5){
+            float inc=(sal/100)*30;
+             System.out.println("the salary is"+(sal+inc));
+        }
+    }
+}
+---------------------------------------------------------------------------
+
+18)
+     *
+    ***
+   *****
+  *******
+ *********
+***********
+ *********
+  *******
+   *****
+    ***
+     *
+
+import java.util.*;
+ 
+public class Test {
+    public static void main(String[] args)
+    {
+        for (int i=1; i<=6; i++) {
+            for (int s=5; s>=i; s--) {
+                    System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+            System.out.print( " *");
+        }
+        System.out.println();
+        }
+        for (int i=1; i<=5; i++) {
+            for (int s=1; s<=i; s++) {
+                    System.out.print(" ");
+            }
+            for(int j=5; j>=i; j--){
+            System.out.print(" *");
+        }
+        System.out.println();
+        }
+    }
+}
+-----------------------------------------------------------------------
+
+19)
+* 
+* * 
+* * * 
+* * * * 
+* * * 
+* * 
+* 
+
+import java.util.*;
+ 
+public class Test {
+    public static void main(String[] args)
+    {
+        for (int i=1; i<=4; i++) {
+            for (int j=1; j<=i; j++) {
+                    System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i=1; i<=3; i++) {
+            for (int j=3; j>=i; j--) {
+                    System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+}
+----------------------------------------------------------------
+
+20)
+1 6 11 16 21 
+2 7 12 17 22
+3 8 13 18 23 
+4 9 14 19 24
+5 10 15 20 25
+
+ 
+        }
