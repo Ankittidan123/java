@@ -1,0 +1,516 @@
+1)class A
+
+
+class B ex A 
+
+Main :
+make object of class A and access from B class
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show1(){
+        System.out.println("A class");
+    }
+}
+class B extends A{
+    void show2(){
+        System.out.println("B class");
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        A k = new B();
+    }
+}
+
+---------------------------------------------------------------------
+2)
+class A :ab
+show1 :no return and no argument 
+show2 :ab: return and no argument 
+show3: return and no argument 
+show4 :ab: return and  argument 
+
+class B ex A
+show5:no return and no argument 
+show6:no return and  argument 
+show7: return and no argument 
+
+class Main 
+two ways access 
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    void show1(){
+        System.out.println("Hello i am show1");
+    }
+    abstract int show2();
+    int show3(){
+        return 0;
+    }
+    abstract int show4(int a);
+}
+class B extends A{
+    int show2(){
+        return 1;
+    }
+    int show4(int a){
+        return a;
+    }
+    void show5(){
+        System.out.println("Hello i am show5");
+    }
+    void show6(int a){
+        System.out.println(a);
+    }
+    int show7(){
+        return 0;
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        B k = new B();
+        k.show1();
+        k.show2();
+        k.show3();
+        k.show4(a);
+        k.show5();
+        k.show6(a);
+        k.show7();
+    }
+}
+
+Second way
+
+import java.util.Scanner;
+abstract class A{
+    void show1(){
+        System.out.println("Hello i am show1");
+    }
+    abstract int show2();
+    int show3(){
+        return 0;
+    }
+    abstract int show4(int a);
+}
+class B extends A{
+    int show2(){
+        return 1;
+    }
+    int show4(int a){
+        return a;
+    }
+    void show5(){
+        System.out.println("Hello i am show5");
+    }
+    void show6(int a){
+        System.out.println(a);
+    }
+    int show7(){
+        return 0;
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        A k = new A(){
+            int show2(){
+                return 1;
+            }
+            int show4(int a){
+                return a;
+            }
+        };
+    }
+}
+
+--------------------------------------------------------------
+
+3)
+class A :ab
+show1 :no return and no argument 
+show2 :ab: return and no argument 
+show3: return and no argument 
+show4 :ab: return and  argument 
+
+class B ex A
+show5:no return and no argument 
+show6:no return and  argument 
+show7: return and no argument 
+
+class Main 
+anonymous inner class 
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    void show1(){
+        System.out.println("Hello i am show1");
+    }
+    abstract int show2();
+    int show3(){
+        return 0;
+    }
+    abstract int show4(int a);
+}
+class B extends A{
+    int show2(){
+        return 1;
+    }
+    int show4(int a){
+        return a;
+    }
+    void show5(){
+        System.out.println("Hello i am show5");
+    }
+    void show6(int a){
+        System.out.println(a);
+    }
+    int show7(){
+        return 0;
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        A k = new A(){
+            int show2(){
+                return 1;
+            }
+            int show4(int a){
+                return a;
+            }
+        };
+    }
+}
+
+---------------------------------------------------------------
+
+4)
+class A :ab 
+A()
+show1 :ab
+show2 
+
+class B ex A
+B()
+show3
+show4
+
+class C:ab
+C()
+show5:ab
+show6
+
+
+class D ex C
+D()
+show7
+show8
+
+
+class Main 
+a)child k through abstraction ka object bnana hey 
+
+b)anonymous inner class 
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    A(){
+        System.out.println("I am constracter");
+    }
+    abstract void show1();
+    void show2(){
+        System.out.println("I am show2");
+    }
+}
+class B extends A{
+    void show1(){
+        System.out.println("I am show1");
+    }
+    B(){
+        System.out.println("I am B constracter");
+    }
+    void show3(){
+        System.out.println("I am show3");
+    }
+    void show4(){
+        System.out.println("I am show4");
+    }
+}
+abstract class C{
+    C(){
+        System.out.println("I am c constracter");
+    }
+    abstract void show5();
+    void show6(){
+        System.out.println("Hello i am show6");
+    }
+}
+class D extends C{
+    void show5(){
+        System.out.println("Hello i am show5");
+    }
+    D(){
+        System.out.println("I am d constracter");
+    }
+    void show7(){
+        System.out.println("Hello i am show7");
+    }
+    void show8(){
+        System.out.println("Hello i am show8");
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        C k = new D(){
+            void show5(){
+                System.out.println("Hello i am show5");
+            }
+        };
+        k.show5();
+        A k1 = new B(){
+            void show1(){
+                System.out.println("hello i am show1");
+            }
+        };
+        k1.show1();
+    }
+}
+--------------------------------------------------------------
+
+5)
+class A :ab 
+A()
+show1 :ab
+show2 
+
+class B ex A
+B() :parameterised
+show3
+show4
+
+class C:ab
+C()
+show5:ab
+show6
+
+
+class D ex C
+D() :parameterised
+
+show7
+show8
+
+
+class Main 
+a)child k through abstraction ka object bnana hey 
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    A(){
+        System.out.println("I am constracter");
+    }
+    abstract void show1();
+    void show2(){
+        System.out.println("I am show2");
+    }
+}
+class B extends A{
+    void show1(){
+        System.out.println("I am show1");
+    }
+    B(int a){
+        System.out.println("I am B constracter"+a);
+    }
+    void show3(){
+        System.out.println("I am show3");
+    }
+    void show4(){
+        System.out.println("I am show4");
+    }
+}
+abstract class C{
+    C(){
+        System.out.println("I am c constracter");
+    }
+    abstract void show5();
+    void show6(){
+        System.out.println("Hello i am show6");
+    }
+}
+class D extends C{
+    void show5(){
+        System.out.println("Hello i am show5");
+    }
+    D(int a){
+        System.out.println("I am d constracter"+a);
+    }
+    void show7(){   
+        System.out.println("Hello i am show7");
+    }
+    void show8(){
+        System.out.println("Hello i am show8");
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        C k = new D(2);
+        k.show5();
+        k.show6();
+        A k1 = new B(3);
+        k1.show1();
+        k1.show2();
+    }
+}
+
+------------------------------------------------------------------
+
+6)
+class A :ab 
+A():parameterised
+
+show1 :ab
+show2 
+
+class B ex A
+B() :parameterised
+show3
+show4
+
+class C:ab
+C():parameterised
+show5:ab
+show6
+
+
+class D ex C
+D() :parameterised
+show7
+show8
+
+
+class Main 
+a)child k through abstraction ka object bnana hey 
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    A(){
+        System.out.println("I am constracter");
+    }
+    abstract void show1();
+    void show2(){
+        System.out.println("I am show2");
+    }
+}
+class B extends A{
+    void show1(){
+        System.out.println("I am show1");
+    }
+    B(int a){
+        System.out.println("I am B constracter"+a);
+    }
+    void show3(){
+        System.out.println("I am show3");
+    }
+    void show4(){
+        System.out.println("I am show4");
+    }
+}
+abstract class C{
+    C(int a){
+        System.out.println("I am c constracter"+a);
+    }
+    abstract void show5();
+    void show6(){
+        System.out.println("Hello i am show6");
+    }
+}
+class D extends C{
+    void show5(){
+        System.out.println("Hello i am show5");
+    }
+    D(int a){
+        super(a);
+        System.out.println("I am d constracter"+a);
+    }
+    void show7(){   
+        System.out.println("Hello i am show7");
+    }
+    void show8(){
+        System.out.println("Hello i am show8");
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        C k = new D(2);
+        k.show5();
+        k.show6();
+        A k1 = new B(3);
+        k1.show1();
+        k1.show2();
+    }
+}
+
+---------------------------------------------------------------
+
+7)
+class A :ab 
+show1 :ab :public |private |protected |default
+show2 
+
+class B ex A
+show3
+show4
+
+class Main 
+access normal b k through
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    public abstract void show1();
+    void show2(){
+        System.out.println("I am show2");
+    }
+}
+class B extends A{
+    public void show1(){
+        System.out.println("I am show1");
+    }
+    void show3(){
+        System.out.println("I am show3");
+    }
+    void show4(){
+        System.out.println("I am show4");
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        B k = new B();
+        k.show1();
+        k.show2();
+        k.show3();
+        k.show4();
+    }
+}

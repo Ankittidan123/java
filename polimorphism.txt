@@ -1,0 +1,836 @@
+1)
+heirarichal inheritance 
+
+class A 
+add :no return and no argument 
+
+class B
+sub : return and no argument 
+
+
+class C
+div :no return and  argument 
+
+
+class D
+multi : return and  argument 
+
+
+class Main 
+user input 
+
+Ans)
+import java.util.Scanner;
+class A{
+    void add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number");
+        int a = sc.nextInt();
+        System.out.println("Enter the second number");
+        int b = sc.nextInt();
+        int c = a+b;
+        System.out.println(c);
+    }
+}
+class B extends A{
+    int sub(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number");
+        int a = sc.nextInt();
+        System.out.println("Enter the second number");
+        int b = sc.nextInt();
+        int c = a-b;
+        return c;
+    }
+}
+class C extends A{
+    void div(int a,int b){
+        int c = a/b;
+        System.out.println(a/b);
+    }
+}
+class D extends A{
+    int multi(int a,int b){
+        int c = a*b;
+        return c;
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        D k = new D();
+        k.multi(a, b);
+        k.add();
+        C k1 = new C();
+        k1.div(a, b);
+        k1.add();
+        B k2 = new B();
+        k2.sub();
+        k2.add();
+    }
+}
+
+-------------------------------------------------------------------------
+2)
+heirarichal inheritance 
+
+class A 
+default type constructor :khali rkhna hey 
+add :no return and no argument 
+
+class B
+default type constructor :khali rkhna hey 
+sub : return and no argument 
+
+
+class C
+default type constructor :khali rkhna hey 
+div :no return and  argument 
+
+
+class D
+default type constructor :khali rkhna hey 
+multi : return and  argument 
+
+
+class Main 
+user input 
+
+Ans)
+import java.util.Scanner;
+class A{
+    A(){
+        System.out.println("A class constructer");
+    }
+    void add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number");
+        int a = sc.nextInt();
+        System.out.println("Enter the second number");
+        int b = sc.nextInt();
+        int c = a+b;
+        System.out.println(c);
+    }
+}
+class B extends A{
+    B(){
+        System.out.println("B class constructer");
+    }
+    int sub(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number");
+        int a = sc.nextInt();
+        System.out.println("Enter the second number");
+        int b = sc.nextInt();
+        int c = a-b;
+        return c;
+    }
+}
+class C extends A{
+    C(){
+        System.out.println("C class constructer");
+    }
+    void div(int a,int b){
+        int c = a/b;
+        System.out.println(a/b);
+    }
+}
+class D extends A{
+    D(){
+        System.out.println("D class constructer");
+    }
+    int multi(int a,int b){
+        int c = a*b;
+        return c;
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        D k = new D();
+        k.multi(a, b);
+        k.add();
+        C k1 = new C();
+        k1.div(a, b);
+        k1.add();
+        B k2 = new B();
+        k2.sub();
+        k2.add();
+    }
+}
+-------------------------------------------------------------------------
+heirarichal inheritance 
+
+class A 
+getter setter add
+
+class B
+sub : getter setter
+
+
+class C
+div :getter setter
+
+
+class D
+multi : getter setter
+
+
+class Main 
+user input 
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    void setA1(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA1(){
+        int c = a+b;
+        return c;
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void setA2(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA2(){
+        int c = a-b;
+        return c;
+    }
+}
+class C extends A{
+    int a;
+    int b;
+    void setA3(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA3(){
+        int c = a/b;
+        return c;
+    }
+}
+class D extends A{
+    int a;
+    int b;
+    void setA4(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA4(){
+        int c = a*b;
+        return c;
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        D k = new D();
+        k.setA4(a, b);
+        k.setA1(a, b);
+        System.out.println(k.getA4());
+        System.out.println(k.getA1());
+        C k1 = new C();
+        k1.setA3(a, b);
+        k1.setA1(a, b);
+        System.out.println(k1.getA3());
+        System.out.println(k1.getA1());
+        B k2 = new B();
+        k2.setA2(a, b);
+        k2.setA1(a, b);
+        System.out.println(k2.getA2());
+        System.out.println(k2.getA1());
+    }
+}
+
+-------------------------------------------------------------------------
+single inheritance 
+
+class A 
+getter setter add
+
+class B
+sub : getter setter
+
+
+class C
+div :getter setter
+
+
+class D
+multi : getter setter
+
+
+class Main 
+user input 
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    void setA1(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA1(){
+        int c = a+b;
+        return c;
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void setA2(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA2(){
+        int c = a-b;
+        return c;
+    }
+}
+class C{
+    int a;
+    int b;
+    void setA3(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA3(){
+        int c = a/b;
+        return c;
+    }
+}
+class D{
+    int a;
+    int b;
+    void setA4(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA4(){
+        int c = a*b;
+        return c;
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        D k = new D();
+        k.setA4(a, b);
+        System.out.println(k.getA4());
+        C k1 = new C();
+        k1.setA3(a, b);
+        System.out.println(k1.getA3());
+        B k2 = new B();
+        k2.setA2(a, b);
+        k2.setA1(a, b);
+        System.out.println(k2.getA2());
+        System.out.println(k2.getA1());
+    }
+}
+
+-------------------------------------------------------------------------
+multilevel inheritance 
+
+class A 
+getter setter add
+
+class B
+sub : getter setter
+
+
+class C
+div :getter setter
+
+
+class D
+multi : getter setter
+
+
+class Main 
+user input 
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    void setA1(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA1(){
+        int c = a+b;
+        return c;
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void setA2(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA2(){
+        int c = a-b;
+        return c;
+    }
+}
+class C extends B{
+    int a;
+    int b;
+    void setA3(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA3(){
+        int c = a/b;
+        return c;
+    }
+}
+class D extends C{
+    int a;
+    int b;
+    void setA4(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getA4(){
+        int c = a*b;
+        return c;
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        D k = new D();
+        k.setA4(a, b);
+        k.setA1(a, b);
+        k.setA2(a, b);
+        k.setA3(a, b);
+        System.out.println(k.getA1());
+        System.out.println(k.getA2());
+        System.out.println(k.getA3());
+        System.out.println(k.getA4());
+    }
+}
+---------------------------------------------------------------------
+		OVERRIDING 
+======================================================================
+single level inheritance overriding 
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(){
+        System.out.println("A class method");
+    }
+}
+class B extends A{
+    void show(){
+        super.show();
+        System.out.println("B class method");
+    }
+}
+
+public class Mnc{
+    public static void main(String[] args) {
+        B k = new B();
+        k.show();
+    }
+}
+
+---------------------------------------------------------------------
+multil level inheritance overriding 
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(){
+        System.out.println("A class method");
+    }
+}
+class B extends A{
+    void show(){
+        super.show();
+        System.out.println("B class method");
+    }
+}
+class C extends B{
+    void show(){
+        super.show();
+        System.out.println("C class method");
+    }
+}
+class D extends C{
+    void show(){
+        super.show();
+        System.out.println("D class method");
+    }
+}
+
+public class Mnc{
+    public static void main(String[] args) {
+        D k = new D();
+        k.show();
+    }
+}
+
+---------------------------------------------------------------------
+hierarichal level inheritance overriding 
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(){
+        System.out.println("A class method");
+    }
+}
+class B extends A{
+    void show(){
+        super.show();
+        System.out.println("B class method");
+    }
+}
+class C extends A{
+    void show(){
+        super.show();
+        System.out.println("C class method");
+    }
+}
+class D extends A{
+    void show(){
+        super.show();
+        System.out.println("D class method");
+    }
+}
+
+public class Mnc{
+    public static void main(String[] args) {
+        B k2 = new B();
+        k2.show();
+        C k1 = new C();
+        k1.show();
+        D k = new D();
+        k.show();
+    }
+}
+---------------------------------------------------------------------
+user input 
+
+class A 
+show() :addition :no return and no argument 
+
+class B ex A 
+show() :sub :no return and no argument 
+
+Main 
+access
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    void show(){
+        super.show();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a-b);
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        B k2 = new B();
+        k2.show();
+    }
+}
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+user input 
+
+class A 
+show() :multi :no return and no argument 
+
+class B ex A 
+show() :add :no return and no argument 
+
+class C ex B
+show() :sub :no return and no argument 
+
+Main ex C 
+show() :div :no return and no argument 
+
+access
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a*b);
+    }
+}
+class B extends A{
+    void show(){
+        super.show();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+}
+class C extends B{
+    void show(){
+        super.show();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a-b);
+    }
+}
+public class Mnc extends C{
+    void show(){
+        super.show();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a/b);
+    }
+    public static void main(String[] args) {
+        Mnc k2 = new Mnc();
+        k2.show();
+    }
+}
+
+---------------------------------------------------------------------
+user input 
+
+class A 
+show() :multi :no return and  argument 
+
+class B ex A 
+show() :add :no return and no argument 
+
+class C ex B
+show() :sub :no return and  argument 
+
+Main ex C 
+show() :div :no return and no argument 
+
+access
+Main k through access
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(int a,int b){
+        System.out.println(a*b);
+    }
+}
+class B extends A{
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        super.show(a,b);
+        System.out.println(a+b);
+    }
+}
+class C extends B{
+    void show(int a,int b){
+        super.show();
+        System.out.println(a-b);
+    }
+}
+public class Mnc extends C{
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        super.show(a,b);
+        System.out.println(a/b);
+    }
+    public static void main(String[] args) {
+        Mnc k2 = new Mnc();
+        k2.show();
+    }
+}
+
+---------------------------------------------------------------------
+user input 
+
+class A 
+parameterised constructor :multi
+
+class B ex A
+parameterised constructor  
+show() :add :no return and no argument 
+
+class C ex B
+parameterised constructor :sub
+
+Main ex C 
+parameterised constructor 
+show() :div :no return and no argument 
+
+access
+Main k through access
+
+Ans)
+
+import java.util.Scanner;
+class A{
+    A(int a,int b){
+        System.out.println(a*b);
+    }
+}
+class B extends A{
+    B(int a,int b){
+        super(a, b);
+    }
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+}
+class C extends B{
+    C(int a,int b){
+        super(a, b);
+        System.out.println(a-b);
+    }
+}
+public class Mnc extends C{
+    Mnc(int a,int b){
+        super(a, b);
+    }
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a/b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        Mnc k2 = new Mnc(a,b);
+        k2.show();
+    }
+}
+
+---------------------------------------------------------------------
+class A 
+vairable 
+
+class B ex A 
+vairable 
+
+class C ex B
+vairable 
+
+Main access 
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a,b;
+    void show(int a,int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    int a,b;
+    void show(int a,int b){
+        this.a=a;
+        this.b=b;
+        super.show(a, b);
+        System.out.println(a*b);
+    }
+}
+class C extends B{
+    int a,b;
+    void show(int a,int b){
+        this.a=a;
+        this.b=b;
+        super.show(a,b);
+        System.out.println(a/b);
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        C k2 = new C();
+        k2.show(a,b);
+    }
+}
+---------------------------------------------------------------------

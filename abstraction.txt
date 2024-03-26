@@ -1,0 +1,829 @@
+----------------------------------------------------------------------------
+1)
+class A 
+only show() name method 
+method overload 
+addition
+sub
+div 
+multi
+
+overload +remove 
+
+Ans)
+overload//
+import java.util.Scanner;
+class A{
+    void show(int a,int b){
+        int c = a+b;
+        System.out.println(c);
+    }
+    void show(int a,int b){
+        int c = a-b;
+        System.out.println(c);
+    }
+    void show(int a,int b){
+        int c = a/b;
+        System.out.println(c);
+    }
+    void show(int a,int b){
+        int c = a*b;
+        System.out.println(c);
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        A k2 = new A();
+        k2.show(a,b);
+    }
+}
+
+
+import java.util.Scanner;
+class A{
+    void show(int a,int b){
+        int c = a+b;
+        System.out.println(c);
+    }
+    void show(float a,int b){
+        float c = a-b;
+        System.out.println(c);
+    }
+    void show(long a,int b){
+        long c = a/b;
+        System.out.println(c);
+    }
+    void show(short a,int b){
+        int c = a*b;
+        System.out.println(c);
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        A k2 = new A();
+        k2.show(a,b);
+        System.out.println("Enter the number");
+        float c = sc.nextInt();
+        System.out.println("Enter the number");
+        int d = sc.nextInt();
+        k2.show(c,d);
+        System.out.println("Enter the number");
+        long e = sc.nextInt();
+        System.out.println("Enter the number");
+        int f = sc.nextInt();
+        k2.show(e,f);
+    }
+}
+--------------------------------------------------------------
+
+2)
+class Main
+only show() name method 
+method overload 
+addition
+sub
+div 
+multi
+
+overload +remove 
+
+Ans)
+overload//
+
+import java.util.Scanner;
+
+public class Mnc{
+    void show(int a,int b){
+        int c = a+b;
+        System.out.println(c);
+    }
+    void show(int a,int b){
+        int c = a-b;
+        System.out.println(c);
+    }
+    void show(int a,int b){
+        int c = a/b;
+        System.out.println(c);
+    }
+    void show(int a,int b){
+        int c = a*b;
+        System.out.println(c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        Mnc k2 = new Mnc();
+        k2.show(a,b);
+    }
+}
+
+import java.util.Scanner;
+
+public class Mnc{
+    void show(int a,int b){
+        int c = a+b;
+        System.out.println(c);
+    }
+    void show(float a,int b){
+        float c = a-b;
+        System.out.println(c);
+    }
+    void show(double a,int b){
+        double c = a/b;
+        System.out.println(c);
+    }
+    void show(short a,int b){
+        int c = a*b;
+        System.out.println(c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        Mnc k2 = new Mnc();
+        k2.show(a,b);
+        k2.show(0, b);
+        k2.show(a, b);
+        k2.show(a, b);
+    }
+}
+
+---------------------------------------------------------
+3)
+single level 
+
+overload +remove 
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(){
+        System.out.println("A method");
+    }
+    void show(int a){
+        System.out.println("B method"+a);
+    }
+}
+class B extends A{
+    void show1(){
+        System.out.println("C method");
+    }
+    void show1(int a){
+        System.out.println("D method"+a);
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        B k2 = new B();
+        k2.show();
+        k2.show(a);
+        k2.show1();
+        k2.show1(a);
+    }
+}
+----------------------------------------------------------------
+
+4)
+multilevel 
+overload +remove 
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(){
+        System.out.println("A method");
+    }
+    void show(int a){
+        System.out.println("B method"+a);
+    }
+}
+class B extends A{
+    void show1(){
+        System.out.println("C method");
+    }
+    void show1(int a){
+        System.out.println("D method"+a);
+    }
+}
+class C extends B{
+    void show2(){
+        System.out.println("E method");
+    }
+    void show2(int a){
+        System.out.println("F method"+a);
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        C k2 = new C();
+        k2.show();
+        k2.show(a);
+        k2.show1();
+        k2.show1(a);
+        k2.show2();
+        k2.show2(a);
+    }
+}
+
+----------------------------------------------------------------
+
+5)heirarichal 
+
+overload +remove 
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show(){
+        System.out.println("A method");
+    }
+    void show(int a){
+        System.out.println("B method"+a);
+    }
+}
+class B extends A{
+    void show1(){
+        System.out.println("C method");
+    }
+    void show1(int a){
+        System.out.println("D method"+a);
+    }
+}
+class C extends A{
+    void show2(){
+        System.out.println("E method");
+    }
+    void show2(int a){
+        System.out.println("F method"+a);
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        C k2 = new C();
+        k2.show();
+        k2.show(a);
+        k2.show2();
+        k2.show2(a);
+        B k1 = new B();
+        k1.show1();
+        k1.show1(a);
+        k1.show();
+        k1.show(a);
+    }
+}
+---------------------------------------------------------------
+
+6)
+class Main
+only main() name method 
+method overload 
+addition
+sub
+div 
+multi
+
+overload +remove 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc{
+    void main(int a,int b){
+        int c = a+b;
+        System.out.println(c);
+    }
+    void main(int a,int b){
+        int c = a-b;
+        System.out.println(c);
+    }
+    void main(int a,int b){
+        int c = a/b;
+        System.out.println(c);
+    }
+    void main(int a,int b){
+        int c = a*b;
+        System.out.println(c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        Mnc k2 = new Mnc();
+        k2.main(a, b);
+    }
+}
+
+import java.util.Scanner;
+
+public class Mnc{
+    void main(int a,int b){
+        int c = a+b;
+        System.out.println(c);
+    }
+    void main(float a,int b){
+        float c = a-b;
+        System.out.println(c);
+    }
+    void main(double a,int b){
+        double c = a/b;
+        System.out.println(c);
+    }
+    void main(short a,int b){
+        int c = a*b;
+        System.out.println(c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println("Enter the number");
+        float c = sc.nextInt();
+        System.out.println("Enter the number");
+        int k = sc.nextInt();
+        System.out.println("Enter the number");
+        double d = sc.nextInt();
+        System.out.println("Enter the number");
+        int s = sc.nextInt();
+        Mnc k2 = new Mnc();
+        k2.main(a, b);
+        k2.main(c, k);
+        k2.main(d, s);
+        k2.main(0, b);
+    }
+}
+
+-----------------------------------------------------------------
+
+7)
+class Main
+constructor 
+method overload 
+addition
+sub
+div 
+multi
+
+overload +remove 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc{
+    Mnc(){
+        System.out.println("Construter");
+    }
+    void show(int a,int b){
+        int c = a + b;
+        System.out.println(c);
+    }
+    void show(int a){
+        int c = a - a;
+        System.out.println(c);
+    }
+    void show(float a, int b){
+        float c = a/b;
+        System.out.println(c);
+    }
+    void show(long f){
+        float c = f/f;
+        System.out.println(c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show(a, b);
+        k.show(a, b);
+        k.show(a);
+        k.show(b);
+    }
+}
+------------------------------------------------------------------
+
+8)
+constructor chaining :
+class Main
+constructor  
+addition
+sub
+div 
+multi
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc{
+    Mnc(){
+        System.out.println("Construter");
+    }
+    Mnc(int a,int b){
+        this(89,78,9.8f);
+        int c = a+b;
+        System.out.println(c);
+    }
+    Mnc(int b,int a, float e){
+        this(89,78,98);
+        int c = a-b;
+        System.out.println(c);
+    }
+    Mnc(int a,int b,long g){
+        this();
+        int c = a/b;
+        System.out.println(c);
+    }
+    Mnc(int a,int b,short d){
+        int c = a*b;
+        System.out.println(c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println("Enter the number");
+        float e = sc.nextFloat();
+        new Mnc(a,b);
+    }
+}
+
+-------------------------------------------------------------
+
+
+9)
+class A :abstract
+show1 :abs : return and  argument 
+show2 :abs: return and no argument 
+
+
+class B ex A 
+show3 ::no return and no argument 
+
+show4 ::no return and  argument 
+
+class Main 
+access
+
+Ans)
+
+import java.util.Scanner;
+abstract class A{
+    abstract int show1(int a);
+    abstract int show2();
+}
+class B extends A{
+    int show1(int a){
+        return a;
+    }
+    int show2(){
+        return 0;
+    }
+    void show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show4(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+}
+public class Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a);
+        k.show2();
+        k.show3();
+        k.show4();
+    }
+}
+
+----------------------------------------------------------
+
+10)
+class A :abstract
+show1 :abs : return and  argument 
+show2 :abs: return and no argument 
+
+
+class B ex A 
+show3 ::no return and no argument 
+
+show4 ::no return and  argument 
+
+class Main ex A 
+access
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    abstract int show1(int a);
+    abstract int show2();
+}
+class B extends A{
+    int show1(int a){
+        return a;
+    }
+    int show2(){
+        return 0;
+    }
+    void show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show4(int a,int b){
+        System.out.println(a+b);
+    }
+}
+public class Mnc extends A{
+    int show1(int a){
+        return a;
+    }
+    int show2(){
+        return 0;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a);
+        k.show2();
+        k.show3();
+        k.show4(a,b);
+        Mnc k1 = new Mnc();
+        k1.show1(a);
+        k1.show2();
+    }
+}
+
+-------------------------------------------------------------
+
+11)
+class A :abstract
+show1 :abs : return and  argument 
+show2 :abs: return and no argument 
+
+
+class B 
+show3 ::no return and no argument 
+
+class Main ex A  
+show3 ::no return and no argument 
+
+show4 ::no return and  argument 
+
+access
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    abstract int show1(int a);
+    abstract int show2();
+}
+class B extends A{
+    int show1(int a){
+        return a;
+    }
+    int show2(){
+        return 0;
+    }
+    void show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+}
+public class Mnc extends A{
+    int show1(int a){
+        return a;
+    }
+    int show2(){
+        return 0;
+    }
+    void show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show4(int a,int b){
+        System.out.println(a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        B k = new B();
+        k.show1(a);
+        k.show2();
+        k.show3();
+        Mnc k1 = new Mnc();
+        k1.show1(a);
+        k1.show2();
+        k1.show3();
+        k1.show4(a,b);
+    }
+}
+
+------------------------------------------------------------
+
+12)
+class A :abstract
+show1 :abs : return and  argument 
+show2 :abs: return and no argument 
+
+
+class B ex A 
+show3 ::no return and no argument 
+
+show4 ::no return and  argument 
+
+class Main ex B 
+access
+
+Ans)
+import java.util.Scanner;
+abstract class A{
+    abstract int show1(int a);
+    abstract int show2();
+}
+class B extends A{
+    int show1(int a){
+        return a;
+    }
+    int show2(){
+        return 0;
+    }
+    void show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show4(int a,int b){
+        System.out.println(a+b);
+    }
+}
+public class Mnc extends B{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a);
+        k.show2();
+        k.show3();
+        k.show4(a, b);
+    }
+}
+
+------------------------------------------------------------
+
+13)
+class A :abstract
+show1 :abs : return and  argument 
+
+class C :ex D
+
+class D :abstract
+show2 :abs: return and no argument 
+
+
+class B  ex A 
+show3 ::no return and no argument 
+
+class Main ex A  
+show3 ::no return and no argument 
+
+show4 ::no return and  argument 
+
+access
+
+Ans)
+
+import java.util.Scanner;
+abstract class A{
+    abstract int show1(int a);
+}
+class C extends D{
+
+}
+abstract class D{
+    abstract int show2();
+}
+class B extends A{
+    int show1(int a){
+        return a;
+    }
+    int show2(){
+        return 0;
+    }
+    void show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+}
+public class Mnc extends A{
+    int show1(int a){
+        return a;
+    }
+    void show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    void show4(int a,int b){
+        System.out.println(a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENter the number");
+        int a = sc.nextInt();
+        System.out.println("Enter the number");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a);
+        k.show3();
+        k.show4(a, b);
+    }
+}
+
+//error because we can not extend lower classes
+------------------------------------------------------------------
