@@ -1,40 +1,33 @@
-import java.util.Scanner;
-class A{
-    void show(int a,int b){
-        int c = a+b;
-        System.out.println(c);
-    }
-    void show(float a,int b){
-        float c = a-b;
-        System.out.println(c);
-    }
-    void show(long a,int b){
-        long c = a/b;
-        System.out.println(c);
-    }
-    void show(short a,int b){
-        int c = a*b;
-        System.out.println(c);
-    }
-}
+import java.util.*;
 public class Main{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number");
-        int a = sc.nextInt();
-        System.out.println("Enter the number");
-        int b = sc.nextInt();
-        A k2 = new A();
-        k2.show(a, b);
-        System.out.println("Enter the number");
-        float c = sc.nextInt();
-        System.out.println("Enter the number");
-        int d = sc.nextInt();
-        k2.show(c, d);
-        System.out.println("Enter the number");
-        long e = sc.nextInt();
-        System.out.println("Enter the number");
-        int f = sc.nextInt();
-        k2.show(e,f);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size :");
+        int size = sc.nextInt();
+        int a[] = new int[size];
+        for(int i=0; i<a.length; i++){
+            a[i] = sc.nextInt();
+        }
+        int count=0;
+        int sum=0;
+        System.out.println("enter the target :");
+        int d=sc.nextInt();
+        
+        for(int i=0; i<a.length; i++){
+            System.out.print(a[i]+" \n");
+            count++;
+            sum=sum+a[i];
+            }
+            for(int i =0; i<a.length;i++){
+                if(a[i]==d){
+                    
+                    break;
+                }
+            }
+            
+        }
+        System.out.println("present");
+        System.out.println(" the sum of array :"+sum);
+       
+        System.out.println("count :"+count);
     }
-}
