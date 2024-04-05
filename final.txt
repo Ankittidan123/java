@@ -1,0 +1,1476 @@
+user input 
+--------------------------------------------
+class A 
+	instance variable final
+	method final print 
+
+Main access
+
+Ans)
+import java.util.*;
+class A{
+    final int a = 1;
+    final void show(){
+        System.out.println("Hello i am show "+a);
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+
+------------------------------------------
+class A 
+	instance variable final
+	method non final print 
+
+Main access
+
+Ans)
+import java.util.*;
+class A{
+    final int a = 1;
+    void show(){
+        System.out.println("Hello i am show "+a);
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+
+------------------------------------------
+
+class A 
+	instance variable non final
+	method final print 
+
+Main access
+
+Ans)
+import java.util.*;
+class A{
+    int a = 1;
+    final void show(){
+        System.out.println("Hello i am show "+a);
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+
+------------------------------------------
+class A 
+	instance variable  final
+	getter setter 
+
+Main access
+
+Ans)
+import java.util.*;
+class A{
+    final int a;
+    void setA(int a){
+        this.a = a;
+    }
+    int getA(){
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the value");
+        int a = sc.nextInt();
+        A k = new A();
+        k.setA(a);
+        System.out.println(k.getA());
+    }
+}
+
+// error because we can not set the value of final instance variable 
+------------------------------------------
+class A 
+	instance variable  final
+	getter setter 
+
+class B ex A
+	method :final instance variable access
+
+Main access
+
+Ans)
+import java.util.*;
+class A{
+    final int a;
+    void setA(int a){
+        this.a = a;
+    }
+    int getA(){
+        return a;
+    }
+}
+class B extends A{
+    final void show(){
+        System.out.println("Hello i am show "+a);
+    }
+}
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the value");
+        int a = sc.nextInt();
+        A k = new A();
+        k.setA(a);
+        System.out.println(k.getA());
+    }
+}
+// error because we can not set the value of final instance variable
+
+--------------------------------------------------
+class A 
+	instance variable  final
+	getter setter 
+
+class B ex A
+	method :final instance variable access
+
+class C ex B 
+acces :instance variable  final
+
+Main access 
+
+Ans)
+import java.util.*;
+class A{
+    final int a;
+    void setA(int a){
+        this.a = a;
+    }
+    int getA(){
+        return a;
+    }
+}
+class B extends A{
+    final void show(){
+        System.out.println("Hello i am show "+a);
+    }
+}
+class C extends B{
+    void show1(){
+        System.out.println("Hello i am show2 "+a);
+    }
+}
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the value");
+        int a = sc.nextInt();
+        A k = new A();
+        k.setA(a);
+        System.out.println(k.getA());
+    }
+}
+
+// error because we can not set the value of final instance variable
+--------------------------------------------------
+class A 
+	instance variable final
+	method final print :no return and argument 
+
+Main access
+
+Ans)
+import java.util.*;
+class A{
+    final int a = 2;
+    final void show(int b){
+        b = a;
+        System.out.println("Hello this is a "+a);
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the value");
+        int a = sc.nextInt();
+        A k = new A();
+        k.show(a);
+    }
+}
+
+// final instance variable will not change its value beacuse it is final
+------------------------------------------
+class A 
+	instance variable final
+	method final print : return and argument 
+
+Main access
+
+Ans)
+import java.util.*;
+class A{
+    final int a = 2;
+    final int show(int b){
+        b = a;
+        System.out.println("Hello this is a "+a);
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the value");
+        int a = sc.nextInt();
+        A k = new A();
+        k.show(a);
+    }
+}
+
+------------------------------------------
+class A 
+	instance variable final
+	method final print : return and no argument 
+
+Main access
+
+Ans)
+import java.util.*;
+class A{
+    final int a = 2;
+    final int show(){
+        System.out.println("Hello this is a "+a);
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+
+        A k = new A();
+        k.show();
+    }
+}
+
+
+------------------------------------------
+final class A 
+	instance :final
+	method :final :: return and no argument 
+
+Main access
+
+Ans)
+import java.util.*;
+final class A{
+    final int a = 2;
+    final int show(){
+        System.out.println("Hello this is a "+a);
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+
+        A k = new A();
+        k.show();
+    }
+}
+
+------------------------------------------------------
+final class A 
+	instance :non final
+	method :final :: return and no argument 
+
+Main access
+
+Ans)
+import java.util.*;
+final class A{
+    int a = 2;
+    final int show(){
+        System.out.println("Hello this is a "+a);
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+
+        A k = new A();
+        k.show();
+    }
+}
+------------------------------------------------------
+final class A 
+	instance :final
+	method :non final :: return and  argument (final)
+
+Main access
+
+Ans)
+import java.util.*;
+final class A{
+    final int a = 2;
+    int show(final int b){
+        System.out.println("Hello this is a "+(a+b));
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        A k = new A();
+        k.show(a);
+    }
+}
+
+------------------------------------------------------
+getter setter 
+
+final class A 
+	instance :final
+	method :final :: return and no argument 
+
+Main access
+
+Ans)
+import java.util.*;
+final class A{
+    final int a = 2;
+    void setA(int b){
+        b=a;
+    }
+    int getA(){
+        return a;
+    }
+    int show(){
+        System.out.println("Hello this is a "+a);
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        A k = new A();
+        k.show();
+        k.setA(a);
+    }
+}
+
+------------------------------------------------------
+initialize in constructor 
+final class A 
+	instance :final
+	method :final :: return and no argument 
+
+Main access
+
+Ans)
+import java.util.*;
+final class A{
+    final int a;
+    A(){
+        a = 1;
+    }
+    int show(){
+        System.out.println("Hello this is a "+a);
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+
+------------------------------------------------------
+final class A 
+	static instance :final
+	method :final :: return and no argument 
+
+Main access
+
+Ans)
+import java.util.*;
+final class A{
+    final static int a=1;
+    int show(){
+        System.out.println("Hello this is a "+a);
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+
+------------------------------------------------------
+final class A 
+	static instance :final
+	method :final :: return and  argument (final)
+
+Main access
+
+Ans)
+import java.util.*;
+final class A{
+    final static int a=1;
+    final int show(final int b){
+        System.out.println("Hello this is a "+(a+b));
+        return a;
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        A k = new A();
+        k.show(a);
+    }
+}
+
+---------------
+file :
+void show1():no return and no argument 
+void show2():no return and  argument 
+
+void show3(): return and no argument 
+
+void show4(): return and  argument 
+
+Main file : 
+access 
+
+Ans)
+File one
+import java.util.Scanner;
+
+public class Mnc{
+    void show1(){
+        System.out.println("Hello i am show 1");
+    }
+    void show2(int a){
+        System.out.println("hello i am show 2 "+a);
+    }
+    int show3(){
+        System.out.println("Hello i am show 3 ");
+        return 0;
+    }
+    int show4(int a){
+        System.out.println("hello i am show 4 "+a);
+        return 0;
+    }
+    public static void main(String[] args) {
+
+    }
+}
+file 2
+
+import java.util.*;
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1();
+        k.show2(a);
+        k.show3();
+        k.show4(a);
+    }
+}
+------------------------------------------------------
+file :
+default constructor 
+void show1():no return and no argument 
+void show2():no return and  argument 
+
+void show3(): return and no argument 
+
+void show4(): return and  argument 
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+
+public class Mnc{
+    Mnc(){
+        System.out.println("I am constractor");
+    }
+    void show1(){
+        System.out.println("Hello i am show 1");
+    }
+    void show2(int a){
+        System.out.println("hello i am show 2 "+a);
+    }
+    int show3(){
+        System.out.println("Hello i am show 3 ");
+        return 0;
+    }
+    int show4(int a){
+        System.out.println("hello i am show 4 "+a);
+        return 0;
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+file second
+
+import java.util.*;
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1();
+        k.show2(a);
+        k.show3();
+        k.show4(a);
+    }
+}
+
+
+------------------------------------------------------
+file :
+parameterised constructor :two number addition 
+void show1():no return and no argument 
+void show2():no return and  argument 
+
+void show3(): return and no argument 
+
+void show4(): return and  argument 
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+
+public class Mnc{
+    Mnc(int a,int b){
+        System.out.println("I am constractor "+(a+b));
+    }
+    void show1(){
+        System.out.println("Hello i am show 1");
+    }
+    void show2(int a){
+        System.out.println("hello i am show 2 "+a);
+    }
+    int show3(){
+        System.out.println("Hello i am show 3 ");
+        return 0;
+    }
+    int show4(int a){
+        System.out.println("hello i am show 4 "+a);
+        return 0;
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+file second
+
+import java.util.*;
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        System.out.println("Enter the value");
+        int b = sc.nextInt();
+        Mnc k = new Mnc(a,b);
+        k.show1();
+        k.show2(a);
+        k.show3();
+        k.show4(a);
+    }
+}
+
+
+------------------------------------------------------
+file :
+getter seeter :addition 
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+
+public class Mnc{
+    int a;
+    void setA(int a){
+        this.a = a;
+    }
+    int getA(){
+        return a;
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+file second
+
+import java.util.*;
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        Mnc k = new Mnc();
+        k.setA(a);
+        System.out.println("The value we got "+k.getA());
+    }
+}
+
+
+------------------------------------------------------
+file :
+parameterised constructor :two number addition 
+void show1():no return and no argument 
+covariant return type 
+void show4(): return and  argument 
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+
+public class Mnc{
+    Mnc(int a,int b){
+        System.out.println("The sum is : "+(a+b));
+    }
+    void show1(){
+        System.out.println("This is show1");
+    }
+    Mnc cov(){
+        System.out.println("I am coveriant");
+        return this;
+    }
+    int show4(int a){
+        System.out.println("I am show4");
+        return a;
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+file second
+
+import java.util.*;
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        System.out.println("Enter the value");
+        int b = sc.nextInt();
+        Mnc k = new Mnc(a,b);
+        k.show1();
+        k.cov();
+        k.show4(a);
+    }
+}
+
+
+------------------------------------------------------
+file :
+method overloading 
+
+Main file : 
+access 
+
+remove also +overload
+
+Ans)
+file one 
+
+import java.util.Scanner;
+
+public class Mnc{
+    void show1(){
+        System.out.println("This is show1");
+    }
+    void show1(){
+        System.out.println("This is show1");
+    }
+    void show1(){
+        System.out.println("This is show1");
+    }
+    void show1(){
+        System.out.println("This is show1");
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+//overloading done
+
+import java.util.Scanner;
+
+public class Mnc{
+    void show1(){
+        System.out.println("This is show1");
+    }
+    void show1(int a){
+        System.out.println("This is show1");
+    }
+    void show1(float a){
+        System.out.println("This is show1");
+    }
+    void show1(double a){
+        System.out.println("This is show1");
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+//overloading solved
+
+import java.util.*;
+
+public class Test{
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        k.show1();
+        k.show1(4.5);
+        k.show1(4.666);
+        k.show1(5);
+    }
+}
+
+
+------------------------------------------------------
+file :
+constructor overloading 
+
+Main file : 
+access 
+
+remove also +overload
+
+Ans)
+file one
+
+
+------------------------------------------------------
+file :
+constructor chaining 
+
+Main file : 
+access 
+
+remove also +overload
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc{
+    Mnc(){
+        System.out.println("I am constrctor");
+    }
+    Mnc(){
+        System.out.println("I am constrctor");
+    }
+    Mnc(){
+        System.out.println("I am constrctor");
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+//overloaded
+
+import java.util.Scanner;
+
+public class Mnc{
+    Mnc(){
+        System.out.println("I am constrctor");
+    }
+    Mnc(int a){
+        System.out.println("I am constrctor");
+    }
+    Mnc(float a){
+        System.out.println("I am constrctor");
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        Mnc k = new Mnc();
+        new Mnc(a);
+        new Mnc(a);
+    }
+}
+
+
+------------------------------------------------------
+file :
+pallindrome
+armstrong
+prime
+neon
+perfect
+fibonacci 
+
+
+Main file : 
+access 
+
+Ans)
+File one
+
+import java.util.Scanner;
+
+public class Mnc{
+    void pallindrom(int num){
+        int rem;
+        int sum = 0;
+        while(num>0){
+            rem = num%10;
+            sum = sum*10+rem;
+            num = num/10;
+        }
+        if(sum==num){
+            System.out.println("Pallindrom");
+        }
+        else{
+            System.out.println("Not pallindrom");
+        }
+    }
+    void armstrong(int num){
+        int rem;
+        int sum = 0;
+        while(num>0){
+            rem = num%10;
+            sum = sum+rem*rem*rem;
+            num = num/10;
+        }
+        if(num==sum){
+            System.out.println("Armstrong");
+        }
+        else{
+            System.out.println("Not Armstrong");
+        }
+    }
+    void prime(int num){
+        int count = 0;
+        for(int i = 1; i<=num; i++){
+            if(num%2==0 && num%1==0){
+                count++;
+            }
+        }
+        if(count==2){
+            System.out.println("Prime");
+        }
+        else{
+            System.out.println("Not prime");
+        }
+    }
+    void neon(int num){
+        int a = num*num;
+        int rem;
+        int sum = 0;
+        while(a>0){
+            rem =a%10;
+            sum = sum + rem;
+            a = a/10;
+        }
+        if(sum==num){
+            System.out.println("Neon number");
+        }
+        else{
+            System.out.println("Not neon number");
+        }
+    }
+    void perfect(int num){
+        int rem;
+        int sum = 0;
+        for(int i=1; i<num; i++){
+            if(num%i==0){
+                sum = sum+i;
+            }
+        }
+        if(sum==num){
+            System.out.println("Perfect number");
+        }
+        else{
+            System.out.println("Not perfect");
+        }
+    }
+    void fibo(int n){
+        int n1 = 0;
+        int n2 = 1;
+        int n3;
+        System.out.println(n1+" "+n2);
+        for(int i=1; i<n; i++){
+            n3 = n1+n2;
+            System.out.println(n3+" ");
+        }
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        Mnc k = new Mnc();
+        k.armstrong(a);
+        k.pallindrom(a);
+        k.neon(a);
+        k.prime(a);
+        k.perfect(a);
+        k.fibo(a);
+    }
+}
+
+------------------------------------------------------
+single level inheritance : 
+
+file :
+class A
+parameterised constructor :two number addition 
+void show1():no return and no argument 
+
+class Ab ex A 
+covariant return type 
+void show4(): return and  argument 
+
+Main file : 
+access 
+
+Ans)
+First file
+
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        System.out.println(a+b);
+    }
+    void show1(){
+        System.out.println("Hello i am show1");
+    }
+}
+class Ab extends A{
+    Ab(){
+        super(2,4);
+    }
+    Ab co(){
+        return this;
+    }
+    int show4(int a){
+        System.out.println("Hello i am show4");
+        return a;
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        // new A();
+        Ab k =new Ab();
+        k.show1();
+        k.show4(a);
+        k.co();
+
+    }
+}
+
+------------------------------------------------------
+multilevl inheritance 
+
+file :
+class A
+parameterised constructor :two number addition 
+
+class B ex A 
+covariant return type 
+void show1():no return and no argument 
+
+class Ab ex B
+void show4(): return and  argument 
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    B(){
+        super(2,4);
+    }
+    B co(){
+        return this;
+    }
+    void show1(){
+        System.out.println("Hello i am show1");
+    }
+}
+class Ab extends B{
+    int show4(int a){
+        System.out.println("Hello i am show4");
+        return a;
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        // new A();
+        Ab k =new Ab();
+        k.show1();
+        k.show4(a);
+        k.co();
+
+    }
+}
+
+
+------------------------------------------------------
+heirarichal inheritance 
+
+file :
+class A
+parameterised constructor :two number addition 
+
+class B ex A 
+covariant return type 
+void show1():no return and no argument 
+
+class Ab ex A
+void show4(): return and  argument 
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    B(){
+        super(2,4);
+    }
+    B co(){
+        return this;
+    }
+    void show1(){
+        System.out.println("Hello i am show1");
+    }
+}
+class Ab extends A{
+    Ab(){
+        super(2,4);
+    }
+    int show4(int a){
+        System.out.println("Hello i am show4");
+        return a;
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        B k = new B();
+        k.show1();
+        k.co();
+        Ab h = new Ab();
+        h.show4(a);
+    }
+}
+
+------------------------------------------------------
+single level inheritance : 
+
+file :
+class A
+overrding 
+
+class Ab ex A 
+
+Main file : 
+access 
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class A{
+    void show(){
+        System.out.println("Hello i am show of A");
+    }
+}
+class Ab extends A{
+    void show(){
+        super.show();
+        System.out.println("Hello i am show of Ab");
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value");
+        int a = sc.nextInt();
+        Ab k = new Ab();
+        k.show();
+    }
+}
+
+------------------------------------------------------
+single level inheritance : 
+
+file :
+class A
+overrhiding 
+
+class Ab ex A 
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+class A{
+    static void show(){
+        System.out.println("Hello i am show of A");
+    }
+}
+class Ab extends A{
+    static void show(){
+        System.out.println("Hello i am show of Ab");
+    }
+}
+public class Mnc{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        Ab.show();
+    }
+}
+
+------------------------------
+file :
+method :public
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+class A{
+    public void show(){
+        System.out.println("Hello i am show of A");
+    }
+}
+public class Mnc extends A{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+
+
+------------------------------
+file :
+method :private
+
+Main file : 
+access 
+
+Ans)
+
+first file
+
+import java.util.Scanner;
+class A{
+    private void show(){
+        System.out.println("Hello i am show of A");
+    }
+}
+public class Mnc extends A{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        A k = new A();
+        k.show(); // it will give error because we can not fatch private method
+    }
+}
+
+------------------------------
+file :
+method :protected
+
+Main file : 
+access 
+
+Ans)
+
+import java.util.Scanner;
+class A{
+    protected void show(){
+        System.out.println("Hello i am show of A");
+    }
+}
+public class Mnc extends A{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public static void main(String[] args) {
+        A k = new A();
+        k.show(); // it will give error because we can not fatch private method
+    }
+}
+---------------------------------------
+multilevl inheritance 
+
+file :
+class A
+getter setter :addition 
+
+class B ex A 
+getter setter :sub 
+
+class Ab ex B
+getter setter :multi 
+
+Main file : 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    void getA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int setA(){
+        int c = a+b;
+        return c;
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void getA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int setA(){
+        int c = a-b;
+        return c;
+    }
+}
+class Ab extends B{
+    int a;
+    int b;
+    void getA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int setA(){
+        int c = a*b;
+        return c;
+    }
+}
+public class Mnc extends Ab{
+
+    public static void main(String[] args) {
+
+    }
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        k.getA(2, 3);
+        System.out.println(k.setA());
+    }
+}
