@@ -1,0 +1,343 @@
+array in 1 D
+1)
+23,78,56,34,21,89,67 
+
+print :23,78,56,34,21,89,67 
+
+Ans)
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        int a[] = {23,78,56,34,21,89,67};
+        for(int i=0; i<a.length; i++){
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+
+----------------------------------------------------
+2)
+23,78,56,34,21,89,67 
+
+print:
+67,89,21,34,56,78,23
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {23,78,56,34,21,89,67};
+        for(int i=a.length-1; i>=0; i--){
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+---------------------------------------------------
+3)through loop 
+
+23,78,56,34,21,89,67,88
+
+print :
+23,78,56,34,88,67,89,21
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {23,78,56,34,21,89,67};
+        for(int i=0; i<=a.length/2; i++){
+            System.out.print(a[i]+" ");
+        }
+        for(int i=a.length-1; i>a.length/2; i--){
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+--------------------------------------------------------
+4)through loop 
+
+23,78,56,34,21,89,67 ,88
+
+print :
+56,34,21,89
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {23,78,56,34,21,89,67};
+        for(int i=2; i<=a.length-2; i++){
+            System.out.print(a[i]+" ");
+        }
+        
+    }
+}
+
+--------------------------------------------------------
+5)
+
+through loop 
+
+23,78,56,34,21,89,67,88
+
+print :
+89,21,34,56,78
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {23,78,56,34,21,89,67};
+        for(int i=a.length-2; i>=1; i--){
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+--------------------------------------------------------
+6)
+through loop 
+
+23,78,56,34,21,89,67 ,88
+
+print :
+34,56,78,23,21,89,67,88
+
+Ans)
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        int a[] = {23,78,56,34,21,89,67,88};
+        for(int i=a.length/2; i>=0; i--){
+            System.out.print(a[i]+" ");
+        }
+        for(int i=a.length/2+1; i<a.length; i++){
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+----------------------------------------------------------
+7)
+through loop 
+
+23,78,56,34,21,89,67
+
+print :
+mid element print 
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {23,78,56,34,21,89,67,88};
+        for(int i=a.length/2; i>=0; i--){
+            System.out.println(a[i]);
+            break;
+        }
+    }
+}
+
+----------------------------------------------------------
+8)
+through loop 
+
+23,78,56,34,21,89,67
+
+print :
+mid element print table 
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int b=0;
+        int a[] = {23,78,56,34,21,89,67,88};
+        for(int i=a.length/2; i>=0; i--){
+            b += a[i];
+            break;
+        }
+        for(int i=1; i<=10; i++){
+            System.out.print(b*i+" ");
+        }
+    }
+}
+
+-------------------------------------------------------------
+9)
+
+through loop 
+
+23,78,56,34,21,89,67
+
+print :
+last element print 
+
+Ans)
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        int a[] = {23,78,56,34,21,89,67,88};
+        for(int i=a.length-1; i>0; i--){
+            System.out.println(a[i]);
+            break;
+        }
+    }
+}
+
+------------------------------------------------------------
+10)
+through loop 
+
+23,78,56,34,21,89,67
+
+print :
+last element print table 
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int b=0;
+        int a[] = {23,78,56,34,21,89,67,88};
+        for(int i=a.length-1; i>0; i--){
+            b += a[i];
+            break;
+        }
+        for(int i=1; i<=10; i++){
+            System.out.println(b*i+" ");
+        }
+    }
+}
+
+----------------------------------------------------------------------
+1)two number addition :
+a[]=:1,2,3,4,5
+b[]=:1,2,3,4,5
+c[]=2,4,6,8,10 
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5};
+        int b[] = {1,2,3,4,5};
+        for(int i=0; i<a.length; i++){
+            for(int j=i; j<b.length; j++){
+                System.out.print(a[i]+b[j]+" ");
+                break;
+            }
+        }
+    }
+}
+
+----------------------------------------------------------------------
+2)a[]=1,2,3,4,5
+
+every element factorial 
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5};
+        for(int i=0; i<a.length; i++){
+            int fact = 1;
+            for(int j=1; j<=a[i]; j++){
+                fact *= j;
+            }
+            System.out.print(fact+" ");
+        }
+    }
+}
+
+----------------------------------------------------------------------
+3)
+a[]=1,2,3,4,5
+
+every element square 
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5};
+        for(int i=0; i<a.length; i++){
+            int fact = 1;
+            System.out.print(a[i]*a[i]+" ");
+        }
+    }
+}
+
+----------------------------------------------------------------------
+4)
+a[]=1,2,3,4,5
+
+prime number  
+
+ANs)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5};
+        for(int i=0; i<a.length; i++){
+            int count = 0;
+            for(int j=a[i]; j>0; j--){
+                if(a[i]%j==0){
+                    count++;
+                }
+            }
+            if(count==2){
+                System.out.println(a[i]+" is prime number");
+            }
+        }
+    }
+}
+
+----------------------------------------------------------------------
+5)
+a[]=1,2,3,4,5
+
+prime number  :table print 
+
+Ans)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5};
+        for(int i=0; i<a.length; i++){
+            int count = 0;
+            for(int j=a[i]; j>0; j--){
+                if(a[i]%j==0){
+                    count++;
+                }
+            }
+            if(count==2){
+                for(int g=1; g<=10; g++){
+                    System.out.print(a[i]*g+" ");
+                }
+            }
+        }
+    }
+}
+
+----------------------------------------------------------------------

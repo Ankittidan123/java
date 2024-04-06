@@ -2,32 +2,21 @@ import java.util.*;
 public class Main{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter the size :");
-        int size = sc.nextInt();
-        int a[] = new int[size];
-        for(int i=0; i<a.length; i++){
-            a[i] = sc.nextInt();
+        System.out.println("eter the size :");
+        int size=sc.nextInt();
+        int a[]=new int[size];
+        for(int i=0;i<a.length;i++){
+            System.out.println("enter the values :");
+            a[i]=sc.nextInt();
+
         }
-        int count=0;
-        int sum=0;
-        System.out.println("enter the target :");
-        int d=sc.nextInt();
-        
-        for(int i=0; i<a.length; i++){
-            System.out.print(a[i]+" \n");
-            count++;
-            sum=sum+a[i];
-            }
-            for(int i =0; i<a.length;i++){
-                if(a[i]==d){
-                    
-                    break;
-                }
-            }
-            
+        for(int i=0;i<a.length;i++){
+            System.out.println(a[i]+" ");
         }
-        System.out.println("present");
-        System.out.println(" the sum of array :"+sum);
-       
-        System.out.println("count :"+count);
+        for(int i=a.length/2;i<a.length;i++){
+            if(a[i]%2==0){
+                System.out.println(a[i]+" mid element is even");
+            }
+        }
     }
+}
