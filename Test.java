@@ -1,25 +1,44 @@
 import java.util.*;
-final class A{
-    final int a = 2;
-    void setA(int b){
-        b=a;
+public class Shape {
+    public int calculateArea() {
+        
     }
-    int getA(){
-        return a;
-    }
-    int show(){
-        System.out.println("Hello this is a "+a);
-        return a;
+
+
+    public void displayInfo() {
+        System.out.println("This is a display shape.");
     }
 }
 
-public class Test{
+public class Circle extends Shape {
+     int radius;
+    System.out.println("radius")
+    }
+
+    
+    public int calculateArea() {
+        return radius;  
+    }
+
+   
+    public void displayInfo() {
+        System.out.println("Circle with radius " + radius);
+    }
+}
+
+
+public class Rectangle extends Shape {
+     int width;
+     int height;
+
+    
+    }
+public class Test {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the value");
-        int a = sc.nextInt();
-        A k = new A();
-        k.show();
-        k.setA(a);
+        Circle circle = new Circle(4);
+        System.out.println("Area of Circle: " + circle.calculateArea());
+
+        Rectangle rectangle = new Rectangle(12, 34);
+        System.out.println("\nArea of Rectangle: " + rectangle.calculateArea());
     }
 }
