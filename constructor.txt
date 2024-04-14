@@ -1,0 +1,275 @@
+class A 
+default constructor :add 
+
+multi() :return and no argument 
+
+class Main 
+Main() -->div 
+
+mod() : no return and argument 
+
+main :access 
+
+import java.util.Scanner;
+
+class A{
+    A(){
+        int a=1,b=2,c;
+        c=a+b;
+        System.out.println(c);
+    }
+    int multi(){
+        c=a+b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    Main(){
+        int a=4,b=2,c;
+        c=a/b;
+        System.out.println(c);
+    }
+    void mod(int a,int  b){
+        int c=a%b;
+        System.out.println(c);
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the vslue of a and b:");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        Main k=new Main();
+       k.mod(c);
+       A aj=new A();
+       aj.multi();
+    }
+}
+-----------------------------------------------------------------------------
+--------------------------------------------------------
+2)
+A
+default constructor :add 
+
+
+B
+default constructor :multi 
+
+
+C
+default constructor :div 
+
+
+D
+default constructor :mod 
+
+Main
+default constructor :
+
+import java.util.*;
+class A{
+    A(){
+     int a=1,b=2,c;
+     c=a+b;
+     System.out.println("add"+c);   
+    }
+}
+class B{
+    B(){
+        int a=2,b=2,c;
+        c=a*b;
+        System.out.println("multi"+c); 
+    }
+}
+class C{
+    C(){
+        int a=6,b=2,c;
+     c=a/b;
+     System.out.println("div"+c);
+    }
+}
+class D{
+    D(){
+        int a=4,b=2,c;
+     c=a%b;
+     System.out.println("mod"+c);
+    }
+}
+public class Main {
+    Main(){
+        System.out.println("hello world");
+    }
+   public static void main(String[] args) {
+        A aj=new A();
+        B kj=new B();
+        C cj=new C();
+        D dj=new D();
+        Main k=new Main();
+    }
+}
+---------------------------------------------
+default value print :
+primitive data :print defaul values through instance variable . 
+
+int 
+import java.util.*;
+
+class A {
+    
+    int a;
+  
+    void show() {
+        
+        System.out.println(a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+----------------------------
+byte==
+
+import java.util.*;
+
+class A {
+    
+     byte a;
+  
+    void show() {
+        
+        System.out.println(a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+------------------------------
+long==
+
+import java.util.*;
+
+class A {
+    
+     double a;
+  
+    void show() {
+        
+        System.out.println(a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+------------------
+
+double ==
+import java.util.*;
+
+class A {
+    
+     double a;
+  
+    void show() {
+        
+        System.out.println(a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+--------------------------------
+char -===
+
+import java.util.*;
+
+class A {
+    
+     byte a;
+  
+    void show() {
+        
+        System.out.println(a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+-------------------------------
+float===
+import java.util.*;
+
+class A {
+    
+     float a;
+  
+    void show() {
+        
+        System.out.println(a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+---------------------
+import java.util.*;
+
+class A {
+    
+     short a;
+  
+    void show() {
+        
+        System.out.println(a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+----------------------
+boolean====
+
+import java.util.*;
+
+class A {
+    
+    boolean a;
+  
+    void show() {
+        
+        System.out.println(a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}

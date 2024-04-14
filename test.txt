@@ -175,6 +175,15 @@ Create a method that calculates the power of a number (x^y).
 
   || NOT STUDIED YET ||
 
+class Test {
+    public static void main(String[] args) {
+        int base = 3, exponent = -4;
+        double result = Math.pow(base, exponent);
+
+        System.out.println("Answer = " + result);
+    }
+}
+
 ------------------------------------------------------------------------
 
 7)

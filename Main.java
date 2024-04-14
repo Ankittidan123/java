@@ -1,53 +1,26 @@
 import java.util.*;
-// Create a base class Vehicle with methods start() and stop().
-//  Derive two classes Car and Bike inheriting from Vehicle. 
-//  Implement start and stop methods accordingly.
-abstract class Vehicle{
-    abstract void start(char g);
-    abstract void stop(char g);
 
+class A {
+    
+    int a;
+    int b;
+    A(int a, int b) {
+        // this.a = a;
+        // this.b = b; 
+    }
+
+    void method1(int a,int b) {
+        this.a=a;
+        this.b=b;
+        int sum=a+b;
+        System.out.println(sum);
+    }
 }
- abstract class Car extends Vehicle{
-    public void start(){
-    if(g=='r'){
-        System.out.println("car started");
-    }
-    }
-    public void stop(){
-        if(g=='s'){
-            System.out.println("car is stop");
-        }
-    }
- }
- abstract class Bike extends Vehicle{
-   public void start(){
-    if(b=='r'){
-        System.out.println("bike started");
-    }
-    }
-   public void stop(){
-        if(b=='s'){
-            System.out.println("bike is stop");
-        }
-    }
- }
- public class Main{
+
+public class Main {
+
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("enter the r to start and s to stop the car");
-        char g=sc.next().charAt(0);
-        System.out.println("enter the r to start and s to stop the car");
-        char g=sc.next().charAt(0);
-        Vehicle aj=new Vehicle(); 
-            aj.start(g);
-            aj.stop(g);
-            Car k=new Car();
-            k.start(g); 
-            k.stop(g);
-            Bike j=new Bike();
-             j.start(g);
-             j.stop(g);
-        }
-        
+        A k = new A(0, 0);
+        k.method1(4, 6);
     }
- 
+}
