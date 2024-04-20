@@ -1,0 +1,356 @@
+import java.util.Scanner;
+
+class A{
+    A(int a,int b)
+    {
+                int sum=a+b;
+                System.out.println(sum+" ");
+    }
+    int method1()
+    {
+       return 0;
+    }
+}
+class B{
+    B(int a,int b)
+    {
+                int sub=a-b;
+                System.out.println(sub+" ");
+    }
+    int method2(int a,int b)
+    {
+        B sc=new B(3234, 34);
+       return 0;
+    }
+}
+class C{
+    C(int a,int b)
+    {
+                int multi=a+b;
+          System.out.println(multi+" ");      
+    }
+    void method3()
+    {
+        C kj=new C(5, 4);
+    }
+}
+class D{
+    D(int a,int b)
+    {
+                int div=a/b;
+                System.out.println(div+" ");
+    }
+    int method4()
+    {
+       return 0;
+    }
+}
+
+public class Main {
+    public static void main(String [] args)
+    {
+        Scanner input=new Scanner (System.in);
+       
+       
+        System.out.println("Enter the value");
+        int a=input.nextInt();
+        int b=input.nextInt();
+        A sc=new A(a, b);
+        sc.method1();
+        B s=new B(4, 1);
+        s.method2(a, b);
+        C aj=new C(6, 3);
+        aj.method3();
+        D k=new D(4, 2);
+        k.method4();
+    }
+}
+------------------------------
+
+
+class A 
+constructor :parameterise :addition 
+
+method1()==> 
+
+
+class B
+constructor :parameterise :sub 
+method1()==> 
+
+
+class C
+constructor :parameterise :multi
+method1()==>no return and no argument 
+
+
+class D 
+constructor :parameterise :div
+method1()==> return and no argument 
+
+
+
+class E 
+constructor :parameterise :mod 
+ method1()==>no return and  argument 
+
+
+Main class
+default constructor :hello world 
+ :access all classes method and parameter 
+
+
+
+
+
+
+class A{
+    int c;
+
+    A(int c){
+        this.c=c;
+        System.out.println(c);
+
+    }
+
+    int method1(){
+        this.c=c;
+        System.out.println("c value "+ c);
+        return c;
+
+    }
+    
+}
+class B{
+    int d;
+
+    B(int d ){
+        this.d=d;
+        System.out.println(d);
+
+    }
+
+    int method2(int d ){
+        this.d=d;
+        System.out.println("Value is "+ d);
+        return d;
+    }
+}
+class C{
+    int g;
+    C(int g){
+        this.g=g;
+        System.out.println("value is " + g);
+
+    }
+    void method3(){
+        this.g=g;
+        System.out.println("value is "+g);
+    }
+
+
+}
+class D{
+    int j;
+    D(int j){
+        this.j = j;
+        System.out.println(j);
+
+    }
+
+    int method4(){
+        this.j=j;
+        System.out.println("Value is "+j);
+        return j;
+    }
+}
+class E{
+    int m;
+    E(int m){
+        this.m=m;
+        System.out.println(m);
+    }
+
+    void method4(){
+        this.m=m;
+        System.out.println("Value of  "+m);
+    }
+}
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        int a=8;
+        int b=9;
+        int c = a+b;
+        
+        A aj = new A(c);
+         aj.method1();
+         int e = 5;
+         int f = 4;
+ 
+         int d= e-f;
+ 
+         B bj= new B(d);
+         bj.method2(d);
+         int h = 6;
+        int i = 4;
+
+        int g = h*i;
+
+        C cj = new C(g);
+        cj.method3();
+        int k = 6;
+        int l = 2;
+
+        int j = k/l;
+
+        D dj = new D(j);
+        dj.method4();
+        int n= 25;
+        int o = 5;
+
+        int m = n%o;
+
+        E ej = new E(m);
+        ej.method4();
+    }
+}
+============================================================================================================================================================================================================================================================================================================
+
+
+import java.util.*;
+
+
+
+class A{
+    int c;
+    A(int c){
+        this.c=c;
+        System.out.println("Addition " + c);
+
+    }
+o[
+    int method1(){
+        this.c=c;
+        System.out.println("Addition method " + c);
+        return c;
+    }
+
+
+}
+
+class B {
+    int d;
+    B(int d){
+        this.d=d;
+        System.out.println("Sub " + d);
+
+
+    }
+    int method2(int d){
+        this.d=d;
+        System.out.println("Sub "+d);
+        return d;
+    }
+}
+
+class C {
+    int e;
+    C(int e){
+        this.e=e;
+        System.out.println("Multi "+e);
+        
+    }
+
+    void method3(){
+        this.e=e;
+        System.out.println("Multi method "+ e);
+    }
+}
+
+class D {
+    int f;
+    D(int f){
+        this.f=f;
+        System.out.println("div " + f);
+        
+    }
+
+    int method4(){
+        this.f=f;
+        System.out.println("div Method " + f);
+        return f;
+    }
+}
+
+class E {
+    int g;
+    E(int g){
+        this.g=g;
+        System.out.println("Mod "+g);
+        
+    }
+
+    void method5(int g){
+        this.g=g;
+        System.out.println("Method Mod " + g);
+        
+    }
+
+    
+}
+
+class Default{
+    Default(){
+        String a = "Hello world";
+        System.out.println(a);
+        
+    }
+}
+
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner dc = new Scanner(System.in);
+
+        System.out.println("Ente value of a :");
+        int a = dc.nextInt();
+
+        System.out.println("Enter value of b :");
+        int b = dc.nextInt();
+
+        int c = a+b;
+        int d = a-b;
+        int e = a*b;
+        int f = a/b;
+        int g = a%b;
+
+        A ad = new A(c);
+        B su = new B(d);
+        C mu = new C(e);
+        D div = new D(f);
+        E mo = new E(g);
+
+        ad.method1();
+        su.method2(d);
+        mu.method3();
+        div.method4();
+        mo.method5(g);
+
+        Default v = new Default();
+
+
+        
+
+
+    }
+}
+---------------------------------------------------------------------------------
+Difference between constructor and method in Java 
+what is local variable ?
+what is instance variable ?
+what is diffrence between local variable and instance variable ?
+why we used default and parameterised constructor ? 
