@@ -1,0 +1,336 @@
+user input 
+------------------------------------------------
+single level : 
+
+class A
+add :no return and no argument 
+multi: return and no argument 
+
+class B
+div : return and  argument 
+mod:no return and  argument 
+
+
+Main :sub :return and no argument 
+
+import java.util.Scanner;
+class A{
+    void show1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println(a+b);
+    }
+    int show2(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+         int c=a*b;
+        System.out.println(c);
+        return c; 
+    }
+}
+class B extends A{
+    int show3(int a,int b){
+        
+        int c = a/b;
+        return c;
+    }
+    void show4(int c,int d){
+        int e = c%d;
+        System.out.println(e);
+    }
+}
+public class Mnc {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        // Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int c = sc.nextInt();
+        System.out.println("Enter the number ");
+        int d = sc.nextInt();
+        B k = new B();
+        k.show1();
+        k.show2();
+        k.show3(a, b);
+        k.show4(c, d);
+    }
+}
+-------------------------------------------------------
+single level : 
+
+class A
+add :no return and no argument 
+multi: return and no argument 
+
+class B
+instance variable (int a,int b)
+div : return and  argument 
+mod:no return and no argument 
+
+
+Main :sub :
+instance variable (int a,int b)
+return and  argument 
+
+import java.util.Scanner;
+class A{
+    void add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println("addition"+a+b);
+    }
+    int multi(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+         int c=a*b;
+        System.out.println(c);
+        return c; 
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    int div(int a,int b){
+        this.a=a;
+        this.b=b;
+        int c = a/b;
+        return c;
+    }
+    void mod(){
+       Scanner sc=new Scanner(System.in);
+        this.a=a;
+        this.b=b;
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b= sc.nextInt();
+
+        int d = a%b;
+        System.out.println(d);
+    }
+}
+public class Mnc {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+      
+        B k = new B();
+        k.add();
+        k.multi();
+        k.div(a, b);
+        k.mod( );
+    }
+}
+
+------------------------------------------------------------
+single level : 
+
+class A
+add :no return and no argument 
+multi: return and no argument :covarint 
+
+class B
+instance variable (int a,int b)
+div : return and  argument :covarint
+mod:no return and no argument 
+
+
+Main :sub :
+instance variable (int a,int b)
+covarint return type :hello world 
+
+return and  argument 
+
+import java.util.Scanner;
+class A{
+    void add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        System.out.println("addition"+a+b);
+    }
+    A multi(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+         int c=a*b;
+        System.out.println(c);
+        return this; 
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    B div(int a,int b){
+        this.a=a;
+        this.b=b;
+        int c = a/b;
+        return this;
+    }
+    void mod(){
+       Scanner sc=new Scanner(System.in);
+        this.a=a;
+        this.b=b;
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b= sc.nextInt();
+
+        int d = a%b;
+        System.out.println(d);
+    }
+}
+public class Mnc {
+    int e;
+    int f;
+    int sub(int e,int f){
+        this.e=e;
+        this.f=f;
+       int g=e-f;
+       return g;
+    }
+    Mnc show(){
+        System.out.println("hello world");
+    }
+    
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the number ");
+        int b = sc.nextInt();
+        
+         System.out.println("Enter the number ");
+        int e= sc.nextInt();
+        System.out.println("Enter the number ");
+        int f= sc.nextInt();
+        Mnc mj=new Mnc();
+        mj.show();
+        B k = new B();
+        k.add();
+        k.multi();
+        k.div(a, b);
+        k.mod( );
+    }
+}
+--------------------------------------------------------
+class A :
+getter setter method :
+addition :
+
+Main :
+access
+
+
+
+class A{
+    int a;
+    void geta(int a)
+    {
+        this.a=a;
+    }
+    int setter()
+    {
+        return a;
+    }
+    void add(int a)
+    {
+        System.out.println(a+a+" = add");
+    }
+
+} 
+public class Mnc extends A {
+
+    public static void main(String [] args)
+    {
+       A k=new A();
+       k.add(2);
+    }
+
+}
+--------------------------------------------------------
+class A :
+String name ;
+float per: 
+int number: 
+getter and setter method :instance variable accesss
+
+Main :
+access
+
+import java.util.*;
+
+class A{
+    int a;
+    void geta(int a)
+    {
+        this.a=a;
+    }
+    int setter()
+    {
+        return a;
+    }
+    void add(int a)
+    {
+        System.out.println(a+a+" = add");
+    }
+    void stri(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String");
+        String name = sc.next();
+        System.out.println("regex is a learning platform and regex is a service based company");
+        
+    }
+    
+
+} 
+public class Mnc extends A {
+
+    public static void main(String [] args)
+    {
+       A k=new A();
+       k.add(2);
+       k.stri();
+    }
+
+}
+----------------------------------------
+-------------------------------------------------------
+Main :
+getter and setter :
+empname 
+empfname
+empmname
+empid 
+empsalary 
+
+method access
+
+
+
+--------------------------------------------------------

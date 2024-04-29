@@ -1,0 +1,464 @@
+class A :abstract 
+
+show1() :two number addition :non-abs
+show2() :two number multi:non-abs
+
+
+class B ex A 
+show3() :two number sub
+show4() :two number div 
+
+class Main :access 
+
+import java.util.*;
+
+abstract class A{
+    void show1(){
+       Scanner sc=new Scanner(System.in);
+       int a=sc.nextInt();
+       int b=sc.nextInt();
+        System.out.println("addtion :"+(a+b));
+        }
+    void show2(){
+        Scanner sc=new Scanner(System.in);
+       int a=sc.nextInt();
+       int b=sc.nextInt();
+       System.out.println("multi :"+(a*b));
+    }
+}
+class B extends A{
+    void show3(){
+        Scanner sc=new Scanner(System.in);
+       int a=sc.nextInt();
+       int b=sc.nextInt();
+       System.out.println("sub :"+(a-b));
+    }
+    void show4(){
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        System.out.println("div :"+(a/b));
+    }
+}
+public class Test {
+    public static void main(String[] args)
+    {
+     B k=new B();
+     k.show1();
+     k.show2();
+     k.show3();
+     k.show4();
+                }
+    }
+
+-----------------------------------------------------------------
+class A :abstract 
+
+show1() :two number addition :non-abs : return and no argument 
+show2() :two number multi:non-abs: return and  argument 
+
+
+class B ex A 
+show3() :two number sub: return and  argument 
+show4() :two number div :no return and no argument 
+
+class Main :access 
+
+import java.util.*;
+
+abstract class A{
+    int show1(){
+       Scanner input=new Scanner(System.in);
+       int a=input.nextInt();
+       int b=input.nextInt();
+       int c=a+b;
+
+        System.out.println("addtion :"+c);
+        return c;
+        }
+    int  show2(int a,int b){
+       
+       int c=a*b;
+       System.out.println("multi :"+c);
+       return c;
+    }
+}
+class B extends A{
+    int show3(int a,int b){
+        
+       int c=a-b;
+       System.out.println("sub :"+c);
+       return c;
+    }
+    void show4(){
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=a/b;
+        System.out.println("div"+c);
+
+    }
+}
+public class Test {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+
+     B k=new B();
+     k.show1();
+     k.show2(a, b);
+     k.show3(a, b);
+     k.show4();
+                }
+    }
+
+-----------------------------------------------------------------
+class A :abstract 
+
+show1() :two number addition :abs : return and no argument 
+show2() :two number multi:non-abs: return and  argument 
+
+
+class B ex A 
+show3() :two number sub: return and  argument 
+show4() :two number div :no return and no argument 
+
+class Main :access 
+
+import java.util.*;
+
+abstract class A{
+    abstract int show1();
+    int  show2(int a,int b){
+       
+       int c=a*b;
+       System.out.println("multi :"+c);
+       return c;
+    }
+}
+class B extends A{
+
+    int show1(){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=a+b;
+        System.out.println("addtion :"+c);
+        return c;
+    }
+    int show3(int d,int f){
+        
+       int e=d-f;
+       System.out.println("sub :"+e);
+       return e;
+    }
+    void show4(){
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=a/b;
+        System.out.println("div"+c);
+
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+       
+        Scanner scan=new Scanner(System.in);
+        int d=scan.nextInt();
+        int f=scan.nextInt();
+
+     B k=new B();
+     k.show1();
+     k.show2(a, b);
+     k.show3(d, f);
+     k.show4();
+                }
+    }
+
+-----------------------------------------------------------------
+class A :abstract 
+
+show1() :two number addition :abs :public 
+show2() :two number multi:abs :protected 
+
+
+class B ex A 
+show3() :two number sub
+show4() :two number div 
+
+class Main :access 
+
+import java.util.*;
+
+abstract class A{
+    public abstract void show1();
+   protected abstract void show2();
+}
+class B extends A{
+
+  public void show1(){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=a+b;
+        System.out.println("addtion :"+c);
+        
+    }
+    protected void show2(){
+         Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=a*b;
+        System.out.println("addtion :"+c);
+    }
+    void show3(){
+        Scanner scan=new Scanner(System.in);
+        int d=scan.nextInt();
+        int f=scan.nextInt();
+
+       int e=d-f;
+       System.out.println("sub :"+e);
+       
+    }
+    void show4(){
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=a/b;
+        System.out.println("div"+c);
+
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+       
+     B k = new B();
+     k.show1();
+     k.show2();
+    k.show3();
+     k.show4();
+                }
+    }
+
+-----------------------------------------------------------------
+class A :abstract 
+
+show1() :two number addition :abs :private 
+
+
+class B ex A 
+show3() :two number sub
+show4() :two number div 
+
+class Main :access 
+
+with solution 
+
+ERROR======
+import java.util.*;
+
+abstract class A{
+    private abstract void show1();
+   
+}
+class B extends A{
+
+  private void show1(){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=a+b;
+        System.out.println("addtion :"+c);
+        
+    }
+    
+    void show3(){
+         Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=a-b;
+        System.out.println("addtion :"+c);
+       
+    }
+    void show4(){
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=a/b;
+        System.out.println("div"+c);
+
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+    
+     B k = new B();
+     
+     k.show1();
+
+    k.show3();
+     k.show4();
+                }
+    }
+
+
+=====SOLUTION==========
+BY REMOVING PRIVATE ACCESS MODIFIER WE CAN ACCESS THIS CODE
+
+-------------------------------------------------------------------------
+class A :abstract 
+
+show1() :two number addition :abs : return and no argument :public 
+show2() :two number multi:non-abs: return and  argument :protected
+
+
+class B ex A 
+show3() :two number sub: return and  argument 
+ show4() :two number div :no return and no argument 
+
+class Main :access 
+
+import java.util.*;
+
+abstract class A{
+    public abstract int show1();
+   protected int show2(int a,int b){
+      
+        int c=a*b;
+        System.out.println("addtion :"+c);
+        return c;
+   }
+}
+class B extends A{
+
+  public int show1(){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=a+b;
+        System.out.println("addtion :"+c);
+        return c;
+    }
+    
+    int show3(int d,int f){
+        
+       int e=d-f;
+       System.out.println("sub :"+e);
+       return e;
+       
+    }
+    void show4(){
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=a/b;
+        System.out.println("div"+c);
+
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+       Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        
+         Scanner scan=new Scanner(System.in);
+        int d=scan.nextInt();
+        int f=scan.nextInt();
+     B k = new B();
+     
+     k.show1();
+     k.show2(a,b);
+    k.show3(d,f);
+     k.show4();
+                }
+    }
+
+--------------------------------------------------------------------
+class A :non-abstract 
+
+show1() :two number addition :abs : return and no argument :public 
+show2() :two number multi:non-abs: return and  argument :protected
+
+
+class B ex A 
+show3() :two number sub: return and  argument 
+show4() :two number div :no return and no argument 
+
+class Main :access 
+
+
+import java.util.*;
+
+ class A{
+    public abstract int show1();
+   protected int show2(int a,int b){
+      
+        int c=a*b;
+        System.out.println("addtion :"+c);
+        return c;
+   }
+}
+class B extends A{
+
+  public int show1(){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=a+b;
+        System.out.println("addtion :"+c);
+        return c;
+    }
+    
+    int show3(int d,int f){
+        
+       int e=d-f;
+       System.out.println("sub :"+e);
+       return e;
+       
+    }
+    void show4(){
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=a/b;
+        System.out.println("div"+c);
+
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+       Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        
+         Scanner scan=new Scanner(System.in);
+        int d=scan.nextInt();
+        int f=scan.nextInt();
+     B k = new B();
+     
+     k.show1();
+     k.show2(a,b);
+    k.show3(d,f);
+     k.show4();
+                }
+    }
+
+ERROR=========
+
+
+=== A is not abstract and does not override abstract method show1() in A=======
+
+
+
