@@ -155,6 +155,42 @@ d[]=2.3,7.8,8.7,4.5
 
 method through (print all one method) 
 
+public class Main
+{
+	public	static void show(int a[],String array[],char b[],float c[]){
+		    for(int i=0;i<a.length;i++){
+		        System.out.print(a[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<array.length;i++){
+		        System.out.print(array[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<b.length;i++){
+		        System.out.print(b[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<c.length;i++){
+		        System.out.print(c[i]+" ");
+		    }
+		    System.out.println();
+		}
+		public static void main(String[] args){
+		 int a[]={35,68,134,67,45,67};
+		 String array[]={"hello","hii","bye","tata"};
+		 char b[]={'a','e','i','o','u'};
+		 float c[]={2.3f,7.8f,8.7f,4.5f};
+		 show(a,array,b,c);
+		}
+		}
+=============================================================================
+
 5)user input 
 a[] =12,45,6,7,89,45
 print 
@@ -188,6 +224,42 @@ d[]=2.3,7.8,8.7,4.5
 
 method through (print all one method) 
 
+public class Main
+{
+	public	static void show(int a[],String array[],char b[],float c[]){
+		    for(int i=0;i<a.length;i++){
+		        System.out.print(a[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<array.length;i++){
+		        System.out.print(array[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<b.length;i++){
+		        System.out.print(b[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<c.length;i++){
+		        System.out.print(c[i]+" ");
+		    }
+		    System.out.println();
+		}
+		public static void main(String[] args){
+		 int a[]={35,68,134,67,45,67};
+		 String array[]={"hello","hii","bye","tata"};
+		 char b[]={'a','e','i','o','u'};
+		 float c[]={2.3f,7.8f,8.7f,4.5f};
+		 show(a,array,b,c);
+		}
+		}
+==========================================================================
+
 7)
 a[]=35,68,134,67,45,67
 
@@ -199,19 +271,169 @@ d[]=2.3,7.8,8.7,4.5
 
 method through (print all one method) 
 
+public class Main
+{
+	public	static void show(int a[],String array[],char b[],float c[]){
+		    for(int i=0;i<a.length;i++){
+		        System.out.print(a[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<array.length;i++){
+		        System.out.print(array[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<b.length;i++){
+		        System.out.print(b[i]+" ");
+		    }
+		    System.out.println();
+		
+		
+		    for(int i=0;i<c.length;i++){
+		        System.out.print(c[i]+" ");
+		    }
+		    System.out.println();
+		}
+		public static void main(String[] args){
+		 int a[]={35,68,134,67,45,67};
+		 String array[]={"hello","hii","bye","tata"};
+		 char b[]={'a','e','i','o','u'};
+		 float c[]={2.3f,7.8f,8.7f,4.5f};
+		 show(a,array,b,c);
+		}
+		}
+=======================================================================
+
 8)
 String array :return and argument 
 
+public class Main {
+    static String[] show(String a[]){
+        return a;
+    }
+    static void display(String a[]){
+        for(int  i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+        
+    }
+    public static void main(String[] args){
+        String a[]={"what","hello","hie","tei","hi"};
+        String b[]=show(a);
+        display(b);
+    }
+       
+   }
+======================================================================
+
 9)int array :return and argument 
+
+public class Main {
+ static int [] show(int a[]){
+     return a;
+ }
+ static void display(int a[]){
+     for(int  i=0;i<a.length;i++){
+         System.out.print(a[i]+" ");
+     }
+     
+ }
+ public static void main(String[] args){
+     int a[]={1,2,4,5,3};
+     int b[]=show(a);
+     display(b);
+ }
+    
+}
+=================================================================
 
 10)byte array :return and argument 
 
+public class Main {
+    static byte[] show(byte a[]){
+        return a;
+    }
+    static void display(byte a[]){
+        for(int  i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+        
+    }
+    public static void main(String[] args){
+        byte a[]={10,20,30,40,50};
+        byte b[]=show(a);
+        display(b);
+    }
+       
+   }
+====================================================================
+
 11)short array :return and argument 
+
+public class Main {
+    static short[] show(short a[]){
+        return a;
+    }
+    static void display(short a[]){
+        for(int  i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+        
+    }
+    public static void main(String[] args){
+        short a[]={10,20,30,40,50};
+        short b[]=show(a);
+        display(b);
+    }
+       
+   }
+====================================================================
 
 12)float array :return and argument 
 
+public class Main {
+    static float[] show(float a[]){
+        return a;
+    }
+    static void display(float a[]){
+        for(int  i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+        
+    }
+    public static void main(String[] args){
+        float a[]={1.0f,2.0f,3.0f,4.0f,5.0f};
+        float b[]=show(a);
+        display(b);
+    }
+       
+   }
+=================================================================
+
 13)double array :return and argument 
 
+public class Main {
+    static double[] show(double a[]){
+        return a;
+    }
+    static void display(double a[]){
+        for(int  i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+        
+    }
+    public static void main(String[] args){
+        double a[]={1.1, 2.2, 3.3, 4.4, 5.5};
+        double b[]=show(a);
+        display(b);
+    }
+       
+   }
+
+========================================================================
 14)reverse of array :
 input :1,2,3,4,5,6,7,8,9,10
 
