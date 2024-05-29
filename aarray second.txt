@@ -1,0 +1,462 @@
+methods : 
+
+check a array which element is even : 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2 == 0) {
+                System.out.println("even "+a[i]);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        target(a, 0);
+    }
+}
+-------------------
+check a array which element is odd : 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2==1){
+                System.out.println("odd "+a[i]);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        target(a, 0);
+    }
+}
+============================================================
+
+check a array which element is even and odd : 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2==0){
+                System.out.println("even "+a[i]);
+            }
+        }
+    }
+    public static void target1(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2==1){
+                System.out.println("odd "+a[i]);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        target(a, 0);
+        target1(a, 0);
+    }
+}
+==========================================================================
+
+check a array which element is even : index present 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2 == 0) {
+                System.out.println("index " +i+ " is have even value ");
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        target(a, 0);
+    }
+}
+====================================================================
+
+check a array which element is odd : index present 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2 == 1) {
+                System.out.println("index " +i+ " is have odd value ");
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        target(a, 0);
+    }
+}
+======================================================================
+
+check a array which element is even and odd index: index present
+
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2==0){
+                System.out.println("index number "+i+" have even value");
+            }
+        }
+    }
+    public static void target1(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2==1){
+                System.out.println("index number "+i+" have odd value");
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        target(a, 0);
+        target1(a, 0);
+    }
+}
+=============================================================== 
+
+make a array and print only even index element 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2 == 0) {
+                System.out.println("even numbers are "+a[i]);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        target(a, 0);
+    }
+}
+==============================================================
+
+make a array and print only odd index element
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2 == 1) {
+                System.out.println("odd numbers are "+a[i]);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        target(a, 0);
+    }
+} 
+======================================================
+
+check a element is present or not in array : 
+a[]= {154,22,31,54,59,67,74,89,99,109}
+target :31 present 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                System.out.println("persent ");
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 154,22,31,54,59,67,74,89,99,109};
+        int target=31;
+target(a, target);  
+  }
+}
+============================================================
+check a element is present or not in array : 
+a[]= {154,22,31,54,59,67,74,89,99,109}
+target :31 present :index 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                System.out.println("persent on index  "+i);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 154,22,31,54,59,67,74,89,99,109};
+        int target=31;
+target(a, target);  
+  }
+}
+============================================================
+
+input a two array check which one is common element :
+a[]={1,2,3,4,5};
+b[]={1,45,678,89}; 
+
+common 
+
+public class Main {
+    
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5};
+        int b[]={1,45,678,89}; 
+        for(int i=0; i<a.length; i++){
+            for(int j=0; j<b.length; j++){
+                if(a[i]==b[j]){
+                    System.out.println(a[i]+" value with index "+i+" and "+b[j]+" value in b with index "+j+);
+                }
+            }
+        }
+    }
+}
+=============================================================
+
+input a two array check which one is common element :
+a[]={1,2,3,4,5};
+b[]={1,45,678,89}; 
+
+common index : 
+
+public class Main {
+    
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5};
+        int b[]={1,45,678,89}; 
+        for(int i=0; i<a.length; i++){
+            for(int j=0; j<b.length; j++){
+                if(a[i]==b[j]){
+                    System.out.println(a[i]+" value with index "+i+" and "+b[j]+" value in b with index "+j);
+                }
+            }
+        }
+    }
+}
+========================================================================
+
+input a array print table of the every element : 
+a[]={1,2,3,4,5} 
+
+public class Main {
+    
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5}; 
+        for(int i=0; i<a.length; i++){
+            int b=1;
+            while(b<=10){
+
+            System.out.println(a[i]+"X"+b+"="+(a[i]*b));
+            b++;
+            }
+            System.out.println();
+        }
+    }
+}
+---------------------------------------------------------
+char p,e,a,k :a present 
+
+public class Main {
+    public static void target(char a[], char target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                System.out.println("persent at index "+i );
+            }
+        }
+    }
+    public static void main(String[] args) {
+        char a[] = {'a','e','i','o','u'};
+        char target='e';
+target(a, target);  
+  }
+}
+---------------------------------------------------
+char :r,e,g,e,x ,i,s, a, l,e,a,r,n,i,n,g ,p,l,a,t,f,o,r,m
+
+vowel  
+
+     
+char :r,e,g,e,x ,i,s, a, l,e,a,r,n,i,n,g ,p,l,a,t,f,o,r,m
+
+consonant 
+
+public class Main {
+    
+    public static void main(String[] args) {
+        char a[] = {'r','e','g','e','x','i','s','a','l','e','a','r','n','i','n','g','p','l','a','t','f','o','r','m'};
+        
+        for(int i=0; i<a.length; i++){
+                      if(a[i]=='a' || a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u'){
+                    System.out.println(a[i]+" vowels is persent at an index );
+                }
+                else{
+                    System.out.println(a[i]+" consonents are present );
+                }
+            }
+        }
+    }
+
+      
+=======================================================================
+
+char :r,e,g,e,x ,i,s, a, l,e,a,r,n,i,n,g ,p,l,a,t,f,o,r,m
+
+vowel :index
+
+
+char :r,e,g,e,x ,i,s, a, l,e,a,r,n,i,n,g ,p,l,a,t,f,o,r,m
+
+consonat  :index
+
+public class Main {
+    
+    public static void main(String[] args) {
+        char a[] = {'r','e','g','e','x','i','s','a','l','e','a','r','n','i','n','g','p','l','a','t','f','o','r','m'};
+        
+        for(int i=0; i<a.length; i++){
+                      if(a[i]=='a' || a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u'){
+                    System.out.println(a[i]+" vowels is persent at an index "+i);
+                }
+                else{
+                    System.out.println(a[i]+" consonents are present "+i);
+                }
+            }
+        }
+    }
+
+      
+
+---------------------------------------------------
+char :r,e,g,e,x ,i,s, a, l,e,a,r,n,i,n,g ,p,l,a,t,f,o,r,m
+
+vowel :count how much
+
+
+char :r,e,g,e,x ,i,s, a, l,e,a,r,n,i,n,g ,p,l,a,t,f,o,r,m
+
+consonat  :count 
+
+public class Main {
+    public static void vowel(char a[]) {
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u') {
+                count++;
+            }
+        }
+        System.out.println("vowel :" + count);
+    }
+
+    public static void consonent(char a[]) {
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u') {
+
+            } else {
+                count++;
+            }
+        }
+        System.out.println("consonat :" + count);
+    }
+
+    public static void main(String[] args) {
+        char[] a = { 'a', 'b', 'c', 'd' };
+        vowel(a);
+        consonent(a);
+    }
+}
+------------------------------------------------------
+check a element is present or not in array : 
+a[]= {154,22,31,54,59,67,74,89,99,109}
+target :31 present :table print 
+
+public class Main {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                System.out.println("persent on index  "+i);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int a[] = { 154,22,31,54,59,67,74,89,99,109};
+        int target=31;
+target(a, target);  
+  }
+}
+
+------------------------------------------------------
+input a array print factorial of the every element : 
+a[]={1,2,3,4,5} 
+
+public class Main {
+    
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5}; 
+        for(int i=0; i<a.length; i++){
+            int fact=1;
+	   for(int j=1; j<=a[i]; j++){
+	       fact=fact*j;
+	   }
+	   System.out.println(fact);
+            }
+         
+        }
+    
+    }
+------------------------------------------------------
+input a array print prime number check of the every element : 
+a[]={1,2,3,4,5} 
+
+
+
+
+---------------
+check a array which element is even : count 
+
+public class Main {
+    public static void target(int a[], int target) {
+        int count=0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2 == 0) {
+                System.out.println("even "+a[i]);
+                count++;
+            }
+            
+        }
+        System.out.println(count+" are elements are even");
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        target(a, 0);
+    }
+}
+-------------------
+check a array which element is odd : count 
+
+public class Main {
+    public static void target(int a[], int target) {
+        int count=0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]%2 == 1) {
+                System.out.println("odd "+a[i]);
+                count++;
+            }
+            
+        }
+        System.out.println(count+" are elements are odd");
+    }
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        
+        target(a, 0);
+    }
+}
+=========================================================================

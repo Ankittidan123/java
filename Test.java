@@ -1,28 +1,14 @@
-import java.util.*;
-
-public class Test{
-    public static int binarysearch(int number[], int key){
-        int start =0,end =number.length-1;
-        while(start<=end){
-            int mid=(start+end)/2;
-
-            //comparison
-            if(number[mid]==key){ //found
-                return mid;
-
-            }
-            if(number[mid]<key){ //right
-            start=mid+1;
-
-            }else{
-                end=mid-1;
+public class Tes {
+    public static void target(int a[], int target) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                System.out.println("present");
             }
         }
-        return -1;
     }
     public static void main(String[] args) {
-       int number[]={2,4,6,8,10,12,14,26};
-       int key =12 ;
-       System.out.println("index for key is :" +binarysearch(number, key));
+        int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int target = 8;
+        target(a, 8);
     }
 }

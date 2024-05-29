@@ -1,17 +1,19 @@
-public class Main {
-    static double[] show(double a[]){
-        return a;
-    }
-    static void display(double a[]){
-        for(int  i=0;i<a.length;i++){
-            System.out.print(a[i]+" ");
-        }
+import java.util.*;
+
+public class Main{
+    
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5,6,7,8};
+        int b[] = a.clone();
+        int c[] = b.clone();
+
+        int d[] = c.clone();
         
+        a[2] = 98;
+        a[4] = 56;
+        for(int i=0; i<d.length; i++){
+            
+            System.out.print(d[i]+" ");
+        }
     }
-    public static void main(String[] args){
-        double a[]={1.1, 2.2, 3.3, 4.4, 5.5};
-        double b[]=show(a);
-        display(b);
-    }
-       
-   }
+}
