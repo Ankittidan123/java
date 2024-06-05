@@ -1,0 +1,816 @@
+which element is greater than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+target : 6 :greater which 
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int target = 6;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]>target) {
+                System.out.print(" "+a[i]);
+            }
+        }
+    }
+}
+
+------------------------------------------------
+which element is less than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+target : 6 :less which 
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]<target) {
+                System.out.print(" "+a[i]);
+            }
+        }
+    }
+}
+-----------------------------------------------
+which element is greater than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+target : 6 :greater count  
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]>target) {
+                System.out.print(" "+a[i]);
+                count++;
+             System.out.println(); 
+            }
+            
+        }
+        System.out.println(count+" elements are greater");
+    }
+}
+
+------------------------------------------------
+which element is less than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+target : 6 :less count 
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]<target) {
+                System.out.print(" "+a[i]);
+                count++;
+             System.out.println(); 
+            }
+            
+        }
+        System.out.println(count+" elements are greater");
+    }
+}
+
+-----------------------------------------------
+which element is greater than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+target : 6 :greater index with value 
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+      //  int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]>target) {
+                System.out.print(a[i]+" with index value "+i);
+        //        count++;
+             System.out.println(); 
+             break;
+            }
+            
+        }
+    }
+}
+
+------------------------------------------------
+which element is less than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+target : 6 :less index with value 
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+      //  int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]<target) {
+                System.out.print(a[i]+" with index value "+i);
+        //        count++;
+             System.out.println(); 
+             break;
+            }
+            
+        }
+    }
+}
+----------------------------------------------------
+which element is greater than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+array two part 
+first part :target : 6 :greater index  
+second part :target : 6 :less index 
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+      for (int i = 0; i < a.length/2; i++) {
+            if (a[i]<target) {
+                System.out.print(a[i]+" with index value "+i);
+        
+             System.out.println(); 
+             break;
+            }
+            
+        }
+        for (int i = a.length/2; i <= a.length-1; i++) {
+            if (a[i]>target) {
+                System.out.print(a[i]+" with index value "+i);
+       
+             System.out.println(); 
+             break;
+            }
+            
+        }
+        
+    }
+}
+
+------------------------------------------------
+which element is greater than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+array two part 
+first part :target : 6 :less index
+second part :target :  6 :greater index 
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+      for (int i = 0; i < a.length/2; i++) {
+            if (a[i]<target) {
+                System.out.print(a[i]+" with index value "+i);
+        
+             System.out.println(); 
+             break;
+            }
+            
+        }
+        for (int i = a.length/2; i <= a.length-1; i++) {
+            if (a[i]>target) {
+                System.out.print(a[i]+" with index value "+i);
+       
+             System.out.println(); 
+             break;
+            }
+            
+        }
+        
+    }
+} 
+------------------------------------------------
+sum of the all elements  : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+total array sum : 
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size :");
+        int size = sc.nextInt();
+        int a[] = new int[size];
+        for(int i=0; i<a.length; i++){
+            a[i] = sc.nextInt();
+        }
+        int sum=0;
+        for(int i=0; i<a.length; i++){
+            System.out.print(a[i]+" \n");
+           
+            sum=sum+a[i];
+           
+            
+               
+            }
+        
+      
+        System.out.println("the sum of array :"+sum);
+       
+       
+    }
+}
+----------------------------------------------------
+which element is greater than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+array two part 
+first part :target : 6 :less than addition 
+second part :target :  6 :greater than addition 
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+        int sum=0;
+      for (int i = 0; i < a.length/2; i++) {
+            if (a[i]<=target) {
+                
+        sum=sum+a[i];
+        System.out.println();
+             
+            }
+             
+            
+        }
+        int sum1=0;
+        for (int i = a.length/2; i <= a.length-1; i++) {
+            if (a[i]>target) {
+                sum1=sum1+a[i];
+                
+       
+             System.out.println(); 
+            // break;
+            }
+           
+            
+        }
+        System.out.println("the sum of first part array is :"+sum);
+         System.out.print("the sum of remaining half arrray is :"+sum1);
+    }
+}
+
+
+----------------------------------------------------
+which element is greater than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+array two part 
+first part :target : 6 :less than odd numbers  
+second part :target :  6 :greater than even numbers 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+        // int sum=0;
+      for (int i = 0; i < a.length/2; i++) {
+            if (a[i]<=target) {
+        if(a[i]%2==1){
+            
+            System.out.print(a[i]+" ");
+        }        
+      //  sum=sum+a[i];
+        }     
+            
+        }System.out.println();
+        //int sum1=0;
+        for (int i = a.length/2; i <= a.length-1; i++) {
+            if (a[i]>target) {
+                
+               if(a[i]%2==0){
+                System.out.print(a[i]+" ");
+               } 
+               
+            }
+        }
+           System.out.println(); 
+        }
+        }
+
+
+
+----------------------------------------------------
+which element is greater than target element : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+array two part 
+first part :target : 6 :less than odd numbers  sum
+second part :target :  6 :greater than even numbers sum
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1,2,3,4,5,6,7,8,9,4,2,6,54 };
+        int target = 6;
+        int sum=0;
+      for (int i = 0; i < a.length/2; i++) {
+            if (a[i]<=target) {
+                if(a[i]%2==1){
+                
+        sum=sum+a[i];
+                
+        System.out.println();
+            }
+            }
+             
+            
+        }
+        int sum1=0;
+        for (int i = a.length/2; i <= a.length-1; i++) {
+            if (a[i]>target) {
+                if(a[i]%2==0){
+                sum1=sum1+a[i];
+                
+       
+             System.out.println(); 
+            }
+            }
+           
+            
+        }
+        System.out.println("the sum of first part array is :"+sum);
+         System.out.print("the sum of remaining half arrray is :"+sum1);
+    }
+}
+---------------------------------------------------
+find maximum element in array : 
+public class Main{
+    public static void main(String[] args){
+        int a[]={1,2,3,5,6,4,3,1};
+        int max=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+        }
+        System.out.println(max);
+    }
+}
+
+
+
+-------------------------------------------------------
+find minimum element in array : 
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={5,2,3,5,6,4,3};
+        int mini=6;
+        for(int i=0;i<a.length;i++){
+            if(a[i]<mini){
+                mini=a[i];
+            }
+        }
+        System.out.println(mini);
+    }
+}
+---------------------------------------------------
+find maximum element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+mid part : 
+first part maximum 
+second part maximum 
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int max=0;
+        for(int i = 0; i < a.length/2; i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+            //System.out.println();
+        }
+        int maxii=0;
+        for(int i = a.length/2; i <= a.length-1; i++){
+        if(a[i]>maxii){
+            maxii=a[i];
+        }
+        // System.out.println();
+        }
+        System.out.println(max);
+        System.out.println(maxii);
+    }
+}
+
+---------------------------------------------------
+find maximum element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+mid part : 
+first part maximum 
+second part minimum
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int max=0;
+        for(int i = 0; i < a.length/2; i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+            //System.out.println();
+        }
+        int mini=54;
+        for(int i = a.length/2; i <= a.length-1; i++){
+        if(a[i]<mini){
+            mini=a[i];
+        }
+        // System.out.println();
+        }
+        System.out.println(max);
+        System.out.println(mini);
+    }
+}
+---------------------------------------------------
+find maximum element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+mid part : 
+first part minimum 
+second part maximum
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int mini=6;
+        for(int i = 0; i < a.length/2; i++){
+            if(a[i]<mini){
+                mini=a[i];
+            }
+            //System.out.println();
+        }
+        int maxi=2;
+        for(int i = a.length/2; i <= a.length-1; i++){
+        if(a[i]>maxi){
+            maxi=a[i];
+        }
+        // System.out.println();
+        }
+        System.out.println(mini);
+        System.out.println(maxi);
+    }
+} 
+---------------------------------------------------
+find maximum element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+mid part : 
+first part maximum 
+second part maximum 
+
+first max and second max sum 
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int max=0;
+        for(int i = 0; i < a.length/2; i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+            //System.out.println();
+        }
+        int maxii=0;
+        for(int i = a.length/2; i <= a.length-1; i++){
+        if(a[i]>maxii){
+            maxii=a[i];
+        }
+        // System.out.println();
+        }
+        System.out.println(max);
+        System.out.println(maxii);
+
+        System.out.println("sum of both maxi number are :"+(max+maxii));
+    }
+}
+---------------------------------------------------
+find maximum element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+mid part : 
+first part minimum 
+second part minimum 
+
+first min and second min sum 
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int mini=6;
+        for(int i = 0; i < a.length/2; i++){
+            if(a[i]<mini){
+                mini=a[i];
+            }
+            //System.out.println();
+        }
+        int minii=54;
+        for(int i = a.length/2; i <= a.length-1; i++){
+        if(a[i]<minii){
+            minii=a[i];
+        }
+        // System.out.println();
+        }
+        System.out.println(mini);
+        System.out.println(minii);
+
+       System.out.println("sum of both maxi number are :"+(mini+minii));
+    }
+}
+--------------------------------------------
+find maximum element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+mid part : 
+first part maximum 
+second part maximum 
+
+which one is max 
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int max=0;
+        for(int i = 0; i < a.length/2; i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+            //System.out.println();
+        }
+        int maxii=0;
+        for(int i = a.length/2; i <= a.length-1; i++){
+        if(a[i]>maxii){
+            maxii=a[i];
+        }
+        // System.out.println();
+        }
+        System.out.println(max);
+        System.out.println(maxii);
+
+        if(max>maxii){
+            System.out.println("first part sum is greater ");
+        }
+        else {
+            System.out.println("second part is greater");
+        }
+
+        //System.out.println("sum of both maxi number are :"+(max+maxii));
+    }
+}
+---------------------------------------------------
+find maximum element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+mid part : 
+first part minimum 
+second part minimum 
+
+which one is minimum 
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int mini=6;
+        for(int i = 0; i < a.length/2; i++){
+            if(a[i]<mini){
+                mini=a[i];
+            }
+            //System.out.println();
+        }
+        int minii=54;
+        for(int i = a.length/2; i <= a.length-1; i++){
+        if(a[i]<minii){
+            minii=a[i];
+        }
+        // System.out.println();
+        }
+        System.out.println(mini);
+        System.out.println(minii);
+    
+
+
+        if(mini<minii){
+            System.out.println("first part is smaller ");
+        }
+        else {
+            System.out.println("second part is smaller");
+        }
+
+        //System.out.println("sum of both maxi number are :"+(max+maxii));
+    }
+}
+--------------------------------------------
+find sort all  element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+import java.util.*;
+public class Main{
+    public static void show(int a[]){
+        for(int i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        System.out.println("original array");
+        show(a);
+        Arrays.sort(a);
+        System.out.println("after sorting");
+        show(a);
+    }
+}
+--------------------------------------------
+find  element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+two part divide :
+first :sort 
+second part :not sorted part 
+
+import java.util.*;
+public class Main{
+    public static void show(int a[]){
+        for(int i=0;i<a.length/2;i++){
+            System.out.print(a[i]+" ");
+        }
+        System.out.println();
+    }
+    public static void show1(int a[]){
+        for(int i=a.length/2;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+         
+        Arrays.sort(a);
+        
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+        // System.out.println("original array");
+        // show(a);
+        show(a);
+        show1(a);
+    }
+}
+--------------------------------------------
+find  element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+two part divide :
+first :not sort 
+second part : sorted part 
+
+import java.util.*;
+public class Main{
+    public static void show(int a[]){
+        for(int i=a.length/2;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+        System.out.println();
+    }
+    public static void show1(int a[]) {
+        for(int i=0;i<a.length/2;i++){
+            System.out.print(a[i]+" "); 
+    } 
+    System.out.println();
+    }
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5,6,7,8,9,4,2,6,54};
+       
+        Arrays.sort(a);
+        show(a);
+        show1(a);
+    }
+}
+--------------------------------------------
+find  element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+find maximum element find and minimum element in array 
+
+public class Main {
+
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int mini=54;
+        for(int i=0;i<a.length;i++){
+            if(a[i]<mini){
+                mini=a[i];
+            }
+        }
+        int maxi=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]>maxi){
+                maxi=a[i];
+            }
+        }
+        System.out.println("the mini value element is:"+mini);
+        System.out.println("the maxi value of elements is:"+maxi);
+    }
+}
+
+--------------------------------------------
+find  element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+find maximum element find and minimum element in array:sum  
+
+public class Main {
+
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int mini=54;
+        for(int i=0;i<a.length;i++){
+            if(a[i]<mini){
+                mini=a[i];
+            }
+        }
+        int maxi=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]>maxi){
+                maxi=a[i];
+            }
+        }
+        System.out.println("the mini value element is:"+mini);
+        System.out.println("the maxi value of elements is:"+maxi);
+
+        System.out.println("sum of mini and maxi elements is :"+(mini+maxi));
+    }
+}
+--------------------------------------------
+find  element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+find maximum element find and minimum element in array:which one is max
+
+public class Main {
+
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int mini=54;
+        for(int i=0;i<a.length;i++){
+            if(a[i]<mini){
+                mini=a[i];
+            }
+        }
+        int maxi=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]>maxi){
+                maxi=a[i];
+            }
+        }
+        System.out.println("the mini value element is:"+mini);
+        System.out.println("the maxi value of elements is:"+maxi);
+
+    if(maxi>mini){
+        System.out.println(maxi+" is greater");
+    }
+    else{
+        System.out.println(mini+" is greater");
+    }
+    }
+}
+
+--------------------------------------------
+find  element in array : 
+1,2,3,4,5,6,7,8,9,4,2,6,54
+
+find maximum element find and minimum element in array:minimum  
+
+public class Main {
+
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5,6,7,8,9,4,2,6,54};
+        int mini=54;
+        for(int i=0;i<a.length;i++){
+            if(a[i]<mini){
+                mini=a[i];
+            }
+        }
+        int maxi=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]>maxi){
+                maxi=a[i];
+            }
+        }
+        System.out.println("the mini value element is:"+mini);
+        System.out.println("the maxi value of elements is:"+maxi);
+
+    if(maxi>mini){
+        System.out.println(maxi+" is greater");
+    }
+    else{
+        System.out.println(mini+" is greater");
+    }
+    }
+}
+==============================================
