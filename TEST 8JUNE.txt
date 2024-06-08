@@ -1,0 +1,330 @@
+1)
+    *
+   ***
+  *****
+ *******
+*********
+   ***
+   ***
+   ***
+   ***
+
+public class Test {
+    public static void main(String[] args) {
+          
+        for(int i=1; i<=5; i++){
+            for(int s=4; s>=i; s--){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < 4; i++) {
+            for (int s = 0; s < 5-3/2; s++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 3; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+======================================================================
+2)
+
+Problem Statement – Chaman planned to choose a four digit lucky number for his car. His
+lucky numbers are 3,5 and 7. Help him find the number, whose sum is divisible by 3 or 5 or
+7. Provide a valid car number, Fails to provide a valid input then display that number is not a
+valid car number.
+Note : The input other than 4 digit positive number[includes negative and 0] is considered as
+invalid.
+Refer the samples, to read and display the data.
+Sample Input 1:
+Enter the car no:1234
+Sample Output 1:
+Lucky Number
+Sample Input 2:
+Enter the car no:1214
+Sample Output 2:
+Sorry its not my lucky number
+Sample Input 3:
+Enter the car no:14
+Sample Output 3:
+14 is not a valid car number
+
+import java.util.*;
+public class Test {
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the car number :");
+    int num=sc.nextInt();
+    if(num>=1000 && num<=9999){
+        int rem,sum=0;
+        while(num>0){
+            rem=num%10;
+            sum=sum+rem;
+            num=num/10;
+        }
+        if(sum%3==0||sum%5==0||sum%7==0){
+            System.out.println("this is a lucky number");
+        }
+        else {
+            System.out.println("this is not a lucky number");
+        }
+    }
+    else {
+        System.out.println("not a valid input");
+    }
+}
+    
+}
+===============================================================
+
+3)
+Problem Statement – Goutam and Tanul plays by telling numbers. Goutam says a number
+to Tanul. Tanul should first reverse the number and check if it is same as the original. If yes,
+Tanul should say “Palindrome”. If not, he should say “Not a Palindrome”. If the number is
+negative, print “Invalid Input”. Help Tanul by writing a program.
+Sample Input 1 :
+21212
+Sample Output 1 :
+Palindrome
+Sample Input 2 :
+6186
+Sample Output 2 :
+Not a Palindrome
+
+import java.util.*;
+public class Test {
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the value to find pallindrom ");
+        int num = sc.nextInt();
+        int rem;
+        int sum = 0;
+        int temp = num;
+        while(num>0){
+            rem = num%10;
+            sum = sum*10+rem;
+            num = num/10;
+        }
+        String name = (sum==temp)?"pallindrome":"Not pallindrom";
+        System.out.println(name);
+        if(temp<0){
+            System.out.println("invalid input");
+        }
+        }
+    
+}
+    
+
+==========================================================
+
+4)
+Problem Statement – FOE college wants to recognize the department which has
+succeeded in getting the maximum number of placements for this academic year.
+The departments that have participated in the recruitment drive are CSE,ECE,
+MECH. Help the college find the department getting maximum placements. Check
+for all the possible output given in the sample snapshot
+Note : If any input is negative, the output should be “Input is Invalid”. If all
+department has equal number of placements, the output should be “None of the
+department has got the highest placement”.
+Sample Input 1:
+Enter the no of students placed in CSE:90
+Enter the no of students placed in ECE:45
+Enter the no of students placed in MECH:70
+Sample Output 1:
+Highest placement
+CSE
+Sample Input 2:
+Enter the no of students placed in CSE:55
+Enter the no of students placed in ECE:85
+Enter the no of students placed in MECH:85
+Sample Output 2:
+Highest placement
+ECE
+MECH
+Sample Input 3:
+Enter the no of students placed in CSE:0
+Enter the no of students placed in ECE:0
+Enter the no of students placed in MECH:0
+Sample Output 3:
+None of the department has got the highest placement
+Sample Input 4:
+Enter the no of students placed in CSE:10
+Enter the no of students placed in ECE:-50
+Enter the no of students placed in MECH:40
+Sample Output 4:
+Input is Invalid
+
+import java.util.*;
+
+public class  Test{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the no of students placed in CSE: ");
+        int cse = scanner.nextInt();
+        System.out.print("Enter the no of students placed in ECE: ");
+        int ece = scanner.nextInt();
+        System.out.print("Enter the no of students placed in MECH: ");
+        int mech = scanner.nextInt();
+
+       if(cse>ece && cse>mech){
+        System.out.println("cse department got heighest package");
+       }
+       else if(ece>cse && ece >mech){
+        System.out.println("ece deaprtment got heighest package");
+       }
+       else {
+        System.out.println("mech got hieghest package");
+       }
+       if(cse<0 || ece<0 || mech<0){
+        System.out.println("invalid input");
+       }
+       else {
+        System.out.println("valid input");
+       }
+       if(cse==ece || ece== mech || mech==cse ){
+        System.out.println("no one get hieghest package");
+       }
+       else {
+        System.out.println("=============");
+       }
+    }
+}
+=================================================================
+
+5)
+Create a class Student with a parameterized constructor that takes the name, roll number, and grade as parameters.
+
+class A{
+    private String name;
+    private int rollNumber;
+    private char grade;
+     A (String name, int rollNumber, char grade) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.grade = grade;
+    }
+
+    public void show() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Grade: " + grade);
+    }
+}
+    public class Test{
+    public static void main(String[] args) {
+        
+        A aj=new A("ajgreat", 123, 'A');
+     aj.show();
+    }
+}
+=================================================================
+
+6)
+Implement a default constructor for the Circle class that sets the radius to 1.
+
+public class Test{
+    Test(){
+        int radi=1;
+        System.out.println("the radius of cicle is :"+radi);
+        System.out.println("the circumfreence of circle is :"+(2*(22/7)*radi));
+    }
+    public static void main(String[] args) {
+        new Test();
+    }
+}
+====================================================================
+
+7)
+Create a class Rectangle with a parameterized constructor that takes the length and width as parameters
+
+class rectangle{
+    private int length;
+    private int breath;
+    
+    rectangle (int length, int breath) {
+        this.length=length;
+        this.breath=breath;
+        
+    }
+
+    public void show() {
+        System.out.println("length is: " + length);
+        System.out.println("breath is: " + breath);
+        System.out.println("parameter is " +(length*breath));
+    }
+}
+    public class Test{
+    public static void main(String[] args) {
+        
+    rectangle aj=new rectangle(4, 5);
+     aj.show();
+    }
+}
+==================================================================
+
+8)
+Create a base class ClothingItem with methods wear() and wash(). Derive two classes Shirt and Jeans inheriting from ClothingItem. Implement wear and wash methods for each.
+
+
+9)
+Create a base class Building with attributes height and material. Derive two classes ResidentialBuilding and OfficeBuilding inheriting from Building. Display the details of each building
+
+10)
+Create a base class Fruit with methods taste() and color(). Derive two classes Apple and Banana inheriting from Fruit. Implement taste and color methods for each.
+
+
+class Fruit {
+    public void taste() {
+        System.out.println("Fruit taste");
+    }
+
+        public void color() {
+        System.out.println("Fruit color");
+    }
+}
+
+
+class Apple extends Fruit {
+    public void taste() {
+        System.out.println("Apple tastes sweet");
+    }
+
+    public void color() {
+        System.out.println("Apple is  red");
+    }
+}
+
+class Banana extends Fruit {
+
+    public void taste() {
+        System.out.println("Banana tastes sweet");
+    }
+
+    public void color() {
+        System.out.println("Banana is yellow ");
+    }
+}
+
+
+public class Test {
+    public static void main(String[] args) {
+
+        Apple apple = new Apple();
+        System.out.println("Apple Details:");
+        apple.taste();
+        apple.color();
+
+
+        Banana banana = new Banana();
+        System.out.println("\nBanana Details:");
+        banana.taste();
+        banana.color();
+    }
+}
+============================================================================
