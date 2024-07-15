@@ -1,0 +1,97 @@
+output :
+ARITHMETIC EXCEPTION
+------------------------------------------------
+
+public class Main{
+    public static void main(String[] args){
+        int a=8/0;
+        System.out.println(a);
+    }
+}
+solve 
+-----
+public class Main{
+    public static void main(String[] args){
+        try{
+        int a=8/0;
+        System.out.println(a);
+    }
+    catch(ArithmeticException ex){
+        System.out.println("handle");
+    }
+}
+}
+
+----------------------------------------------
+null pointer exception
+
+public class Main {
+    public static void main(String[] args) {
+        String name = null;
+        System.out.println(name.length());
+    }
+}
+====solve====
+public class Main {
+    public static void main(String[] args) {
+        try {
+
+            String name = null;
+            System.out.println(name.length());
+        } catch (NullPointerException ex) {
+            System.out.println("handle");
+        }
+    }
+}
+
+
+---------------------------------------
+Number format exception 
+public class Main{
+    public static void main(String []args){
+        String a="abc";
+        int b=Integer.parseInt(a);
+        System.out.println(b);
+    }
+}
+
+============
+solve
+public class Main {
+    public static void main(String[] args) {
+        try {
+            String a = "abc";
+            int b = Integer.parseInt(a);
+            System.out.println(b);
+        } catch (NumberFormatException ex) {
+            System.out.println("handle");
+        }
+    }
+}
+-----------------------------------------
+Array Index Out Bounds Exception
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1, 2, 3, 4, 5};
+        System.out.println(a[8]);
+    }
+}
+=======================solve=============
+public class Main {
+    public static void main(String[] args) {
+        try{
+        int a[] = {1, 2, 3, 4, 5};
+        System.out.println(a[8]);
+    }
+        catch(ArrayIndexOutOfBoundsException ex){
+            System.out.println("handle");
+        }
+            
+        }
+}
+
+
+
+run time exception :one example 
+
+---------------------

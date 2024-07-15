@@ -1,43 +1,69 @@
-public class SwapEvenOdd {
-    public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        
-        // Print the original array
-        System.out.println("Original array:");
-        for (int i : a) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        
-        // Separate even and odd elements
-        int[] even = new int[a.length];
-        int[] odd = new int[a.length];
-        int evenCount = 0;
-        int oddCount = 0;
-        
-        for (int i : a) {
-            if (i % 2 == 0) {
-                even[evenCount++] = i;
-            } else {
-                odd[oddCount++] = i;
-            }
-        }
-        
-        // Merge even and odd elements back into the original array
-        int index = 0;
-        
-        for (int i = 0; i < evenCount; i++) {
-            a[index++] = even[i];
-        }
-        
-        for (int i = 0; i < oddCount; i++) {
-            a[index++] = odd[i];
-        }
-        
-        // Print the modified array
-        System.out.println("Modified array:");
-        for (int i : a) {
-            System.out.print(i + " ");
-        }
+import java.util.Scanner;
+class A{
+    private int a;
+    private int b;
+    void setA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a+b;
+    }
+    void show(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a/b);
     }
 }
+class B{
+    private int a;
+    private int b;
+    void setA(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a+b;
+    }
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a*b);
+    }
+}
+public class Main {
+    private int a;
+    private int b;
+    void setA(int a, int b){
+        this.a = a;
+        this.b = b;
+    }
+    int getA(){
+        return a-b;
+    }
+    void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value ");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.setA(a, b);
+        System.out.println("The sum is "+k.getA());
+        k.show2(a, b);
+        A k1 = new A();
+        k1.setA(a, b);
+        System.out.println(k1.getA());
+        k1.show(a, b);
+        B k2 = new B();
+        k2.setA(a, b);
+        System.out.println(k2.getA());
+        k2.show1(a, b);
+    }
+}
+ 
