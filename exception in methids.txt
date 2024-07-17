@@ -1,0 +1,295 @@
+1)
+null pointer exception code 
+
+catch :Arith
+Null 
+Arry
+Numberformat
+
+public class Main {
+ public static void main(String[] args) {
+ try{
+    String name=null;
+ System.out.print(name.length()); 
+ }
+ catch(ArithmeticException ex){
+    System.out.println("arthmetic");
+
+ }
+ catch(NullPointerException ex){
+    System.out.println("null");
+ }
+ catch(ArrayIndexOutOfBoundsException ex){
+    System.out.println("array");
+ }
+ catch(NumberFormatException ex){
+    System.out.println("number");
+ }
+}
+}
+===================================================================
+
+2)
+class A 
+method :arithmetic exception code 
+
+Main class 
+main method :
+try :method call
+catch exception handle 
+class A{
+    void exc(){
+      
+        int a=8/0;
+        System.out.println(a);
+       }
+}
+public class Main{
+    public static void main(String[] args) {
+        try{
+            A aj=new A();
+            aj.exc();
+        }
+        catch(ArithmeticException ex){
+            System.out.println("handle");
+        }
+    }
+}
+==================================================================
+
+3)
+class A 
+method :arithmetic exception code 
+
+class B 
+method :number exception code 
+
+class D
+method :null exception code 
+
+class E
+method :arrayindex exception code 
+
+class F
+method :arith exception code 
+
+Main class 
+main method :
+try :method call :all object of all the classes 
+catch exception handle 
+
+try :different method call with different try 
+catch :
+
+class A {
+    void exc() {
+        int a = 8 / 0;
+        System.out.println(a);
+    }
+}
+class B{
+    void img(){
+        String a="abc";
+        int b=Integer.parseInt(a);
+    }
+}
+class C{
+    void egc(){
+      String name=null;
+        System.out.println(name.length());
+    }
+}
+class D{
+    void exe(){
+        int a[]={1,2,3,4,5};
+        System.out.println(a[8]);
+    }
+}
+                public class Main{
+                public static void main(String[] args) {
+                    try {
+                        A aj = new A();
+                        aj.exc();
+                    }
+               catch (ArithmeticException ex) {
+                System.out.println("handle");
+}
+
+
+
+                      try{
+                           B l = new B();
+                           l.img();
+                       }
+
+                         catch (NumberFormatException ax) {
+                            System.out.println("catch");
+                        }
+                      try{
+                          C k=new C();
+                          k.egc();
+                      }
+                      catch(NullPointerException ex){
+                          System.out.println("hello");
+                      }
+                      try{
+                          D aj=new D();
+                          aj.exe();
+                      }
+                      catch(ArrayIndexOutOfBoundsException ex){
+                          System.out.println("khsushi");
+                      }
+
+                }
+}
+========================================================
+
+4)
+class A 
+method :arithmetic exception code and handle 
+
+class B 
+method :number exception code  and handle
+
+class D
+method :null exception code  and handle
+
+Main class 
+main method :call all the method 
+
+import java.util.*;
+
+class A{
+    void exc(){
+      try{
+        int a=8/0;
+        System.out.println(a);
+       }
+       catch(ArithmeticException ex){
+        System.out.println("arithmatic handle");
+       }
+    }
+}
+class B {
+   void exx(){
+    try{
+    String a="abc";
+    int b= Integer.parseInt(a);
+    System.out.println(b);
+}
+catch(NumberFormatException ex){
+    System.out.println("number handle");
+
+}
+   }
+}
+class D {
+    
+    void exc(){
+        try{
+        String name=null;
+ System.out.print(name.length()); 
+    }
+    catch(NullPointerException ex){
+        System.out.println("null handle");
+    }
+}
+
+}
+public class Main{
+    public static void main(String[] args) {
+        A aj=new A();
+        aj.exc();
+        B kj=new B();
+        kj.exx();
+        D bj=new D();
+        bj.exc();
+  }
+}
+=========================================================
+
+5)
+class A 
+method :arithmetic exception code 
+
+class B ex A
+method :number exception code 
+
+class D ex B
+method :null exception code 
+
+class E ex D
+method :arrayindex exception code 
+
+class F ex E
+method :arith exception code 
+
+Main class 
+main method :
+try :method call :all object of all the classes 
+catch exception handle 
+
+try :different method call with different try 
+catch :
+
+
+
+import java.util.*;
+
+class A{
+    void exc(){
+      
+        int a=8/0;
+        System.out.println(a);
+       }
+}
+class B extends A{
+   void exx(){
+    String a="abc";
+    int b= Integer.parseInt(a);
+    System.out.println(b);
+}
+}
+class D extends B{
+    void exccc(){
+        String name=null;
+ System.out.print(name.length()); 
+    }
+
+}
+class E extends D{
+    void excce(){
+        int a[]={1,3,4,2,5,6};
+        System.out.println(a[8]);
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        try{
+            E aj=new E();
+            aj.exc();
+            aj.exx();
+            aj.exccc();
+            aj.excce();
+        }
+        catch(ArithmeticException ex){
+            System.out.println("handle");
+        }
+        catch(NumberFormatException ex){
+        System.out.println("number handlw");
+
+        }
+        catch(NullPointerException ex){
+            System.out.println("null ");
+        }
+        catch(ArrayIndexOutOfBoundsException ex){
+            System.out.println("array");
+        }
+  }
+}
+=========================================================================
+
+oops 
+encapsulation 
+inheritance 
