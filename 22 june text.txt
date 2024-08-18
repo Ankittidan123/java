@@ -1,0 +1,148 @@
+Write a Java program to find the sum of all elements in an integer array.
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        int sum=0;
+        int a[] = {23,78,56,34,21,89,67};
+        for(int i=0; i<a.length; i++){
+            System.out.print(a[i]+" ");
+            sum=sum+a[i];
+        }
+        System.out.println();
+        System.out.println("sum of array :"+sum);
+    }
+}
+==========================================================	
+
+Write a Java program to find the largest element in an integer array
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        int a[]={23,78,56,34,21,89,67};
+        int max=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+        }
+        System.out.println(max);
+    }
+}
+
+================================================================
+
+Write a Java program to check if a specified element exists in an array.
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        int target=56;
+        int a[] = {23,78,56,34,21,89,67};
+        for(int i=0; i<a.length; i++){
+            if(a[i]==target){
+            System.out.println("the element is persent");
+        }
+        }
+        //System.out.println();
+      //  System.out.println("sum of array :"+sum);
+    }
+}
+
+========================================================================
+
+Write a Java program to reverse an array of integers.
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+       
+        int a[] = {23,78,56,34,21,89,67};
+        for(int i=0; i<a.length; i++){
+            
+            System.out.print(a[i]+" ");
+           
+        }
+        System.out.println();
+        System.out.println("reversse of array");
+        for(int i=a.length-1;i>=0; i--){
+            
+            System.out.print(a[i]+" ");
+           
+        }
+       }
+}
+
+================================================================
+
+Write a Java program to find the frequency of each element in an array.
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        int count=0;
+        int a[] = {23,78,56,34,56,21,89,67};
+        for(int i=0; i<a.length; i++){
+            
+            System.out.print(a[i]+" ");
+           count++;
+        }
+        System.out.println();
+       System.out.println("number of elements are :"+count);
+        }
+      
+    }
+
+
+========================================================================
+
+Write a Java program to find the intersection of two arrays.
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+       
+        int a[] = {23,78,56,34,21,89,67};
+        int b[] = {1,23,5,4,35,53,56,89,67};
+        for(int i=0; i<a.length; i++){
+        for(int j=0;j<b.length;j++){
+            if(a[i]==b[j]){
+            System.out.println(a[i]+" in a array");
+            
+            System.out.println(b[j]+" in b array");
+            }
+            //System.out.println(b[j]+" ");
+        }
+        
+        }
+      
+    }
+}
+
+====================================================================
+
+Write a Java program to remove duplicates from an array and return a new array without duplicates.
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        int target=56;
+        int a[] = {23,78,56,34,56,21,89,67};
+        for(int i=0; i<a.length; i++){
+            if(a[i]==target)
+            continue;
+            System.out.print(a[i]+" ");
+          
+        }
+        }
+       // System.out.println();
+      //  System.out.println("sum of array :"+sum);
+    }
+
+
