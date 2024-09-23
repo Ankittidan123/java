@@ -1,0 +1,339 @@
+ll wrapper class used  
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        ArrayList <Integer> a=new ArrayList<>();
+        ArrayList <String> w=new ArrayList<>();
+        ArrayList <Float> e=new ArrayList<>();
+        ArrayList <Double> r=new ArrayList<>();
+        ArrayList <Short> t=new ArrayList<>();
+        ArrayList <Boolean> y=new ArrayList<>();
+        ArrayList <Long> u=new ArrayList<>();
+        ArrayList <Byte> i=new ArrayList<>();
+        a.add(34);
+        w.add("hello");
+        e.add(4.5f);
+        r.add(33.3d);
+        t.add((short)2);
+        y.add(false);
+        u.add((long)234);
+        i.add((byte)12);
+        System.out.println(a);
+        System.out.println(w);
+        System.out.println(e);
+        System.out.println(r);
+        System.out.println(t);
+        System.out.println(y);
+        System.out.println(u);
+        System.out.println(i);
+    }
+}
+-----------------------------------------------------------
+arraylist :
+1,2,3,4,5,6,7,8,9,10
+for loop data print 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        al.add(5);
+        al.add(6);
+        al.add(7);
+        al.add(8);
+        al.add(9);
+        al.add(10);
+       for (int i = 0; i < al.size(); i++) {
+            System.out.println(al.get(i) + " ");
+        }
+    }
+}
+-----------------------------------------------------------
+arraylist :
+1,2,3,4,5,6,7,8,9,10
+for loop data print 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        al.add(5);
+        al.add(6);
+        al.add(7);
+        al.add(8);
+        al.add(9);
+        al.add(10);
+        for (int i = 0; i < al.size(); i++) {
+            System.out.println(al.get(i) + " ");
+            }
+        }
+    }
+even number 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        al.add(5);
+        al.add(6);
+        al.add(7);
+        al.add(8);
+        al.add(9);
+        al.add(10);
+        for (int i = 0; i < al.size(); i++) {
+if(al.get(i)%2==0){
+                System.out.println(al.get(i) + " ");
+            }
+        }
+    }
+}
+odd number 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        al.add(5);
+        al.add(6);
+        al.add(7);
+        al.add(8);
+        al.add(9);
+        al.add(10);
+        for (int i = 0; i < al.size(); i++) {
+if(al.get(i)%2!=0){
+                System.out.println(al.get(i) + " ");
+            }
+        }
+    }
+}
+count 
+sum even
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int sum=0;
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        al.add(5);
+        al.add(6);
+        al.add(7);
+        al.add(8);
+        al.add(9);
+        al.add(10);
+        for (int i = 0; i < al.size(); i++) {
+        if(al.get(i)%2==0) {
+            System.out.println(al.get(i) + " ");
+            sum = sum + (al.get(i));
+        }
+        }
+        System.out.println(sum);
+    }
+}
+sum odd
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int sum=0;
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        al.add(5);
+        al.add(6);
+        al.add(7);
+        al.add(8);
+        al.add(9);
+        al.add(10);
+        for (int i = 0; i < al.size(); i++) {
+        if(al.get(i)%2!=0) {
+            System.out.println(al.get(i) + " ");
+            sum = sum + (al.get(i));
+        }
+        }
+        System.out.println(sum);
+    }
+}
+Armstrong number :151,152,153,154 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(123);
+        al.add(243);
+        al.add(323);
+        al.add(153);
+        al.add(343);
+        
+        for (int i = 0; i < al.size(); i++) {
+            int temp = al.get(i);
+            int sum = 0;
+            int num = temp; 
+            
+            
+            while (num > 0) {
+                int rem = num % 10; 
+                sum += rem * rem * rem; 
+                num /= 10; 
+            }
+            
+            if (temp == sum) {
+                System.out.println(temp + " is an Armstrong number.");
+            } else {
+                System.out.println(temp + " is not an Armstrong number.");
+            }
+        }
+    }
+}
+------------------------------------------------------------------------------
+palindrome number : 12321,456, 5678,16761
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(123);
+        al.add(243);
+        al.add(323);
+        al.add(153);
+        al.add(343);
+        
+        for (int i = 0; i < al.size(); i++) {
+            int temp = al.get(i);
+            int sum = 0;
+            int num = temp; 
+            
+            while (num > 0) {
+                int rem = num % 10; 
+                sum = sum * 10 + rem; 
+                num /= 10; 
+            }
+            
+            
+            if (temp == sum) {
+                System.out.println(temp + " is a palindrome.");
+            } else {
+                System.out.println(temp + " is not a palindrome.");
+            }
+        }
+    }
+}
+----------------------------------------------------------------------------------
+factorial :1,2,3,4,5 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        al.add(5);
+        
+        for (int i = 0; i < al.size(); i++) {
+            int temp = al.get(i);
+            long factorial = 1; 
+            
+            for (int j = 1; j <= temp; j++) {
+                factorial *= j;
+            }
+            
+            
+            System.out.println("Factorial of " + temp + " is " + factorial + ".");
+        }
+    }
+}
+----------------------------------------------------------------------
+neon number check : 9,5,2,1 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(9);
+        al.add(5);
+        al.add(2);
+        al.add(1);
+        
+        for (int i = 0; i < al.size(); i++) {
+            int temp = al.get(i);
+            int square = temp * temp; 
+            
+            
+            int sum = 0;
+            while (square > 0) {
+                sum += square % 10; 
+                square /= 10;
+            }
+            
+            
+            if (temp == sum) {
+                System.out.println(temp + " is a neon number.");
+            } else {
+                System.out.println(temp + " is not a neon number.");
+            }
+        }
+    }
+}
+---------------------------------------------------------------------
+prime number 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(9);
+        al.add(5);
+        al.add(2);
+        al.add(1);
+        al.add(11);
+        al.add(15);
+        
+        for (int i = 0; i < al.size(); i++) {
+            int temp = al.get(i);
+            
+    
+            if (isPrime(temp)) {
+                System.out.println(temp + " is a prime number.");
+            } else {
+                System.out.println(temp + " is not a prime number.");
+            }
+        }
+    }
+    
+    
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false; 
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false; 
+            }
+        }
+        return true; 
+    }
+}
+
+---------------------------------------------------------------

@@ -1,0 +1,102 @@
+1)
+add element heterogenous 
+
+print 
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Collection hs=new LinkedHashSet<>();
+        hs.add(54);
+        hs.add("hello")
+        System.out.println(hs);
+    }
+}
+=================================================================
+
+
+2)add element homogenous 
+
+print 
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Collection hs=new LinkedHashSet<>();
+        hs.add(54);
+        hs.add(34)
+        System.out.println(hs);
+    }
+}
+=========================================================
+
+
+3)
+user input :
+Book 
+name
+publisher
+author
+price
+contact 
+address
+
+LinkedHashSet
+
+
+
+
+
+
+int book;
+    String name;
+    String publish;
+    String author;
+    int price;
+    double contact;
+    String address;
+
+//user input :
+
+// Book 
+// name
+// publisher
+// author
+// price
+// contact 
+// address
+
+// LinkedHashSet 
+import java.util.*;
+class A{
+    int book;
+    String name;
+    String publish;
+    String author;
+    int price;
+    double contact;
+    String address;
+
+    A(int book,String name, String publish, String author,int price,double contact,String address)
+    {
+        this.book=book;
+        this.name=name;
+        this.publish=publish;
+        this.author=author;
+        this.price=price;
+        this.contact=contact;
+        this.address=address;
+    }
+}
+public class Main{
+    public static void main (String[] args) {
+        A p=new A(01,"ajgreat","drishti","ankit",890,9024005080d,"vashali");
+        A p1=new A(02,"physics","drishti","ajgreat",890,9024005080d,"jaipur");
+        LinkedHashSet<A> hs=new LinkedHashSet<>();
+        hs.add(p);
+        hs.add(p1);
+        for(A k:hs){
+            System.out.print(k.book+" "+k.name+" "+k.publish+" "+k.author+" "+k.price+" "+k.contact+" "+k.address);
+        }
+    }
+} 

@@ -1,0 +1,111 @@
+ArrayList :
+
+heterogenous data stored 
+
+import java.util.*;
+
+public class Arraylist {
+    public static void main(String[] args) {
+        int a[]={23,"hi"}; //not possible 
+        ArrayList al = new ArrayList();//possible
+        // hetrogenous store :store diffrent diifrent data string ,int
+        al.add("hello");
+        al.add(34);
+        al.add(2.34f);
+        System.out.print(al+" ");
+    }
+}
+===================================================================
+-----------------------------------------------------
+ArrayList :
+
+homogenous data stored :
+used wrapper classes in java 
+Integer | Character | String | Byte | Short | Float | Boolean |Long | Double 
+-----------------------------------------------------
+       INTEGER
+
+import java.util.*;
+public class Arraylist {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(12);// 0
+        al.add(56);// 1
+        al.add(99);// 2
+        al.add(8);// 3
+        System.out.print(al+" ");
+    }
+}
+-----------------------------------------------
+   FLOAT
+
+import java.util.*;
+public class Arraylist {
+    public static void main(String[] args) {
+        ArrayList<Float> al = new ArrayList<Float>();
+        al.add(1.2f);// 0
+        al.add(5.6f);// 1
+        al.add(9.9f);// 2
+        al.add(8.9f);// 3
+        System.out.print(al+" ");
+    }
+}
+------------------------------------------------------
+           STRING
+
+import java.util.*;
+public class Arraylist {
+    public static void main(String[] args) {
+        ArrayList<String> al=new ArrayList<String>()
+        al.add("hello");// 0
+        al.add("hii");// 1
+        al.add("bye");// 2
+        al.add("tata");// 3
+        System.out.print(al);
+    }
+}
+--------------------------------------------------------
+           DOUBLE
+import java.util.*;
+public class Arraylist {
+    public static void main(String[] args) {
+        ArrayList<Double> al=new ArrayList<Double>()
+        al.add(49777d);// 0
+        al.add(67686d);// 1
+        al.add(86766556d);// 2
+        al.add(86724368d);// 3
+        System.out.print(al+" ");
+    }
+}
+-----------------------------------------------------
+
+         CHARCATER
+
+import java.util.*;
+public class Arraylist {
+    public static void main(String[] args) {
+        ArrayList<Character> al=new ArrayList<Character>()
+        al.add('T');// 0
+        al.add('G');// 1
+        al.add('G');// 2
+        al.add('A');// 3
+        System.out.print(al+" ");
+    }
+}
+-----------------------------------------------------------------
+          BYTE
+
+import java.util.*;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<Byte> al = new ArrayList<Byte>();
+        al.add((byte) -7); // 0
+        al.add((byte) -9); // 1
+        al.add((byte) -7); // 2
+        al.add((byte) -5); // 3
+        System.out.print(al+" ");
+    }
+}
+-------------------------------------------------------------------
+
