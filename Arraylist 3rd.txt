@@ -536,6 +536,71 @@ Book :through array list : user input
 int id;  
 String name,author,publisher;  
 int quantity;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Book {
+    int id;
+    String name;
+    String author;
+    String publisher;
+    int quantity;
+
+    public Book(int id, String name, String author, String publisher, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.author = author;
+        this.publisher = publisher;
+        this.quantity = quantity;
+    }
+
+    
+    public String toString() {
+        return "ID: " + id + ", Name: " + name + ", Author: " + author + 
+               ", Publisher: " + publisher + ", Quantity: " + quantity;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Book> bookList = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter number of books to add: ");
+        int numberOfBooks = scanner.nextInt();
+        scanner.nextLine(); 
+        
+        for (int i = 0; i < numberOfBooks; i++) {
+            System.out.print("Enter ID: ");
+            int id = scanner.nextInt();
+            scanner.nextLine(); 
+            
+            System.out.print("Enter Name: ");
+            String name = scanner.nextLine();
+            
+            System.out.print("Enter Author: ");
+            String author = scanner.nextLine();
+            
+            System.out.print("Enter Publisher: ");
+            String publisher = scanner.nextLine();
+            
+            System.out.print("Enter Quantity: ");
+            int quantity = scanner.nextInt();
+            scanner.nextLine(); 
+            
+            bookList.add(new Book(id, name, author, publisher, quantity));
+        }
+
+        System.out.println("\nBooks added:");
+        for (Book book : bookList) {
+            System.out.println(book);
+        }
+        
+        scanner.close();
+    }
+}
+
  
 
 -----------------------------------------------
@@ -550,7 +615,7 @@ address
 number
 bloodgroup 
 
-
+secong array list
 al2
 Employe 
 empname
@@ -559,6 +624,152 @@ empfname
 empmname
 company
 salary 
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Student {
+    String name;
+    String fatherName;
+    String motherName;
+    String className;
+    int year;
+    String address;
+    String number;
+    String bloodGroup;
+
+    public Student(String name, String fatherName, String motherName, String className, int year, 
+                   String address, String number, String bloodGroup) {
+        this.name = name;
+        this.fatherName = fatherName;
+        this.motherName = motherName;
+        this.className = className;
+        this.year = year;
+        this.address = address;
+        this.number = number;
+        this.bloodGroup = bloodGroup;
+    }
+
+    
+    public String toString() {
+        return "Name: " + name + ", Father's Name: " + fatherName + ", Mother's Name: " + motherName + 
+               ", Class: " + className + ", Year: " + year + ", Address: " + address + 
+               ", Number: " + number + ", Blood Group: " + bloodGroup;
+    }
+}
+
+class Employee {
+    String empName;
+    int empId;
+    String empFatherName;
+    String empMotherName;
+    String company;
+    double salary;
+
+    public Employee(String empName, int empId, String empFatherName, String empMotherName, 
+                    String company, double salary) {
+        this.empName = empName;
+        this.empId = empId;
+        this.empFatherName = empFatherName;
+        this.empMotherName = empMotherName;
+        this.company = company;
+        this.salary = salary;
+    }
+
+    
+    public String toString() {
+        return "Employee Name: " + empName + ", ID: " + empId + ", Father's Name: " + empFatherName + 
+               ", Mother's Name: " + empMotherName + ", Company: " + company + ", Salary: " + salary;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Student> studentList = new ArrayList<>();
+        ArrayList<Employee> employeeList = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter number of students to add: ");
+        int numberOfStudents = scanner.nextInt();
+        scanner.nextLine(); 
+
+        for (int i = 0; i < numberOfStudents; i++) {
+            System.out.println("\nEntering details for student " + (i + 1) + ":");
+            System.out.print("Enter Name: ");
+            String name = scanner.nextLine();
+            
+            System.out.print("Enter Father's Name: ");
+            String fatherName = scanner.nextLine();
+            
+            System.out.print("Enter Mother's Name: ");
+            String motherName = scanner.nextLine();
+            
+            System.out.print("Enter Class: ");
+            String className = scanner.nextLine();
+            
+            System.out.print("Enter Year: ");
+            int year = scanner.nextInt();
+            scanner.nextLine(); 
+            
+            System.out.print("Enter Address: ");
+            String address = scanner.nextLine();
+            
+            System.out.print("Enter Phone Number: ");
+            String number = scanner.nextLine();
+            
+            System.out.print("Enter Blood Group: ");
+            String bloodGroup = scanner.nextLine();
+            
+            studentList.add(new Student(name, fatherName, motherName, className, year, address, number, bloodGroup));
+        }
+
+        
+        System.out.print("\nEnter number of employees to add: ");
+        int numberOfEmployees = scanner.nextInt();
+        scanner.nextLine(); 
+
+        for (int i = 0; i < numberOfEmployees; i++) {
+            System.out.println("\nEntering details for employee " + (i + 1) + ":");
+            System.out.print("Enter Employee Name: ");
+            String empName = scanner.nextLine();
+            
+            System.out.print("Enter Employee ID: ");
+            int empId = scanner.nextInt();
+            scanner.nextLine(); 
+            
+            System.out.print("Enter Father's Name: ");
+            String empFatherName = scanner.nextLine();
+            
+            System.out.print("Enter Mother's Name: ");
+            String empMotherName = scanner.nextLine();
+            
+            System.out.print("Enter Company: ");
+            String company = scanner.nextLine();
+            
+            System.out.print("Enter Salary: ");
+            double salary = scanner.nextDouble();
+            scanner.nextLine(); 
+            
+            employeeList.add(new Employee(empName, empId, empFatherName, empMotherName, company, salary));
+        }
+
+        
+        System.out.println("\nStudents added:");
+        for (Student student : studentList) {
+            System.out.println(student);
+        }
+
+        
+        System.out.println("\nEmployees added:");
+        for (Employee employee : employeeList) {
+            System.out.println(employee);
+        }
+
+        scanner.close();
+    }
+}
+-------------------------------------------------------------------------
 --------------------------------------------------------
 aggregation :
 Mobile :oppo realme oneplus apple 
