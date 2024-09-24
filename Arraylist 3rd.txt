@@ -790,3 +790,117 @@ al3
 al4
 al5
 
+import java.util.ArrayList;
+
+// Mobile class with its brands
+class Mobile {
+    private ArrayList<String> brands;
+
+    public Mobile() {
+        brands = new ArrayList<>();
+        brands.add("Oppo");
+        brands.add("Realme");
+        brands.add("OnePlus");
+        brands.add("Apple");
+    }
+
+    public ArrayList<String> getBrands() {
+        return brands;
+    }
+}
+
+// Amazon class with its products
+class Amazon {
+    private ArrayList<String> products;
+
+    public Amazon() {
+        products = new ArrayList<>();
+        products.add("Shirt");
+        products.add("Jeans");
+        products.add("Shoes");
+        products.add("Watch");
+    }
+
+    public ArrayList<String> getProducts() {
+        return products;
+    }
+}
+
+// Flipkart class with its items
+class Flipkart {
+    private ArrayList<String> items;
+
+    public Flipkart() {
+        items = new ArrayList<>();
+        items.add("Agarbati");
+        items.add("Mombati");
+        items.add("Phoolbatti");
+        items.add("Chawal");
+    }
+
+    public ArrayList<String> getItems() {
+        return items;
+    }
+}
+
+// JioMart class with its groceries
+class JioMart {
+    private ArrayList<String> groceries;
+
+    public JioMart() {
+        groceries = new ArrayList<>();
+        groceries.add("Rice");
+        groceries.add("Aata");
+        groceries.add("Daal");
+        groceries.add("Oil");
+    }
+
+    public ArrayList<String> getGroceries() {
+        return groceries;
+    }
+}
+
+// Blinkit class with its snacks
+class Blinkit {
+    private ArrayList<String> snacks;
+
+    public Blinkit() {
+        snacks = new ArrayList<>();
+        snacks.add("Chocolate");
+        snacks.add("Soft Drink");
+        snacks.add("Ice Cream");
+        snacks.add("Chips");
+    }
+
+    public ArrayList<String> getSnacks() {
+        return snacks;
+    }
+}
+
+// Main class to access the upper classes using aggregation
+public class Main {
+    public static void main(String[] args) {
+        // Create instances of each class
+        Mobile mobile = new Mobile();
+        Amazon amazon = new Amazon();
+        Flipkart flipkart = new Flipkart();
+        JioMart jioMart = new JioMart();
+        Blinkit blinkit = new Blinkit();
+
+        // Create ArrayLists to hold each category
+        ArrayList<String> al1 = mobile.getBrands();
+        ArrayList<String> al2 = amazon.getProducts();
+        ArrayList<String> al3 = flipkart.getItems();
+        ArrayList<String> al4 = jioMart.getGroceries();
+        ArrayList<String> al5 = blinkit.getSnacks();
+
+        // Print the items in each ArrayList
+        System.out.println("Mobile Brands: " + al1);
+        System.out.println("Amazon Products: " + al2);
+        System.out.println("Flipkart Items: " + al3);
+        System.out.println("JioMart Groceries: " + al4);
+        System.out.println("Blinkit Snacks: " + al5);
+    }
+}
+=================================================================================
+
