@@ -1,0 +1,151 @@
+1)
+treeset 
+
+all wrapper class implement 
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+   
+        TreeSet<Integer> ts = new TreeSet<>();
+        ts.add(23);
+        ts.add(12);
+        ts.add(90);
+        System.out.print(ts+" ");
+ 
+        System.out.println();
+        
+        TreeSet<Double> ts1 = new TreeSet<>();
+        ts1.add(23.5);
+        ts1.add(12.2);
+        ts1.add(90.1);
+        System.out.print(ts1+" ");
+        System.out.println();
+
+        // TreeSet for Character
+        TreeSet<Character> ts2 = new TreeSet<>();
+        ts2.add('z');
+        ts2.add('a');
+        ts2.add('m');
+        System.out.print(ts2+" ");
+        System.out.println();
+
+        // TreeSet for Boolean
+        TreeSet<Boolean> ts3 = new TreeSet<>();
+        ts3.add(true);
+        ts3.add(false); // Boolean set only allows unique values
+        System.out.print(ts3+" ");
+        System.out.println();
+
+        // TreeSet for Byte
+        TreeSet<Byte> ts4 = new TreeSet<>();
+        ts4.add((byte) 10);
+        ts4.add((byte) 5);
+        ts4.add((byte) 20);
+        System.out.print(ts4+" ");
+        System.out.println();
+        
+
+        // TreeSet for Short
+        TreeSet<Short> ts5 = new TreeSet<>();
+        ts5.add((short) 100);
+        ts5.add((short) 50);
+        ts5.add((short) 150);
+        System.out.print(ts5+" ");
+System.out.println();
+        // TreeSet for Long
+        TreeSet<Long> ts6 = new TreeSet<>();
+        ts6.add(1000L);
+        ts6.add(5000L);
+        ts6.add(2000L);
+        System.out.print(ts6+" ");
+        System.out.println();
+
+        // TreeSet for Float
+        TreeSet<Float> ts7 = new TreeSet<>();
+        ts7.add(1.1f);
+        ts7.add(3.3f);
+        ts7.add(2.2f);
+        System.out.print(ts7+" ");
+        System.out.println();
+    }
+
+    
+    
+}
+===============================================================
+2)
+treeset : iterator (any two)
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        TreeSet<Integer> ts = new TreeSet<>();
+        ts.add(23);
+        ts.add(12);
+        ts.add(90);
+        
+        
+        System.out.print("Integer TreeSet: ");
+        Iterator<Integer> inte = ts.iterator();
+        while (inte.hasNext()) {
+            System.out.print(inte.next() + " ");
+        }
+        System.out.println(); 
+
+        
+        TreeSet<Double> ts1 = new TreeSet<>();
+        ts1.add(23.5);
+        ts1.add(12.2);
+        ts1.add(90.1);
+        
+        
+        System.out.print("Double TreeSet: ");
+        Iterator<Double> dou = ts1.iterator();
+        while (dou.hasNext()) {
+            System.out.print(dou.next() + " ");
+
+            }
+}
+}
+=================================================================
+
+3)
+for each (any two )
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+       
+        TreeSet<Integer> ts = new TreeSet<>();
+        ts.add(23);
+        ts.add(12);
+        ts.add(90);
+
+       
+        System.out.print("Integer TreeSet: ");
+        for (Integer num : ts) {
+            System.out.print(num + " ");
+        }
+        System.out.println(); 
+
+        
+        TreeSet<Double> ts1 = new TreeSet<>();
+        ts1.add(23.5);
+        ts1.add(12.2);
+        ts1.add(90.1);
+
+        
+        System.out.print("Double TreeSet: ");
+       for(Double num : ts1){
+        System.out.print(num+" ");
+       }
+        System.out.println(); 
+    }
+}
+=========================================================================
