@@ -1,0 +1,305 @@
+1)
+Counting Vowels in an Array of Characters
+Write a program to count the number of vowels in an array of characters.
+
+import java.util.*;
+public class Main {
+    
+    public static void main(String[] args) {
+        char ar[]={'u','r','e','t','i','m','o'};
+         int count=0;
+         for(int i=0;i<ar.length;i++){
+            if(ar[i]=='a' || ar[i]=='e' || ar[i]=='i' || ar[i]=='o' || ar[i]=='u'){
+                count++;
+            } 
+         }
+        System.out.println("the number of vol :"+count);
+    }
+}
+=================================================================
+2)
+Finding the Most Frequent Element
+Write a program to find the most frequent element in a 1D array.
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        int  a[]={1,2,3,4,5,3,6,3};
+       for(int i=0;i<a.length;i++){
+        for(int j=i+1;j<a.length;j++){
+            if(a[i]==a[j]){
+                System.out.println("the frequenty used element is :"+a[i]);
+                break;
+            }
+        }
+       }
+    }
+}
+=========================================================================
+
+3)
+ Finding Maximum Product of Two Integers
+Write a program to find the maximum product of two integers in a 1D array.
+input :
+int[] arr = {1, 3, 5, 7, 9};
+
+output :
+Maximum Product = 63
+
+import java.util.*;
+public class Main{
+    static void sort(int a[]){
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]>a[j]){
+                    int temp=a[i];
+                    a[i]=a[a.length-1];
+                    a[a.length-1]=a[j];
+                }
+            }
+        }
+           }
+          public static void maxpro(int a[]){
+           int max=0;
+           for(int i=0;i<a.length;i++){
+            if(max<a[i]){
+                max=a[i];
+            }
+           }
+           int max1=0;
+           for(int i=0;i<a.length-1;i++){
+            if(max1<a[i]){
+            max1=a[i];
+            }
+           }
+           System.out.println("product of maximum elements :"+(max*max1));
+    }
+
+    public static void main(String[] args) {
+        int  a[]={1, 3, 5, 7, 9};
+       sort(a);
+        
+        maxpro(a);
+    }
+}
+====================================================================
+
+4)
+Finding the Intersection of Two Arrays
+Objective: Write a Java program that finds the intersection of two 1D arrays, which includes the common elements present in both arrays.
+
+input :
+int[] arr1 = {1, 2, 2, 1};
+int[] arr2 = {2, 2};
+
+output :
+Intersection: [2, 2]
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1,2,2,1};
+        int b[] = {2,2};
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<b.length;j++){
+                if (a[i]==b[j]) {
+                    System.out.print(b[j] + " ");
+                    break;
+                }
+            }
+        }
+    }
+}
+============================================================================
+
+5)
+Finding All Pairs with a Given Sum
+Write a program to find all pairs of integers in an array that sum to a specific target.
+Input:
+
+A 1D integer array (e.g., int[] arr = {2, 7, 11, 15, -2, 9};)
+A target sum value (e.g., target = 9)
+Output:
+
+All pairs of integers that add up to the target sum.
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        int a[]={2, 7, 11, 15, -2, 9};
+        int target=9;
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(target==(a[i]+a[j])){
+                    System.out.println(a[i]+" "+a[j]);
+
+                }
+            }
+        }
+    }
+}
+============================================================================
+
+6)
+ Checking for Palindrome Array
+Write a program to check if the elements of an array form a palindrome.
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        int a[]={2655, 121, 1880, 323, -2, 8776};
+        
+        for(int i=0;i<a.length;i++){
+            int temp=a[i];
+            int sum=0,rem;
+            while(a[i]>0){
+             
+             rem=a[i]%10;
+             sum=sum*10+rem;
+             a[i]=a[i]/10;
+            }
+            if(temp==sum){
+             System.out.println("pallindrome");
+            }
+            else{
+             System.out.println("not");
+            }
+         }
+        }
+    }
+========================================================================
+7)
+Matrix Addition
+Question: Write a Java program to add two 2D arrays (matrices) of the same dimensions.
+Test: Understanding matrix addition.
+
+input :
+int[][] matrix1 = {{1, 2}, {3, 4}};
+int[][] matrix2 = {{5, 6}, {7, 8}};
+
+output : 
+Sum = {{6, 8}, {10, 12}}
+
+import java.util.*;
+public class Main {
+    
+    public static void main(String[] args) {
+        int a[][]={{1,2},{3,4}};
+        int b[][]={{5,6},{7,8}};
+        
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[i].length;j++){
+                System.out.print(a[i][j]+b[i][j]+" ");
+            }
+        }
+        
+    }
+}
+====================================================================
+
+8)
+Matrix Multiplication
+Question: Write a Java program to multiply two 2D arrays (matrices) where the number of columns in the first matrix equals the number of rows in the second.
+Test: Matrix multiplication logic.
+
+input :
+int[][] matrix1 = {{1, 2}, {3, 4}};
+int[][] matrix2 = {{5, 6}, {7, 8}};
+
+output :
+Product = {{19, 22}, {43, 50}}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int[][] a = {
+            {1, 2},
+            {3, 4}
+        };
+        
+        int[][] b = {
+            {5, 6},
+            {7, 8}
+        };
+        
+        
+        int[][] result = new int[2][2];
+        
+        
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                result[i][j] = 0;
+                for (int k = 0; k < 2; k++) {
+                    result[i][j] =result[i][j]+( a[i][k] * b[k][j]);
+                }
+            }
+        }
+        
+       
+        System.out.println("Result of matrix multiplication:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+================================================================
+
+9)
+Matrix Diagonal Sum
+Question: Write a Java program to calculate the sum of the diagonal elements of a square matrix.
+Test: Iterating through the diagonal elements.
+
+input :
+int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+output :
+Diagonal Sum = 15 (1 + 5 + 9)
+
+
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+        int a [][]={{1,2,3},{4,5,6},{7,8,9}};
+        int sum=0;
+        for(int i=0;i<a.length;i++){
+        sum=sum+a[i][i];
+        }
+        System.out.println("sum of diogonal is "+sum);
+    }
+}
+================================================================
+
+10)
+Search in 2D Matrix
+Question: Write a Java program to search for a specific value in a 2D matrix and return its location.
+Test: Searching through a 2D array.
+
+input :
+int[][] matrix = {{1, 3, 5}, {7, 9, 11}, {13, 15, 17}};
+int target = 9;
+
+output :
+Target found at (1, 1)
+
+import java.util.*;
+public class Main {
+    
+    public static void main(String[] args) {
+        int a [][]={{1,3,5},{7,9,11},{13,15,17}};
+        int target=9;
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[i].length;j++){
+                if(target==a[i][j]){
+                    System.out.println(i+","+j);
+                }
+            }
+        }
+        
+    }
+}
+=============================================================
