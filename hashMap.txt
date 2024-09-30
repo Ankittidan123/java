@@ -1,0 +1,432 @@
+hashmap 
+
+Integer,String 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hm = new HashMap<>(); 
+        hm.put("hello", 1);
+        hm.put("hii", 2);
+        System.out.println(hm); 
+    }
+}
+----------------------------------------------------------------------
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Integer, String> hm = new HashMap<>();
+        hm.put(0, "hello");
+        hm.put(1, "hii");
+        System.out.println(hm);
+    }
+}
+-----------------------------------------------------
+float , string 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Float> hm = new HashMap<>();
+        hm.put("doraemon", 2.4f);
+        hm.put("ronak", 4.4f);
+        System.out.println(hm);  
+    }
+}
+-----------------------------------------------------------
+String boolean
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Boolean> hm = new HashMap<>();
+        hm.put("regex", true);
+        hm.put("college", false);
+        System.out.println(hm);  
+    }
+}
+-----------------------------------------------------
+ 
+long , string
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Long> hm = new HashMap<>();
+        hm.put("phone", 5435354L);   
+        hm.put("moblie", 5453534L);
+        System.out.println(hm); 
+    }
+}
+---------------------------------------------- 
+double , string 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Double, String> hm = new HashMap<>();
+        hm.put(1.34349, "a");    
+        hm.put(2.32333, "b");
+        System.out.println(hm);
+    }
+}
+-------------------------------------------------------------
+
+opposite 
+
+int , float 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Integer, Float> hm = new HashMap<>();
+        hm.put(1, 2.2f);    
+        hm.put(2, 1.87f);
+        hm.put(3, 3.14f);
+        System.out.println(hm); 
+    }
+}
+--------------------------------------------------------------
+float , int 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Float, Integer> hm = new HashMap<>();
+        hm.put(1.2f, 1);    
+        hm.put(2.32f, 2);
+        hm.put(3.11f, 3);
+        System.out.println(hm);   
+    }
+}
+-----------------------------------------------------------
+
+char , int
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Character, Integer> hm = new HashMap<>();
+        hm.put('a', 1);    
+        hm.put('b', 2);
+        hm.put('c', 3);
+        System.out.println(hm);  
+    }
+}
+ ---------------------------------------------------------
+int , char 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Integer, Character> hm = new HashMap<>();
+        hm.put(1, 'a');
+        hm.put(2, 'b');
+        hm.put(3, 'c');
+        System.out.println(hm);  
+    }
+}
+
+
+-------------------------------------------------------------------
+aggregation :
+Mobile :oppo realme oneplus apple 
+
+Amazon :shirt jeans shoes watch 
+
+flipcart :agarbati mombati phoolbatti chawal 
+
+JioMart :rice aata daal oil 
+
+Blinkit :choclate softdrink icecream chips 
+
+Main class :
+HashMap
+
+import java.util.HashMap;
+import java.util.Map;
+
+// Mobile class with its brands
+class Mobile {
+    private HashMap<String, String> brands;
+
+    public Mobile() {
+        brands = new HashMap<>();
+        brands.put("Oppo", "mobile");
+        brands.put("Realme", "mobile");
+        brands.put("OnePlus", "phone");
+        brands.put("Apple", "telephone");
+    }
+
+    public HashMap<String, String> getBrands() {
+        return brands;
+    }
+}
+
+// Amazon class with its products
+class Amazon {
+    private HashMap<String, String> products;
+
+    public Amazon() {
+        products = new HashMap<>();
+        products.put("Shirt", "amazon");
+        products.put("Jeans", "amazon");
+        products.put("Shoes", "amazon");
+        products.put("Watch", "amazon");
+    }
+
+    public HashMap<String, String> getProducts() {
+        return products;
+    }
+}
+
+// Flipkart class with its items
+class Flipkart {
+    private HashMap<String, String> items;
+
+    public Flipkart() {
+        items = new HashMap<>();
+        items.put("Agarbati", "flipkart");
+        items.put("Mombati", "flipkart");
+        items.put("Phoolbatti", "flipkart");
+        items.put("Chawal", "flipkart");
+    }
+
+    public HashMap<String, String> getItems() {
+        return items;
+    }
+}
+
+// JioMart class with its groceries
+class JioMart {
+    private HashMap<String, String> groceries;
+
+    public JioMart() {
+        groceries = new HashMap<>();
+        groceries.put("Rice", "jio");
+        groceries.put("Aata", "jio");
+        groceries.put("Daal", "jio");
+        groceries.put("Oil", "jio");
+    }
+
+    public HashMap<String, String> getGroceries() {
+        return groceries;
+    }
+}
+
+// Blinkit class with its snacks
+class Blinkit {
+    private HashMap<String, String> snacks;
+
+    public Blinkit() {
+        snacks = new HashMap<>();
+        snacks.put("Chocolate", "blink");
+        snacks.put("Soft Drink", "blink");
+        snacks.put("Ice Cream", "blink");
+        snacks.put("Chips", "blink");
+    }
+
+    public HashMap<String, String> getSnacks() {
+        return snacks;
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+      
+        Mobile mobile = new Mobile();
+        Amazon amazon = new Amazon();
+        Flipkart flipkart = new Flipkart();
+        JioMart jioMart = new JioMart();
+        Blinkit blinkit = new Blinkit();
+
+        
+        HashMap<String, HashMap<String, String>> storeMap = new HashMap<>();
+        storeMap.put("Mobile Brands", mobile.getBrands());
+        storeMap.put("Amazon Products", amazon.getProducts());
+        storeMap.put("Flipkart Items", flipkart.getItems());
+        storeMap.put("JioMart Groceries", jioMart.getGroceries());
+        storeMap.put("Blinkit Snacks", blinkit.getSnacks());
+
+        
+        for (Map.Entry<String, HashMap<String, String>> entry : storeMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}
+===================================================================================
+-------------------------------------------------------------------
+HashMap
+
+Student 
+name
+fname
+mname
+class
+year
+address
+number
+bloodgroup 
+
+
+Employe 
+empname
+id
+empfname
+empmname
+company
+salary 
+
+import java.util.HashMap;
+import java.util.*;
+
+class Student {
+    String name;
+    String fatherName;
+    String motherName;
+    String className;
+    int year;
+    String address;
+    String number;
+    String bloodGroup;
+
+    public Student(String name, String fatherName, String motherName, String className, int year, 
+                   String address, String number, String bloodGroup) {
+        this.name = name;
+        this.fatherName = fatherName;
+        this.motherName = motherName;
+        this.className = className;
+        this.year = year;
+        this.address = address;
+        this.number = number;
+        this.bloodGroup = bloodGroup;
+    }
+
+    public String toString() {
+        return "Name: " + name + ", Father's Name: " + fatherName + ", Mother's Name: " + motherName + 
+               ", Class: " + className + ", Year: " + year + ", Address: " + address + 
+               ", Number: " + number + ", Blood Group: " + bloodGroup;
+    }
+}
+
+class Employee {
+    String empName;
+    int empId;
+    String empFatherName;
+    String empMotherName;
+    String company;
+    double salary;
+
+    public Employee(String empName, int empId, String empFatherName, String empMotherName, 
+                    String company, double salary) {
+        this.empName = empName;
+        this.empId = empId;
+        this.empFatherName = empFatherName;
+        this.empMotherName = empMotherName;
+        this.company = company;
+        this.salary = salary;
+    }
+
+    public String toString() {
+        return "Employee Name: " + empName + ", ID: " + empId + ", Father's Name: " + empFatherName + 
+               ", Mother's Name: " + empMotherName + ", Company: " + company + ", Salary: " + salary;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Student> studentMap = new HashMap<>();
+        HashMap<Integer, Employee> employeeMap = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+
+        // Input for Students
+        System.out.print("Enter number of students to add: ");
+        int nos = scanner.nextInt();
+        scanner.nextLine(); 
+
+        for (int i = 0; i < nos;i++) {
+            System.out.println("\nEntering details for student " + (i + 1) + ":");
+            System.out.print("Enter Name: ");
+            String name = scanner.nextLine();
+
+            System.out.print("Enter Father's Name: ");
+            String fatherName = scanner.nextLine();
+
+            System.out.print("Enter Mother's Name: ");
+            String motherName = scanner.nextLine();
+
+            System.out.print("Enter Class: ");
+            String className = scanner.nextLine();
+
+            System.out.print("Enter Year: ");
+            int year = scanner.nextInt();
+            scanner.nextLine(); 
+
+            System.out.print("Enter Address: ");
+            String address = scanner.nextLine();
+
+            System.out.print("Enter Phone Number: ");
+            String number = scanner.nextLine();
+
+            System.out.print("Enter Blood Group: ");
+            String bloodGroup = scanner.nextLine();
+
+            studentMap.put(name, new Student(name, fatherName, motherName, className, year, address, number, bloodGroup));
+        }
+
+        // Input for Employees
+        System.out.print("\nEnter number of employees to add: ");
+        int number = scanner.nextInt();
+        scanner.nextLine(); 
+
+        for (int i = 0; i < number; i++) {
+            System.out.println("\nEntering details for employee " + (i + 1) + ":");
+            System.out.print("Enter Employee Name: ");
+            String empName = scanner.nextLine();
+
+            System.out.print("Enter Employee ID: ");
+            int empId = scanner.nextInt();
+            scanner.nextLine(); 
+
+            System.out.print("Enter Father's Name: ");
+            String empFatherName = scanner.nextLine();
+
+            System.out.print("Enter Mother's Name: ");
+            String empMotherName = scanner.nextLine();
+
+            System.out.print("Enter Company: ");
+            String company = scanner.nextLine();
+
+            System.out.print("Enter Salary: ");
+            double salary = scanner.nextDouble();
+            scanner.nextLine(); 
+
+            employeeMap.put(empId, new Employee(empName, empId, empFatherName, empMotherName, company, salary));
+        }
+
+        // Display Students
+        System.out.println("\nStudents added:");
+        for (Student student : studentMap.values()) {
+            System.out.println(student);
+        }
+
+        // Display Employees
+        System.out.println("\nEmployees added:");
+        for (Employee employee : employeeMap.values()) {
+            System.out.println(employee);
+        }
+
+        scanner.close();
+    }
+}
+================================================================================
