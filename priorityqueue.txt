@@ -1,0 +1,103 @@
+priorityqueue :
+--------------------------------------------------------
+wrapper class used 
+
+any three 
+
+for interger 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(12);
+        pq.add(67);
+        pq.add(16);
+        pq.add(78);
+        System.out.println(pq);
+        // iterator
+        Iterator<Integer> itr = pq.iterator();
+        while (itr.hasNext()) {
+            System.out.print(itr.next() + " ");
+        }
+    }
+}
+-----------------------------------------------------------
+for float
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        PriorityQueue<Float> pq = new PriorityQueue<>();
+        pq.add(12.5f);
+        pq.add(67.3f);
+        pq.add(16.8f);
+        pq.add(78.2f);
+        
+        System.out.println(pq);        
+        // Iterator 
+        Iterator<Float> itr = pq.iterator();
+        while (itr.hasNext()) {
+            System.out.print(itr.next() + " ");
+        }
+    }
+}
+-----------------------------------------------------------------
+for String
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        PriorityQueue<String> pq = new PriorityQueue<>();
+        pq.add("banana");
+        pq.add("apple");
+        pq.add("orange");
+        pq.add("mango");
+        
+        System.out.println(pq); 
+        
+        // Iterator
+        Iterator<String> itr = pq.iterator();
+        while (itr.hasNext()) {
+            System.out.print(itr.next() + " ");
+        }
+    }
+}
+=================================================================================
+
+HashMap :
+String,Integer 
+
+
+Integer,String 
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hm = new HashMap<>(); 
+        hm.put("hello", 1);
+        hm.put("hii", 2);
+        System.out.println(hm); 
+    }
+}
+----------------------------------------------------------------------
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Integer, String> hm = new HashMap<>();
+        hm.put(0, "hello");
+        hm.put(1, "hii");
+        System.out.println(hm);
+    }
+}
+
+wrapper classes 
+
+--------------------------------------------------------
+  
