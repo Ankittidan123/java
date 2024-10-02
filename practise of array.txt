@@ -1,0 +1,62 @@
+import java.util.*;
+
+public class Main {
+    static void display(int a[]){
+        for(int i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+    }
+public static void sort(int a[]){
+for(int i=0;i<a.length;i++){
+    for(int j=i+1;j<a.length;j++){
+        if(a[i]>a[j]){
+            swap(a,i,j);
+        }
+    }
+    System.out.println();
+}
+}
+public static void swap(int a[],int i,int j){
+    int temp=a[i];
+    a[i]=a[j];
+    a[j]=temp;
+}
+
+
+   
+
+public static void main(String[] args) {
+    int a[]={3,5,53,35,4,76,45,5,87};
+    display(a);
+    sort(a);
+    display(a);
+
+}        
+    }
+===================================================================================
+INDEX OF FIRST AND LAST ELEMENT IN ARRAY
+
+public class Main{
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5,6,7,8,4,0};
+        int target=4;
+        int first=-1;
+        int last=-1;
+        for(int i=0;i<a.length;i++){
+            if(a[i]==target){
+                if(first==-1){
+                    first=i;
+                }
+                last=i;
+            }
+        }
+        if(first!=-1){
+            System.out.println("index of first element" + first);
+            System.out.println("last element index "+last);
+        }
+        else{
+            System.out.println("not found");
+        }
+    }
+}
+===================================================================================
