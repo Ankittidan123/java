@@ -1,0 +1,287 @@
+vector :
+
+addAll()
+
+
+addElement()
+
+
+capacity()
+import java.util.*;
+
+public class Prac{
+    public static void main(String[] args) {
+        Vector<Integer> vs = new Vector<>();
+        // capacity :by default capacity 10
+        System.out.println(vs.capacity());
+        // add element
+        vs.addElement(12);
+        vs.addElement(78);
+        vs.addElement(90);
+        vs.addElement(45);
+        System.out.println(vs);
+        System.out.println(vs.capacity());
+        System.out.println("addtion of all");
+        vs.addAll(vs);
+        System.out.println("adding new element");
+        vs.addElement(32);
+        System.out.println(vs);
+    }
+}
+-------------------------------------------------------------------------------
+vactor :
+data store heterogenous 
+
+
+import java.util.*;
+
+public class Prac {
+    public static void main(String[] args) {
+
+        Vector<Object> vs = new Vector<>();
+
+        System.out.println(" capacity: " + vs.capacity());
+
+        
+        vs.addElement("hello");               
+        vs.addElement(123);        
+        vs.addElement(4.5);            
+        vs.addElement(true);                     
+        System.out.println(vs);
+        
+        System.out.println();
+
+       
+        Iterator<Object> itr = vs.iterator();
+        System.out.println("Vector elements using Iterator:");
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        
+        System.out.println();
+
+        System.out.println("Vector using for-each loop:");
+        for (Object element : vs) {
+            System.out.println(element);
+        }
+    }
+}
+------------------------------------------------------
+
+data store homogenous 
+
+string 
+integer 
+character 
+print all data through iterator 
+for each loop 
+
+import java.util.*;
+
+public class Prac  {
+    public static void main(String[] args) {
+        Vector<Integer> vs = new Vector<>();
+        
+        System.out.println(vs.capacity());
+        // add element
+        vs.addElement(12);
+        vs.addElement(78);
+        vs.addElement(90);
+        vs.addElement(45);
+        System.out.println(vs);
+      
+        System.out.println();
+
+        Iterator<Integer> itr = vs.iterator();
+        
+        System.out.println("Vector elements using Iterator:");
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        System.out.println();
+        System.out.println("vector using for each");
+        for (Integer element : vs) {
+            System.out.println(element);
+        }
+    }
+}
+--------------------------
+ for String
+
+import java.util.*;
+
+public class Prac  {
+    public static void main(String[] args) {
+        Vector<String> vs = new Vector<>();
+        
+        
+        vs.addElement("Apple");
+        vs.addElement("Banana");
+        vs.addElement("Cherry");
+        vs.addElement("Date");
+        
+        
+        System.out.println(vs);
+        
+        System.out.println();
+        
+        
+        Iterator<String> itr = vs.iterator();
+        System.out.println("Vector using Iterator:");
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        System.out.println();
+        
+        
+        System.out.println("Vector  using for-each loop:");
+        for (String element : vs) { 
+            System.out.println(element);
+        }
+    }
+}
+
+
+----------------------
+for character
+
+import java.util.*;
+
+public class Prac  {
+    public static void main(String[] args) {
+        Vector<Character> vs = new Vector<>();
+
+        vs.addElement('A');
+        vs.addElement('B');
+        vs.addElement('C');
+        vs.addElement('D');
+        
+    
+        System.out.println(vs);
+        System.out.println();
+        
+    
+        Iterator<Character> itr = vs.iterator();
+        System.out.println("Vector using Iterator:");
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        System.out.println();
+        
+        
+        System.out.println("Vector using for-each loop:");
+        for (Character element : vs) {
+            System.out.println(element);
+        }
+    }
+}
+
+-------------------------------------------------------------------------------
+stack :
+all wrapper class implement 
+
+any three 
+push 
+pop
+peek 
+search(Object o)
+print all data through iterator 
+for each loop 
+
+
+integer
+import java.util.*;
+
+public class Prac {
+    public static void main(String[] args) {
+        Stack<Integer> st = new Stack<>();
+        st.push(12);
+        st.push(89);
+        st.push(34);
+        st.push(12);
+       
+        System.out.println(st.peek());
+        System.out.println(st);
+        st.pop();
+        System.out.println(st);
+        st.pop();
+        System.out.println(st);
+        st.pop();
+        System.out.println(st);
+        st.pop();
+        System.out.println(st);
+        st.pop();
+        System.out.println(st);
+       
+       
+
+    }
+}
+-------------------------------------------------
+String
+
+import java.util.*;
+
+public class Prac {
+    public static void main(String[] args) {
+        Stack<String> st = new Stack<>();
+        st.push("hello");
+        st.push("hii");
+        st.push("bye");
+        st.push("thk h");
+       
+        System.out.println(st.peek());
+        System.out.println(st);
+        st.pop();
+        System.out.println(st);
+        // st.pop();
+        // System.out.println(st);
+        // st.pop();
+        // System.out.println(st);
+        // st.pop();
+        // System.out.println(st);
+        // st.pop();
+        // System.out.println(st);
+       
+       for(String element : st){
+        System.out.println(element);
+       }
+       System.out.println();
+       Iterator<String> itr = st.iterator();
+       System.out.println("stack through iterator");
+       while(itr.hasNext()){
+       System.out.println(itr.next());
+       }
+    }
+}
+-----------------------------------------------------------------
+for Character
+
+import java.util.*;
+
+public class Prac {
+    public static void main(String[] args) {
+        Stack<Character> st = new Stack<>();
+        st.push('A');
+        st.push('B');
+        st.push('C');
+        st.push('D');
+       
+        System.out.println(st.peek());
+        System.out.println(st);
+        st.pop();
+        System.out.println(st);
+
+       System.out.println("through for each");
+       for(Character element : st){
+        System.out.println(element);
+       }
+       System.out.println();
+       Iterator<Character> itr = st.iterator();
+       System.out.println("stack through iterator");
+       while(itr.hasNext()){
+       System.out.println(itr.next());
+       }
+    }
+}
+-------------------------------------------------------------------------------
