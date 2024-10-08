@@ -1,0 +1,525 @@
+// 1. Write a Program to print the right triangle star pattern.
+
+// *
+// **
+// ***
+// ****
+// *****
+package Pattern;
+
+public class Pattern {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+-------------------------------------------------------
+// 2. Write a Program to print an inverted right triangle star pattern.
+
+// *****
+// ****
+// ***
+// **
+// *
+package Pattern;
+
+public class Pattern1 {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int j=5;j>=i;j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }        
+    }
+}
+------------------------------------------------------------
+
+// 3. Write a Program to print mirrored right triangle star pattern.
+
+
+//     *
+//    **
+//   ***
+//  ****
+// *****
+package Pattern;
+public class Pattern2 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int s=5;s>i;s--){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+       System.out.println();
+        }
+    }
+}
+-------------------------------------------------------------------------
+// 4. Write a Program to print the Inverted Half Pyramid Star Pattern.
+
+// *****
+//  ****
+//   ***
+//    **
+//     *
+package Pattern;
+
+public class Pattern3 {
+    public static void main(String[] args) {
+        for(int i=0;i<=5;i++){
+            for(int s=0;s<i;s++){
+                System.out.print(" ");
+            }
+            for(int j=5;j>i;j--){
+                System.out.print("*");
+            }
+        System.out.println();
+        }
+    }
+}
+
+-------------------------------------------------------------------------
+// 5. Write a Program to print the Full Pyramid Star pattern.
+
+//     *  
+//    * * 
+//   * * *
+//  * * * *
+package Pattern;
+
+public class Pattern4 {
+    public static void main(String[] args) {
+        for(int i=1;i<=4;i++){
+            for(int s=4;s>i;s--){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print("* ");
+            }
+        System.out.println();
+        }
+    }
+    
+}
+
+
+-------------------------------------------------------------------------
+// 6. Write a Program to print an inverted pyramid star pattern.
+
+// * * * * * 
+//  * * * *
+//   * * *
+//    * *
+//     *
+package Pattern;
+
+public class Pattern5 {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int s=0;s<i;s++){
+                System.out.print(" ");
+            }
+            for(int j=5;j>=i;j--){
+                System.out.print("* ");
+            }
+        System.out.println();
+        }
+    }
+}
+
+-------------------------------------------------------------------------
+// 7. Write a Program to print a square star pattern.
+
+// *****
+// *****
+// *****
+// *****
+// *****
+package Pattern;
+
+public class Pattern6 {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=5;j++){
+                System.out.print("*");
+            }
+        System.out.println();
+        }
+
+    }
+}
+
+-------------------------------------------------------------------------
+// 10. Write a program to Print Inverted V Star Pattern.
+
+//     *     
+//    * *    
+//   *   *   
+//  *     *  
+// *       *
+package Pattern;
+
+/**
+ * Pattern7
+ */
+public class Pattern7 {
+
+    public static void main(String[] args) {
+        for(int i=0;i<=5;i++){
+            for(int s=5;s>i;s--){
+                System.out.print(" ");
+            }
+        for(int j=0;j<=i*2-1;j++){
+            if( j==1|| j==i*2-1){
+            System.out.print("* ");
+            }
+            else{
+                System.out.print(" ");
+            }
+        }
+    System.out.println();
+    }
+    }
+}
+-------------------------------------------------------------------------
+ Write a Program to print the Full Pyramid Star Pattern.
+ 
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+package Pattern;
+
+public class Pattern8 {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int s=5;s>i-1;s--){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i*2-1;j++){
+                System.out.print("*");
+            }
+        System.out.println();
+        
+        }
+    }
+}
+
+-------------------------------------------------------------------------
+ Write a Program to Print the Inverted Full Pyramid Star Pattern.
+
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+package Pattern;
+
+public class Pattern9 {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int s=0;s<=i;s++){
+                System.out.print(" ");
+            }
+            for(int j=9;j>=i*2-1;j--){
+                System.out.print("*");
+            }
+        System.out.println();
+        }
+    }
+}
+
+-------------------------------------------------------------------------
+ Write a  Program to print the Solid Inverted Half Diamond Star Pattern.
+
+//      *
+//     **
+//    ***
+//   ****
+//  *****
+// ******
+//  *****
+//   ****
+//    ***
+//     **
+//      *
+package Pattern;
+
+public class Pattern10 {
+    public static void main(String[]args) {
+    for(int i=1;i<=6;i++){
+        for(int s=6;s>i;s--){
+            System.out.print(" ");
+        }
+        for(int j=1;j<=i;j++){
+            System.out.print("*");
+        }
+    System.out.println();
+    }
+     
+    for(int i=1;i<=5;i++){
+        for(int s=0;s<=i;s++){
+            System.out.print(" ");
+        }
+        for(int j=5;j>i;j--){
+            System.out.print("*");
+        }
+    System.out.println();
+    }
+    }
+}
+
+-------------------------------------------------------------------------
+ Write a Program to Print the V Star Pattern.
+
+// *       * 
+//  *     *  
+//   *   *   
+//    * *    
+//     * 
+package Pattern;
+public class Pattern11 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+        for(int s=0;s<=i;s++){
+             System.out.print(" ");
+            }
+            for(int j=9;j>=i*2-1;j--){
+                if(j==9||j==i*2-1||i==5){
+                System.out.print("*");
+                }
+                else{
+                 System.out.print(" ");
+
+                }
+            }
+            System.out.println();
+
+        }
+    }
+}
+-------------------------------------------------------------------------
+ Write a Program to Print the Hollow Diamond Star Pattern.
+
+//    *   
+//   * *
+//  *   * 
+// *     *
+//  *   *
+//   * *
+//    *
+package Pattern;
+public class Pattern12 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=4;i++){
+            for(int s=4;s>i;s--){
+                System.out.print(" ");
+            }
+        for(int j=1;j<=i*2-1;j++){
+            if(i==1||j==i*2-1||j==1){
+            System.out.print("* ");
+            }
+            else{
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+        }
+        for(int i=1;i<=4;i++){
+            for(int s=0;s<i;s++){
+                System.out.print(" ");
+            }
+            for(int j=7;j>=i*2-1;j--){
+                if(j==1||j==i*2-1||j==7||i==4){
+                System.out.print("* ");
+                }   
+                else{
+                 System.out.print(" ");
+                }
+            }
+        System.out.println();
+        }
+    }
+}
+-------------------------------------------------------------------------
+
+ Write a Program to Print the Pant's style Star Pattern.
+
+// *********
+// **** ****
+// ***   ***
+// **     **
+// *       *
+package Pattern;
+public class Pattern13 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int s=6;s>i;s--){
+                System.out.print("*");
+            }
+            for (int j=2;j<=i*2-1;j++){
+                System.out.print(" ");
+            } 
+                        for(int s1=6;s1>i;s1--){
+                System.out.print("*");
+            }
+
+        System.out.println();
+        }
+    }
+}
+-------------------------------------------------------------------------
+ Write a Program to Print Cross Sign (╳ ) Star Pattern.
+
+// *   *
+//  * *
+//   *
+//  * *
+// *   *
+package Pattern;
+public class Pattern14 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=5;j++){
+                if(i==j || i+j==6){
+                System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+        System.out.println();
+        }
+    }
+}
+-------------------------------------------------------------------------
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// 11 12 13 14 15
+// 16 17 18 19 20 21
+package Pattern;
+public class Pattern15 {
+
+    public static void main(String[] args) {
+        int a=1;
+        for(int i=1;i<=6;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(a+" ");
+            
+                            a++;
+
+            }
+       System.out.println();
+        }
+    }
+}
+-------------------------------------------------------------------------
+. Half Pyramid of Alphabets in C
+// Last Alphabet: F
+
+// Preview
+// A
+// B B
+// C C C
+// D D D D
+// E E E E E
+// F F F F F F
+package Pattern;
+public class Pattern16 {
+
+    public static void main(String[] args) {
+        char a='A';
+        for(int i=1;i<=6;i++){
+            for(int j=1;j<=i;j++){
+
+                System.out.print(a);
+            
+
+            }
+                        a++;
+
+            System.out.println();
+        }
+    }
+}
+-------------------------------------------------------------------------
+// Enter the width of the HourGlass: 7
+// * * * * * * *
+//  * * * * * *
+//   * * * * *
+//    * * * *
+//     * * *
+//      * *
+//       *
+//      * *
+//     * * *
+//    * * * *
+//   * * * * *
+//  * * * * * *
+// * * * * * * *
+
+package Pattern;
+public class Pattern17 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=7;i++){
+            for(int s=0;s<i;s++){
+                System.out.print(" ");
+            }
+            for(int j=8;j>i;j--){
+                System.out.print("* ");
+            }
+                        System.out.println();
+
+            
+        }
+
+        for(int i=2;i<=7;i++){
+            for(int s=8;s>i;s--){
+                System.out.print(" ");
+            }
+        for(int j=1;j<=i;j++){
+            System.out.print("* ");
+        }
+    System.out.println();    
+    }
+    }
+}
+-------------------------------------------------------------------------
+ Palindrome Half Pyramid Pattern Using Numbers in C
+// Rows: 6
+
+// Preview
+// 1
+// 121
+// 12321
+// 1234321
+// 123454321
+// 12345654321
+package Pattern;
+public class Pattern18 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=6;i++){
+            for(int j=1;j<=i;j++){
+                System.out.println("  "+i);
+            }
+        }
+    }
+}
+--------------------------------------------------------
