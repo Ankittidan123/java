@@ -1,0 +1,279 @@
+1)
+Write a Java program to create two threads. One thread should print odd numbers from 1 to 10, and the other thread should print even numbers from 2 to 10. Ensure proper synchronization to alternate between the two threads.
+
+Ans)
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class A{
+    void numbers(int a,int n){
+        synchronized(this){
+            for(int i=a; i<=n; i++){
+                if(i%2==1){
+                    System.out.println("Odd number");
+                }
+            }
+        }
+    }
+}
+class C{
+    void num(int a,int n){
+        synchronized(this){
+            for(int i=a; i<=n; i++){
+                if(i%2==0){
+                    System.out.println("Even number");
+                }
+            }
+        }
+    }
+}
+class B extends Thread{
+    A t;
+    B(A t){
+        this.t = t;
+    }
+    public void run(){
+        t.numbers(1,10);
+    }
+}
+class D extends Thread{
+    C r;
+    D(C r){
+        this.r = r;
+    }
+    public void run(){
+        r.num(2,10);
+    }
+}
+public class Exc{
+    
+    public static void main(String[] args) throws Exception{
+        A k = new A();
+        C i = new C();
+        B o = new B(k);
+        o.start();
+        D p = new D(i);
+        p.start();
+    }
+}
+
+---------------------------------------------------
+
+2)
+Write a Java program that demonstrates the use of the synchronized keyword to achieve thread safety. Create a class with a shared resource and two threads trying to access and modify that resource. Use synchronization to avoid conflicts.
+
+Ans)
+class SharedResource {
+    private int counter = 0;
+
+    // Method to increment the counter
+    public synchronized void increment() {
+        counter++;
+        System.out.println("Counter incremented to: " + counter);
+    }
+
+    // Method to decrement the counter
+    public synchronized void decrement() {
+        counter--;
+        System.out.println("Counter decremented to: " + counter);
+    }
+}
+
+class MyThread extends Thread {
+    private SharedResource sharedResource;
+
+    public MyThread(SharedResource sharedResource) {
+        this.sharedResource = sharedResource;
+    }
+    public void run() {
+        sharedResource.increment();
+        sharedResource.decrement();
+    }
+}
+
+public class Exc {
+    public static void main(String[] args) {
+        SharedResource sharedResource = new SharedResource();
+
+        // Create two threads and start them
+        new MyThread(sharedResource).start();
+        new MyThread(sharedResource).start();
+    }
+}
+
+-------------------------------------------------
+
+3)
+Write a Java program that creates a simple countdown timer using Thread.sleep(). The program should start from 10 and print the remaining time after each second until reaching 0.
+
+Ans)
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class A{
+    void show(){
+        for(int i=10; i>=0; i--){
+            try{
+                System.out.print(i+" ");
+                Thread.sleep(900);
+            }
+            catch(Exception ex){
+    
+            }
+        }
+    }
+}
+public class Exc{
+    public static void main(String[] args) throws Exception{
+        A k = new A();
+        k.show();
+    }
+}
+------------------------------------------------------
+
+4)
+Create a Java program to simulate a traffic light. Use three threads to represent three different colors (red, yellow, and green). Each color should be displayed for a specific duration using Thread.sleep().
+
+Ans)
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class A{
+    void red(){
+        try{
+            System.out.print("Red ");
+            Thread.sleep(900);
+        }
+        catch(Exception ex){
+
+        }
+    }
+    void green(){
+        try{
+            System.out.print("Green ");
+            Thread.sleep(900);
+        }
+        catch(Exception ex){
+
+        }
+    }
+    void yellow(){
+        try{
+            System.out.print("Yellow");
+            Thread.sleep(900);
+        }
+        catch(Exception ex){
+
+        }
+    }
+}
+public class Exc{
+    public static void main(String[] args) throws Exception{
+        A k = new A();
+        k.red();
+        k.green();
+        k.yellow();
+    }
+}
+
+----------------------------------------------------------
+
+5)
+Design a Java program that simulates a race between three runners. Use three threads to represent the runners, and introduce delays with Thread.sleep(). Use Thread.join() to ensure that the race finishes only when all runners have completed.
+
+Ans)
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class A extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            try{
+                Thread.sleep(1000);
+            }
+            catch(Exception ex){
+
+            }
+            System.out.print(i+" ");
+        }
+    }
+}
+public class Exc{
+    public static void main(String[] args) throws Exception{
+        A t1 = new A();
+        A t2 = new A();
+        A t3 = new A();
+        t1.start();
+        try{
+            t1.join();
+        }
+        catch(Exception ex){
+
+        }
+        t2.start();
+        try{
+            t2.join();
+        }
+        catch(Exception ex){
+
+        }
+        t3.start();
+    }
+}
+
+---------------------------------------------------------------
+
+6)
+Write a Java program that creates two threads. The first thread prints numbers from 1 to 5, and the second thread prints letters from 'A' to 'E'. Ensure proper synchronization using Thread.sleep() and Thread.join() to achieve an ordered output.
+
+Ans)
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class A extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            try{
+                Thread.sleep(1000);
+            }
+            catch(Exception ex){
+
+            }
+            System.out.print(i+" ");
+        }
+    }
+}
+class B extends Thread{
+    public void run(){
+        for(char o='A'; o<='E'; o++ ){
+            try{
+                Thread.sleep(1000);
+            }
+            catch(Exception ex){
+
+            }
+            System.out.print(o+" ");
+        }
+    }
+}
+public class Exc{
+    public static void main(String[] args) throws Exception{
+        A t1 = new A();
+        t1.start();
+        try{
+            t1.join();
+        }
+        catch(Exception ex){
+
+        }
+        B t2 =new B();
+        t2.start();
+        try{
+            t2.join();
+        }
+        catch(Exception ex){
+
+        }
+    }
+}
+============================================================================
