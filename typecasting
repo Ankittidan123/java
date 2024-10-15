@@ -1,0 +1,860 @@
+user input 
+-----------------------------------------------------------------
+file A 
+employe 
+
+id
+name
+companyname
+department
+contact
+address 
+email
+password 
+salary 
+
+file B 
+work as data type variable 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc{
+    String id;
+    String name;
+    String cname;
+    String dname;
+    double contact;
+    String address;
+    String email;
+    String pass;
+    float salary;
+    Mnc(String id,String name,String cname,String dname,double contact,String address,String email,String pass,float salary){
+        this.id = id;
+        this.name = name;
+        this.cname = cname;
+        this.dname = dname;
+        this.contact = contact;
+        this.address = address;
+        this.email = email;
+        this.pass = pass;
+        this.salary = salary;
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test{
+    int a;
+    Mnc k;
+    Test(int a,Mnc k){
+        this.a = a;
+        this.k = k;
+    }
+    void show(){
+        System.out.println(a);
+        System.out.println(k.id+" "+k.name+" "+k.cname);
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc("123", "Raghav", "Regex", null, 0, null, null, null, 0);
+        Test i =new Test(23, k);
+        i.show();
+    }
+}
+
+----------------------------------------------------------------
+file A
+book class 
+
+title 
+author 
+type
+name
+page
+content
+price 
+date
+
+file B
+work as data type variable 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc{
+    String title;
+    String auther;
+    String type;
+    String name;
+    String page;
+    String content;
+    String price;
+    String data;
+    Mnc(String title,String auther,String type,String name,String page,String content,String price,String data){
+        this.title = title;
+        this.auther = auther;
+        this.type = type;
+        this.name = name;
+        this.page = page;
+        this.content = content;
+        this.price = price;
+        this.data = data;
+    }
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test{
+    int a;
+    Mnc k;
+    Test(int a,Mnc k){
+        this.a = a;
+        this.k = k;
+    }
+    void show(){
+        System.out.println(a);
+        System.out.println(k.title+" "+k.type+" "+k.name);
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc("CODER", null, "Best", "Shalendra", null, null, null, null);
+        Test i =new Test(23, k);
+        i.show();
+    }
+}
+
+----------------------------------------------------------------
+file A
+ticket booking class 
+name
+address
+contact
+gender
+total_number
+movie_name
+
+file B
+work as data type variable 
+
+Ans)
+file one
+import java.util.Scanner;
+
+public class Mnc{
+    String name;
+    String address;
+    String contact;
+    String gender;
+    String total_number;
+    String mobie_name;
+    Mnc(String name,String address,String contact,String gender,String total_number,String mobie_name){
+        this.name = name;
+        this.address = address;
+        this.contact = contact;
+        this.gender = gender;
+        this.total_number = total_number;
+        this.mobie_name = mobie_name;
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test{
+    int a;
+    Mnc k;
+    Test(int a,Mnc k){
+        this.a = a;
+        this.k = k;
+    }
+    void show(){
+        System.out.println(a);
+        System.out.println(k.name+" "+k.address+" "+k.contact);
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc("Shelendra", "jaipur", "232323", null, null, null);
+        Test i =new Test(23, k);
+        i.show();
+    }
+}
+
+----------------------------------------------------------------
+file A
+College class 
+name
+fname
+mname
+graduation 
+address
+contact
+group_name
+semester
+
+
+file B
+work as data type variable 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc{
+    String name;
+    String fname;
+    String mname;
+    String graduate;
+    String address;
+    String contact;
+    String grp_name;
+    String semester;
+    Mnc(String name,String fname,String mname,String graduate,String address,String contact,String grp_name,String semester){
+        this.name = name;
+        this.fname = fname;
+        this.mname = mname;
+        this.graduate = graduate;
+        this.address = address;
+        this.contact = contact;
+        this.grp_name = grp_name;
+        this.semester = semester;
+    }
+}
+
+Second file
+
+import java.util.*;
+
+public class Test{
+    int a;
+    Mnc k;
+    Test(int a,Mnc k){
+        this.a = a;
+        this.k = k;
+    }
+    void show(){
+        System.out.println(a);
+        System.out.println(k.name+" "+k.fname+" "+k.mname);
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc("Ragha", "Ankit", "Khushi", null, null, null, null, null);
+        Test i =new Test(23, k);
+        i.show();
+    }
+}
+
+---------------------------------------------------------
+byte ->short ->int ->long ->float ->double 
+
+byte convert short 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        byte a = 89;
+        short b = a;
+        System.out.println(b);
+    }
+}
+
+
+byte convert int 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        byte a = 89;
+        int b = a;
+        System.out.println(b);
+    }
+}
+
+
+byte convert long
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        byte a = 89;
+        long b = a;
+        System.out.println(b);
+    }
+}
+
+ 
+byte convert float 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        byte a = 89;
+        float b = a;
+        System.out.println(b);
+    }
+}
+
+
+byte convert double
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        byte a = 89;
+        double b = a;
+        System.out.println(b);
+    }
+}
+
+
+short convert int 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        short a = 89;
+        int b = a;
+        System.out.println(b);
+    }
+}
+
+ 
+short convert long
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        short a = 89;
+        long b = a;
+        System.out.println(b);
+    }
+}
+
+  
+short convert float 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        short a = 89;
+        float b = a;
+        System.out.println(b);
+    }
+}
+
+ 
+short convert double 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        short a = 89;
+        double b = a;
+        System.out.println(b);
+    }
+}
+ 
+
+int convert long
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        int a = 89;
+        long b = a;
+        System.out.println(b);
+    }
+}
+
+
+int convert float 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        int a = 89;
+        float b = a;
+        System.out.println(b);
+    }
+}
+
+
+int convert double
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        int a = 89;
+        double b = a;
+        System.out.println(b);
+    }
+}
+
+
+long convert float 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        long a = 89;
+        float b = a;
+        System.out.println(b);
+    }
+}
+
+
+long convert double
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        long a = 89;
+        double b = a;
+        System.out.println(b);
+    }
+}
+
+float convert double 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        float a = 89;
+        double b = a;
+        System.out.println(b);
+    }
+}
+---------------------------------------------------------------------- 
+ double -> float -> long -> int -> char -> short -> byte  
+
+double --->float 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        float b = (float) a;
+        System.out.println(b);
+    }
+}
+
+
+double --->long
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        long b = (long) a;
+        System.out.println(b);
+    }
+}
+
+
+double --->int 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        int b = (int) a;
+        System.out.println(b);
+    }
+}
+
+
+double --->char
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        char b = (char) a;
+        System.out.println(b);
+    }
+}
+
+
+double --->short
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        short b = (short) a;
+        System.out.println(b);
+    }
+}
+
+
+double --->byte
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        byte b = (byte) a;
+        System.out.println(b);
+    }
+}
+
+
+float--->long 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        float a = 8.97f;
+        long b = (long) a;
+        System.out.println(b);
+    }
+}
+
+
+float--->int
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        float a = 8.97f;
+        int b = (int) a;
+        System.out.println(b);
+    }
+}
+
+
+float--->char
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        float a = 8.97f;
+        char b = (char) a;
+        System.out.println(b);
+    }
+}
+
+
+float--->short
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        float a = 8.97f;
+        short b = (short) a;
+        System.out.println(b);
+    }
+}
+
+
+float--->byte
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        float a = 8.97f;
+        byte b = (byte) a;
+        System.out.println(b);
+    }
+}
+
+
+long-->int 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        long a = 846;
+        int b = (int) a;
+        System.out.println(b);
+    }
+}
+
+
+long-->char
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        long a = 846;
+        char b = (char) a;
+        System.out.println(b);
+    }
+}
+
+
+long-->short
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        long a = 846;
+        short b = (short) a;
+        System.out.println(b);
+    }
+}
+
+
+long-->byte
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        long a = 846;
+        byte b = (byte) a;
+        System.out.println(b);
+    }
+}
+
+
+int-->char
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        int a = 846;
+        char b = (char) a;
+        System.out.println(b);
+    }
+}
+
+
+int-->short
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        int a = 846;
+        short b = (short) a;
+        System.out.println(b);
+    }
+}
+
+
+int-->byte
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        int a = 846;
+        byte b = (byte) a;
+        System.out.println(b);
+    }
+}
+
+
+char-->short 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        char a = 's';
+        short b = (short) a;
+        System.out.println(b);
+    }
+}
+
+
+char-->byte
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        char a = 's';
+        byte b = (byte) a;
+        System.out.println(b);
+    }
+}
+
+short --->byte 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        short a = 2;
+        byte b = (byte) a;
+        System.out.println(b);
+    }
+} 
+
+---------------------------------------------------------------------- 
+ double -> float -> long -> int -> char -> short -> byte  
+
+double---->long --->float
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        float b = (long) a;
+        System.out.println(b);
+    }
+}
+ 
+double-->int--->float 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        float b = (int) a;
+        System.out.println(b);
+    }
+}
+
+double--->char--->float 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        float b = (char) a;
+        System.out.println(b);
+    }
+}
+
+double--short--->float 
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        double a = 8.97;
+        float b = (short) a;
+        System.out.println(b);
+    }
+}
+
+long --->short--->int
+
+Ans)
+import java.util.*;
+
+public class Test{
+    
+    public static void main(String[] args) {
+        long a = 8788768;
+        int b = (short) a;
+        System.out.println(b);
+    }
+} 
+-----------------------------------------------------------------------------
