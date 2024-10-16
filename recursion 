@@ -1,0 +1,137 @@
+Q1  1-->100 number
+
+Ans)
+
+public class Main{
+    public static void printNUmber(int n)
+    {
+        if(n==0)
+        {
+            return ;
+        }
+
+        printNUmber(n-1);
+        System.out.print(n+" ");
+
+
+
+    }
+    public static void main(String [] args)
+    {
+        int n=100;
+        printNUmber(n);
+    }
+
+}
+
+Q2. 100->1
+
+Ans)
+
+
+
+public class Main{
+    public static void printNUmber(int n)
+    {
+        if(n==0)
+        {
+            return ;
+        }
+        System.out.print(n+" ");
+
+        printNUmber(n-1);
+
+
+
+    }
+    public static void main(String [] args)
+    {
+        int n=100;
+        printNUmber(n);
+    }
+
+}
+
+Q3. 23->67
+Ans)
+import java.util.Scanner;
+
+public class Main{
+    public static void prinTln(int start,int end)
+    {
+        if(start==end)
+        {
+            return;
+        }
+        System.out.println(start+" ");
+
+        prinTln(start+1,end);
+
+
+    }
+    public static void main(String [] args)
+    {
+        Scanner input=new Scanner (System.in);
+        System.out.println("Enter the number of starting ");
+        int start=input.nextInt();
+        System.out.println("Enter the end point in you code");
+        int end=input.nextInt();
+        prinTln(start, end);
+
+    }
+}
+
+Q4. 78->23
+Ans)
+
+import java.util.Scanner;
+
+public class Main{
+    public static void prinTln(int start,int end)
+    {
+        if(start==end)
+        {
+            return;
+        }
+        prinTln(start+1,end);
+
+        System.out.println(start+" ");
+    }
+    public static void main(String [] args)
+    {
+        Scanner input=new Scanner (System.in);
+        System.out.println("Enter the number of starting ");
+        int start=input.nextInt();
+        System.out.println("Enter the end point in you code");
+        int end=input.nextInt();
+        prinTln(start, end);
+
+    }
+}
+
+
+Q4. factorial in recursion :first way 
+Ans)
+import java.util.Scanner;
+
+public class Main{
+    public static int printNumebr(int n)
+    {
+        if(n==0)
+        {
+            return 1;
+
+        }
+       int ans= printNumebr(n-1);
+        int f=n*ans;
+        return f;
+
+    }
+    public static void main(String[] args){
+    Scanner input=new Scanner (System.in);
+    System.out.println("Enter the factorial number :");
+    int a=input.nextInt();
+    printNumebr(a);
+    System.out.println("This numebr factorial is : "+a+" : "+printNumebr(a));
+    }
+}
