@@ -1,0 +1,142 @@
+1)
+ArrayList Operations:
+
+Write a program to initialize an ArrayList and perform the following operations: add elements, remove elements, and print the final list.
+
+Ans)
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Exc{  
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(21);
+        al.add(32);
+        al.add(43);
+        al.add(41);
+        al.add(78);
+        al.remove(1);
+        System.out.println(al);
+    }
+}
+
+-----------------------------------------------------
+
+2)
+LinkedList Operations:
+
+Implement a doubly-linked list from scratch in Java, including methods for insertion, deletion, and traversal.
+
+Ans)
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Exc{  
+    public static void main(String[] args) {
+       LinkedList<Integer> al = new LinkedList<>();
+        al.add(21);
+        al.add(32);
+        al.add(43);
+        al.add(41);
+        al.add(78);
+        al.remove(1);
+        System.out.println(al);
+        for(int i=al.size()-1; i>=0; i--){
+            System.out.print(al.get(i)+" ");
+        }
+    }
+}
+
+---------------------------------------------------------
+
+3)
+HashMap Operations:
+
+Create a program that reads a text file, counts the frequency of each word, and stores it in a HashMap.
+
+Ans)
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Vector;
+
+class A{
+    String name;
+    String fname;
+    String mname;
+    A(String name, String fname, String mname){
+        this.name = name;
+        this.fname = fname;
+        this.mname = mname;
+    }
+}
+public class Exc{  
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name");
+        String name = sc.nextLine();
+        System.out.println("Enter the fname");
+        String fname = sc.nextLine();
+        System.out.println("Enter the mname");
+        String mname = sc.nextLine();
+        A k = new A(name, fname, mname);
+        HashMap<Integer,A> hm = new HashMap<>();
+        hm.put(1, k);
+        for(Map.Entry<Integer,A> l:hm.entrySet()){
+            int key = l.getKey();
+            A b = l.getValue();
+            System.out.println(key);
+            System.out.println(b.name+" "+b.fname+" "+b.mname);
+        }
+    }
+}
+
+-----------------------------------------------------------
+
+4)
+Sorting:
+
+Write a method to sort a list of Strings alphabetically without using the built-in Collections.sort() method.
+
+5)
+Queue Implementation:
+
+Implement a priority queue using a TreeMap in Java.
+
+Ans)
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Exc{  
+
+    public static void main(String[] args) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(21);
+        pq.add(12);
+        pq.add(32);
+        pq.add(23);
+        HashMap<Integer,String> hm = new HashMap<pq>();
+        hm.put(1, "H");
+        hm.put(2, "E");
+        hm.put(3, "L");
+        hm.put(4, "L");
+        hm.put(5, "O");
+
+    }
+}
+
+//not possible to add priority queue and hashmap
+
+---------------------------------------------------------
