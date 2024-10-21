@@ -1,0 +1,83 @@
+import java.util.ArrayList;
+
+import java.util.Iterator;
+
+public class Exc{  
+    public static void main(String[] args) {
+        ArrayList<String> al = new ArrayList<>();
+        al.add("Java");
+        al.add("Angular");
+        al.add("React");
+        al.add("JavaScript");
+        al.add("Pythan");
+        for(String i:al){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        Iterator itr = al.iterator();
+        while(itr.hasNext()){
+            System.out.print(itr.next()+" ");
+        }
+    }
+}
+
+--------------------------------------------------------------
+
+
+import java.util.ArrayList;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class Exc{  
+    public static void main(String[] args) {
+        LinkedList<String> al = new LinkedList<>();
+        al.add("Java");
+        al.add("Angular");
+        al.add("React");
+        al.add("JavaScript");
+        al.add("Pythan");
+        for(String i:al){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        Iterator itr = al.iterator();
+        while(itr.hasNext()){
+            System.out.print(itr.next()+" ");
+        }
+    }
+}
+
+
+
+-----------------------------------------------------------
+
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Vector;
+
+public class Exc{  
+    public static void main(String[] args) {
+        Vector<String> al = new Vector<>();
+        al.add("Java");
+        al.add("Angular");
+        al.add("React");
+        al.add("JavaScript");
+        al.add("Pythan");
+        for(String i:al){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        Iterator itr = al.iterator();
+        while(itr.hasNext()){
+            System.out.print(itr.next()+" ");
+        }
+        System.out.println();
+        Enumeration e = al.elements();
+        while (e.hasMoreElements()) {
+            System.out.print(e.nextElement() + " ");
+        }
+    }
+}
