@@ -1,0 +1,84 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        System.out.println("Customer Details");
+        System.out.println("--------------------");
+        ArrayList al = new ArrayList<>();
+        al.add(101);
+        al.add("Jones");
+        al.add('M');
+        al.add("customer1@gmail.com");
+        al.add(1122334455);
+        System.out.println(al);
+    }
+}
+
+-------------------------------------------------------------
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(21);
+        al.add(12);
+        
+        int index0 = 0;
+        int index1 = 1;
+        if(index0 <al.size() && index1 < al.size()){
+            int res = al.get(index0)-al.get(index1);
+            System.out.println("The subraction is "+res);
+        }
+        if(index0 <al.size() && index1 < al.size()){
+            int res = al.get(index0)+al.get(index1);
+            System.out.println("The addition is "+res);
+        }
+        if(index0 <al.size() && index1 < al.size()){
+            int res = al.get(index0)*al.get(index1);
+            System.out.println("The Multiplication is "+res);
+        }
+        if(index0 <al.size() && index1 < al.size()){
+            int res = al.get(index0)/al.get(index1);
+            System.out.println("The division is "+res);
+        }
+        if(index0 <al.size() && index1 < al.size()){
+            int res = (al.get(index0)+al.get(index1))/2;
+            System.out.println("The Avg is "+res);
+        }
+        else {
+            System.out.println("Out of bond");
+        }
+    }
+}
+
+---------------------------------------------------------------
+
+
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        int value  = 5000;
+        System.out.println((5000/100)*5);
+        System.out.println((5000/100)*10);
+        System.out.println((5000/100)*20);
+        System.out.println((5000/100)*25);
+        System.out.println((5000/100)*50);
+    }
+}
