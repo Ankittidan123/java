@@ -1,0 +1,388 @@
+Q1
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+       List<Integer>aj=new ArrayList<>();
+       aj.add(23);
+       aj.add(43);
+       aj.add(21);
+       aj.add(21);
+       System.out.print(aj+" ");
+
+       LinkedHashSet<Integer> kj=new LinkedHashSet<>(aj);
+       aj.clear();
+       aj.addAll(kj);
+
+       for( int i:aj){
+        System.out.println(i);
+       }
+    }
+}
+==========================================================
+Q2.
+
+import java.util.*;
+abstract class Vehicle{
+    abstract void start();
+    abstract void stop();
+}
+
+
+interface Fuelefficiency {
+default void calculateFuelEfficiency(){
+    System.out.println("how much fuel is used");
+}
+}
+
+class Car extends Vehicle implements Fuelefficiency{
+    void start(){
+        System.out.println("Start");
+    }
+    void stop(){
+        System.out.println("Stop");
+    }
+}
+class Bike extends Vehicle implements Fuelefficiency{
+
+    void start(){
+        System.out.println("Start");
+    }
+    void stop(){
+        System.out.println("Stop");
+    }
+}
+
+
+public class Main1 {
+    public static void main(String[] args) {
+        Car k= new Car();
+        Bike k1=new Bike();
+        k.start();
+        k.stop();
+        k.calculateFuelEfficiency();
+        k1.start();
+        k1.stop();
+        k1.calculateFuelEfficiency();
+    }
+}
+=============================================================
+Q3
+
+
+import java.util.*;
+
+class BankAccount{
+    private double AccountNumber;
+    private float Balance;
+   
+    void set(double AccountNumber,float Balance){
+        if(AccountNumber>0000000d && AccountNumber<9999999d ){
+        this.AccountNumber=AccountNumber;
+        this.Balance=Balance;
+        }
+    }
+
+    double get(){
+        return AccountNumber;
+    }
+
+    float get1(){
+        return Balance;
+    }
+
+    void deposit(){
+        if(AccountNumber>=0000000d && AccountNumber<=9999999d){
+            get();
+            get1();
+        }
+        System.out.println("Amount Deposit");
+    }
+
+    void withdraw(){
+        if(AccountNumber>=0000000d && AccountNumber<=9999999d ){
+            get();
+            get1();
+        }
+        System.out.println("Amount Withdraw");
+    }
+   
+}
+public class Main1 {
+    public static void main(String[] args) {
+        BankAccount k=new BankAccount();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Account Number of 4 Digit");
+        int AccountNumber=sc.nextInt();
+        System.out.println("Enter Balance Greater than 0");
+        float Balance=sc.nextFloat();
+        k.set(AccountNumber, Balance);
+        System.out.println(k.get());
+        System.out.println(k.get1());
+        k.deposit();
+        k.withdraw();
+
+    }
+}
+===========================================================
+
+Q4
+
+import java.util.*;
+
+public class Main1 {
+    public static void main(String[] args) {
+        List<Integer> a= new ArrayList<>();
+        a.add(13);
+        a.add(14);
+        a.add(15);
+        a.add(16);
+        a.add(14);
+        for(int i:a){
+            System.out.println(i);
+        }
+
+        for(int i=0;i<a.size();i++){
+            for(int j=i+1;j<a.size();j++){
+                if(a.get(i)==a.get(j)){
+                    a.set(j, -1);
+                }
+            }
+        }
+
+        for(int i=0;i<a.size();i++){
+            if(a.get(i)>0){
+                System.out.print(a.get(i)+" ");
+            }
+        }
+   
+    }
+}
+
+========================================================
+Q5
+
+import java.util.Scanner;
+public class Main1 {
+
+    
+    static void printArray(int a[][]){
+        for(int i=0; i<a.length; i++){
+            for(int j=0; j<a[i].length; j++){
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static int[][] printPascal(int n){
+        int step[][]= new int[n][];     
+        for(int i=0; i<n; i++){
+            step[i]= new int[i+1];      
+            step[i][0]=step[i][i]=1;
+            for(int j=1; j<i; j++){
+                step[i][j]= step[i-1][j-1] + step[i-1][j];
+            }
+        }
+        return step;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+
+        System.out.print("Enter no. of rows for pascal triangle: ");
+        int rows= sc.nextInt();
+
+        int arr[][]= printPascal(rows);
+        printArray(arr);
+    }
+
+}
+
+
+
+====================================================
+
+Q6
+
+class EvenNumbers implements Runnable {
+  
+    public void run() {
+        for (int i = 0; i <= 10; i += 2) {
+            System.out.println("Even: " + i);
+            try {
+                Thread.sleep(100); 
+            } catch (Exception e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+}
+
+class OddNumbers implements Runnable {
+
+    public void run() {
+        for (int i = 1; i < 10; i += 2) {
+            System.out.println("Odd: " + i);
+            try {
+                Thread.sleep(100); 
+            } catch(Exception e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+}
+
+public class Main1 {
+    public static void main(String[] args) {
+        Thread evenThread = new Thread(new EvenNumbers());
+        Thread oddThread = new Thread(new OddNumbers());
+
+        evenThread.start();
+        oddThread.start();
+
+        try {
+            evenThread.join();
+            oddThread.join();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        
+        System.out.println("Both threads run");
+    }
+}
+===========================================================
+
+Q7
+class Counter {
+    private int count = 0;
+
+    public void increment() {
+        count++;
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+
+class IncrementThread extends Thread {
+    private Counter counter;
+
+    public IncrementThread(Counter counter) {
+        this.counter = counter;
+    }
+
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
+            counter.increment();
+        }
+    }
+}
+
+public class Main1 {
+    public static void main(String[] args) throws InterruptedException {
+        Counter counter = new Counter();
+        Thread[] threads = new Thread[10];
+
+        for (int i = 0; i < threads.length; i++) {
+            threads[i] = new IncrementThread(counter);
+            threads[i].start();
+        }
+
+        for (Thread thread : threads) {
+            thread.join();
+        }
+
+        System.out.println("Final Count (without synchronization): " + counter.getCount());
+    }
+}
+==============================================================
+
+
+
+
+Q8)
+
+public class Main1 extends Exception{
+
+    public Main(int a,int b){
+        System.out.println(a/b);        
+    }
+
+    public static void main(String[] args) {
+
+        int a=10;
+        int b=0;
+
+        try{
+            throw new Main1(a, b);
+        }
+        catch(Main1 ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+}
+
+
+====================================================================
+Q9)
+
+import java.util.Scanner;
+
+public class Main extends Exception{
+
+    public Main1(int Number){
+        System.out.println(Number);        
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Phone Number");
+        int b=sc.nextInt();
+
+        try{
+            throw new Main1(b);
+        }
+        catch(Main1 ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+}
+
+========================================================
+Q10)
+
+import java.util.Scanner;
+
+public class Main1 extends Exception {
+    
+    void setMarks(int b) throws Main {  
+        if (b > 0 && b < 100) {
+            System.out.println("Marks Under 0-100");
+        } else {
+            throw new Main1(); 
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Marks");
+        int b = sc.nextInt();
+
+        Main1 exception = new Main1(); 
+        try {
+            exception.setMarks(b);  
+        } catch (Exception ex) {
+            System.out.println("Invalid marks.");
+        }
+    }
+}
+
+
+
+
+
+
+
+
