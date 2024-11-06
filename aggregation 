@@ -1,0 +1,1221 @@
+user input 
+
+file A
+abstract class 
+method1 :no return and no argument :non abstract method 
+method2:no return and  argument : abstract method
+method3: return and no argument :non abstract method
+method4: return and  argument :non abstract method
+
+
+file B
+Main class ex 
+access 
+
+Ans)
+file one
+
+import java.util.Scanner;
+abstract class A{
+    void method1(){
+        System.out.println("Non abstract method");
+    }
+    abstract void method2(int a);
+    int method3(){
+        System.out.println("Non abstract method");
+        return 0;
+    }
+    abstract int method4(int a);
+}
+
+public class Mnc extends A{
+    public void method2(int a){
+        System.out.println("Hello i am abstract "+a);
+    }
+    public int method4(int a){
+        System.out.println("hello i am also absract "+a);
+        return 0;
+    }
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        k.method1();
+        k.method3();
+        k.method2(78);
+        k.method4(98);
+    }
+}
+
+--------------------------------------------------------------
+file A
+abstract class 
+method1 :no return and no argument :non abstract method 
+method2:no return and  argument : abstract method
+method3: return and no argument :non abstract method
+method4: return and  argument :non abstract method
+
+class ex abs
+
+file B
+Main class 
+access 
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+abstract class A{
+    void method1(){
+        System.out.println("Non abstract method");
+    }
+    abstract void method2(int a);
+    int method3(){
+        System.out.println("Non abstract method");
+        return 0;
+    }
+    int method4(int a){
+        System.out.println("non abstract");
+        return 0;
+    }
+}
+class Abs extends A{
+    public void method2(int a){
+        System.out.println("Hello i am abstract");
+    }
+}
+public class Mnc extends Abs{
+    public static void main(String[] args) {
+
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test k = new Test();
+        k.method1();
+        k.method3();
+        k.method4(78);
+        k.method4(99);
+    }
+}
+
+--------------------------------------------------------------
+file A
+abstract class 
+method1 :no return and no argument :non abstract method 
+method2:no return and  argument : abstract method
+method3: return and no argument :non abstract method
+method4: return and  argument :non abstract method
+
+
+file B
+Main class ex 
+access
+
+make a anonymous class of abstraction 
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+abstract class Mnc{
+    void method1(){
+        System.out.println("Non abstract method");
+    }
+    abstract void method2(int a);
+    int method3(){
+        System.out.println("Non abstract method");
+        return 0;
+    }
+    int method4(int a){
+        System.out.println("non abstract");
+        return 0;
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+    public void method2(int a){
+        System.out.println("Hello i am method 2");
+    }
+    public static void main(String[] args) {
+        Test k = new Test(){
+            public void method2(int a){
+                System.out.println("Hello i am method 2");
+            }
+        };
+
+    }
+}
+
+--------------------------------------------------------------
+file A
+interface 
+method1 :no return and no argument :non abstract method 
+method2:no return and  argument : abstract method
+method3: return and no argument :non abstract method
+method4: return and  argument :non abstract method
+
+
+
+file B 
+Main class impl 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+interface A{
+    void method1();
+    abstract void method2(int a);
+    int method3();
+    int method4(int a);
+}
+public class Mnc implements A{
+    public void method1(){
+        System.out.println("I am method one");
+    }
+    public void method2(int a){
+        System.out.println("I am method two");
+    }
+    public int method3(){
+        System.out.println("I am method three");
+        return 0;
+    }
+    public int method4(int a){
+        System.out.println("I am method four");
+        return 0;
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test k = new Test();
+        k.method1();
+        k.method2(90);
+        k.method3();
+        k.method4(78);
+    }
+}
+
+--------------------------------------------------------------
+file A
+interface V 
+method1 :no return and no argument :non abstract method 
+method2:no return and  argument : abstract method
+method3: return and no argument :non abstract method
+method4: return and  argument :non abstract method
+
+class Ab impl V
+
+file B 
+Main class ex Ab
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+interface V{
+    void method1();
+    abstract void method2(int a);
+    int method3();
+    int method4(int a);
+}
+public class Mnc implements V{
+    public void method1(){
+        System.out.println("I am method one");
+    }
+    public void method2(int a){
+        System.out.println("I am method two");
+    }
+    public int method3(){
+        System.out.println("I am method three");
+        return 0;
+    }
+    public int method4(int a){
+        System.out.println("I am method four");
+        return 0;
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test k = new Test();
+        k.method1();
+        k.method2(90);
+        k.method3();
+        k.method4(78);
+    }
+}
+
+--------------------------------------------------------------
+file A
+interface V 
+method1 :no return and no argument :non abstract method 
+
+interface Ab
+method2:no return and  argument : abstract method
+method3: return and no argument :non abstract method
+
+interface H 
+method4: return and  argument :non abstract method
+
+file B 
+Main class impl Ab
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+interface V{
+    void method1();
+}
+interface Ab{
+    abstract void method2(int a);
+    int method3();
+}
+interface H{
+    int method4(int a);
+}
+public class Mnc implements Ab{
+    public void method2(int a){
+        System.out.println("I am method two");
+    }
+    public int method3(){
+        System.out.println("I am method three");
+        return 0;
+    }
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test k = new Test();
+        k.method2(90);
+        k.method3();
+    }
+}
+
+--------------------------------------------------------------
+file A
+interface V 
+method1 :no return and no argument :non abstract method 
+
+interface B
+method2:no return and  argument : abstract method
+method3: return and no argument :non abstract method
+
+interface H 
+method4: return and  argument :non abstract method
+
+class Ab impl V,B,H
+
+file B 
+Main class ex Ab
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+interface V{
+    void method1();
+}
+interface B{
+    abstract void method2(int a);
+    int method3();
+}
+interface H{
+    int method4(int a);
+}
+public class Mnc implements V,B,H{
+    public void method1(){
+        System.out.println("I am method one");
+    }
+    public void method2(int a){
+        System.out.println("I am method two");
+    }
+    public int method3(){
+        System.out.println("I am method three");
+        return 0;
+    }
+    public int method4(int a){
+        System.out.println("I am method four");
+        return 0;
+    }
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test k = new Test();
+        k.method1();
+        k.method2(90);
+        k.method3();
+        k.method4(45);
+    }
+}
+
+
+--------------------------------------------------------------
+factory method through aggregation         
+--------------------------------------------------------------
+overhiding through aggregation 
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    static void method1(){
+        System.out.println("Hello i am method 1");
+    }
+}
+class B extends V{
+    static void method1(){
+        System.out.println("Hello i am method 1 in B");
+    }
+}
+class H extends B{
+    static void method1(){
+        System.out.println("Hello i am method 1 in C");
+    }
+}
+public class Mnc extends H{
+
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test.method1();
+    }
+}
+
+
+--------------------------------------------------------------=
+=================================================================
+file A
+class A 
+variable :static 
+method :print 
+
+file B
+class Main 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    static int a=1;
+    void show(){
+        System.out.println("Hello i am show"+a);
+    }
+}
+public class Mnc extends V{
+
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test k = new Test();
+        k.show();
+    }
+}
+----------------------------------------------------------------
+file A
+
+class A 
+variable :static 
+method :print static
+
+file B
+class Main 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    static int a=1;
+    static void show(){
+        System.out.println("Hello i am show"+a);
+    }
+}
+public class Mnc extends V{
+
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test.show();
+    }
+}
+
+
+----------------------------------------------------------------
+file A
+class A 
+        class B
+                method :non static 
+file B
+Main class 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    class B{
+        void show(){
+            System.out.println("hello i am show");
+        }
+    }
+}
+public class Mnc extends V{
+    Mnc(){
+        V sc=new V();
+        V.B i = sc.new B();
+        i.show();
+    }
+     public static void main(String [] args){
+
+    }
+
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+--------------------------------------------
+file A
+class A 
+        class B
+                method : static 
+file B
+Main class 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    class B{
+        static void show(){
+            System.out.println("hello i am show");
+        }
+    }
+}
+public class Mnc extends V{
+    Mnc(){
+        V.B.show();
+    }
+     public static void main(String [] args){
+
+    }
+
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+
+--------------------------------------------
+file A
+class A 
+        class B
+                variable :static 
+                method :non static 
+file B
+Main class 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    class B{
+        static int a = 0;
+        void show(){
+            System.out.println("hello i am show "+a);
+        }
+    }
+}
+public class Mnc extends V{
+    Mnc(){
+        V k = new V();
+        V.B i = k.new B();
+        i.show();
+    }
+     public static void main(String [] args){
+
+    }
+
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+--------------------------------------------
+file A
+
+class A 
+        class B
+                variable :static 
+                method : static 
+file B
+Main class 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    class B{
+        static int a = 0;
+        static void show(){
+            System.out.println("hello i am show "+a);
+        }
+    }
+}
+public class Mnc extends V{
+    Mnc(){
+        V.B.show();
+    }
+     public static void main(String [] args){
+
+    }
+
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+
+--------------------------------------------
+file A
+class A 
+        class B
+                variable :static 
+                variable :non static 
+
+                public method : static 
+                public method : non static 
+file B
+Main class 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    class B{
+        static int a = 0;
+        void show(){
+            System.out.println("hello i am show "+a);
+        }
+        public static void show1(){
+            System.out.println("Hello i am show next ");
+        }
+        public void show2(){
+            System.out.println("Hello i am show next + 1");
+        }
+    }
+}
+public class Mnc extends V{
+    Mnc(){
+        V k = new V();
+        V.B i = k.new B();
+        i.show();
+        i.show2();
+        V.B.show1();
+    }
+     public static void main(String [] args){
+
+    }
+
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+
+--------------------------------------------
+file A
+class A 
+        show1() :non static :no return and no argument 
+        show2() : static : return and no argument 
+        show3() : static : return and  argument 
+        show4()  :non static :no return and no argument 
+file B
+
+Main class access 
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    void show1(){
+        System.out.println("Hello i am show1");
+    }
+    static int show2(){
+        System.out.println("Hello i am show2");
+        return 0;
+    }
+    static int show3(int a){
+        System.out.println("Hello i am show2");
+        return 1;
+    }
+    void show4(){
+        System.out.println("hello i am show4");
+    }
+}
+public class Mnc extends V{
+
+     public static void main(String [] args){
+
+    }
+
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        k.show1();
+        k.show4();
+        Mnc.show2();
+        Mnc.show3(8);
+    }
+}
+
+--------------------------------------------
+file A
+class A 
+        public show1() :non static :no return and no argument 
+        private show2() : static : return and no argument 
+        protected show3() : static : return and  argument 
+        public show4()  :non static :no return and no argument 
+
+file B
+Main class access 
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    public void show1(){
+        System.out.println("Hello i am show1");
+    }
+    private static int show2(){
+        System.out.println("Hello i am show2");
+        return 0;
+    }
+    protected static int show3(int a){
+        System.out.println("Hello i am show2");
+        return 1;
+    }
+    public void show4(){
+        System.out.println("hello i am show4");
+    }
+}
+public class Mnc extends V{
+
+     public static void main(String [] args){
+
+    }
+
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        k.show1();
+        k.show4();
+        Mnc.show2(); //we can not access private method 
+        Mnc.show3(8);
+    }
+}
+
+---------------------------------------------------------------------
+file A
+class A
+        public show1() : static :no return and no argument 
+
+class B ex A
+        show2() : static : return and no argument 
+
+file B
+class Main access 
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    public static void show1(){
+        System.out.println("Hello i am show1");
+    }
+}
+class B extends V{
+    static int show2(){
+        System.out.println("Hello i am show2");
+        return 0;
+    }
+}
+public class Mnc extends B{
+
+     public static void main(String [] args){
+
+    }
+
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test.show1();
+        Test.show2();
+    }
+}
+
+---------------------------------------------------------------------
+file A
+class A
+        private show1() : static :no return and no argument 
+
+class B ex A
+        show2() : static : return and no argument 
+
+file B
+class Main access 
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    private static void show1(){
+        System.out.println("Hello i am show1");
+    }
+}
+class B extends V{
+    static int show2(){
+        System.out.println("Hello i am show2");
+        return 0;
+    }
+}
+public class Mnc extends B{
+
+     public static void main(String [] args){
+
+    }
+
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test.show1(); //error
+        Test.show2();
+    }
+}
+
+---------------------------------------------------------------------
+file A
+class A
+        protected show1() : static :no return and no argument 
+
+class B ex A
+        show2() : static : return and no argument 
+
+file B
+class Main access 
+
+Ans)
+
+file one
+import java.util.Scanner;
+class V{
+    protected static void show1(){
+        System.out.println("Hello i am show1");
+    }
+}
+class B extends V{
+    static int show2(){
+        System.out.println("Hello i am show2");
+        return 0;
+    }
+}
+public class Mnc extends B{
+
+     public static void main(String [] args){
+
+    }
+
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        Test.show1();
+        Test.show2();
+    }
+}
+
+----------------------------------------------------
+file A
+class A
+        constructor :private 
+file B
+Main class 
+access
+
+Ans)
+file one
+
+import java.util.Scanner;
+class V{
+    private V(){
+        System.out.println("private constrctor");
+    }
+}
+
+public class Mnc{
+    Mnc(){
+       super();
+    }
+     public static void main(String [] args){
+
+    }
+
+}
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+
+----------------------------------------------------
+file A
+class A
+        constructor :public  
+file B
+
+Main class 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    public V(){
+        System.out.println("public constrctor");
+    }
+}
+
+public class Mnc extends V{
+     public static void main(String [] args){
+
+    }
+
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+----------------------------------------------------
+file A
+class A
+        constructor :protected 
+
+file B
+Main class 
+access
+
+Ans)
+
+file one
+
+import java.util.Scanner;
+class V{
+    protected V(){
+        System.out.println("public constrctor");
+    }
+}
+
+public class Mnc extends V{
+     public static void main(String [] args){
+
+    }
+
+}
+
+
+second file
+
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+
+----------------------------------------------------
+file A
+class A
+        constructor :protected 
+
+class B ex A 
+
+file B
+Main class 
+access
+
+Ans)
+file one
+
+import java.util.Scanner;
+class V{
+    protected V(){
+        System.out.println("public constrctor");
+    }
+}
+public class Mnc extends V{
+     public static void main(String [] args){
+
+    }
+
+}
+
+
+second file
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+----------------------------------------------------
+file A
+class A
+        constructor :protected :parameterised 
+
+class B ex A 
+
+file B
+Main class 
+access
+
+Ans)
+
+file one 
+import java.util.Scanner;
+class V{
+    protected V(int a){
+        System.out.println("protected constrctor"+a);
+    }
+}
+public class Mnc extends V{
+    Mnc(){
+        super(4);
+    }
+     public static void main(String [] args){
+
+    }
+
+}
+
+second file
+import java.util.*;
+
+public class Test extends Mnc{
+
+    public static void main(String[] args) {
+        new Mnc();
+    }
+}
+
+----------------------------------------------------
+file A
+class A
+        constructor :protected 
+
+class B ex A 
+
+class C ex B 
+
+file B
+Main class 
