@@ -1,0 +1,233 @@
+1)
+1--->5 number print 
+
+total 5 threads (simultaneously)
+
+Ans)
+class A extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+        }
+    }
+}
+public class Exc{
+
+    public static void main(String[] args) throws Exception{
+        A k = new A();
+        k.start();
+        A i = new A();
+        i.start();
+        A j = new A();
+        j.start();
+        A o = new A();
+        o.start();
+        A s = new A();
+        s.start();
+    }
+}
+
+-------------------------------------------------------------
+2)
+start run twice 
+
+Ans)
+class A extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+        }
+    }
+}
+public class Exc{
+
+    public static void main(String[] args) throws Exception{
+        A k = new A();
+        k.start();
+        k.start();
+    }
+}
+
+it will give an exception IllegalThreadStateException
+-----------------------------------------------------------
+3)
+run twice 
+
+Ans)
+class A extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+        }
+    }
+}
+public class Exc{
+
+    public static void main(String[] args) throws Exception{
+        A k = new A();
+        k.start();
+        A i = new A();
+        i.start();
+    }
+}
+
+-------------------------------------------------------
+4)
+class A
+run 
+
+class B
+run
+
+class C
+run 
+
+Main :
+1--->5 number print 
+
+total 5 threads (simultaneously)
+
+Ans)
+class A extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+            try{
+                Thread.sleep(900);
+            }
+            catch(Exception s){
+
+            }
+        }
+    }
+}
+class B extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+            try{
+
+                Thread.sleep(900);
+            }
+            catch(Exception sc)
+            {
+
+            }
+        }
+    }
+}
+class C extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+            try{
+
+                Thread.sleep(900);
+            }
+            catch(Exception sc)
+            {
+
+            }
+        }
+    }
+}
+public class Exc{
+
+    public static void main(String[] args) throws Exception{
+        A k = new A();
+        k.start();
+        B o = new B();
+        o.start();
+        C i = new C();
+        i.start();
+    }
+}
+
+
+
+-------------------------------------------------------
+5)
+class A
+run 
+
+class B
+run
+
+class C
+run 
+
+Main :
+1--->5 number print 
+
+total 5 threads (diffrent simultaneously)
+
+Ans)
+class A extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+        }
+    }
+}
+class B extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+        }
+    }
+}
+class C extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+        }
+    }
+}
+public class Exc{
+
+    public static void main(String[] args) throws Exception{
+        A k = new A();
+        k.start();
+        try{
+            k.join();
+        }
+        catch(Exception ex){
+
+        }
+        B o = new B();
+        o.start();
+        try{
+            o.join();
+        }
+        catch(Exception ex){
+
+        }
+        C i = new C();
+        i.start();
+    }
+}
+
+
+-------------------------------------------------------
+Instance Initializer block is used to initialize the instance data member. It run each time when object of the class is created.
+
+Ans)
+
+class A {
+    int a;
+
+    A() {
+        System.out.println(a);
+    }
+
+    {
+        a = 100;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A p = new A();
+    }
+}
+-----------------------------------------------------
