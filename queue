@@ -1,0 +1,513 @@
+aggregation :
+Mobile :oppo realme oneplus apple 
+
+Amazon :shirt jeans shoes watch 
+
+flipcart :agarbati mombati phoolbatti chawal 
+
+JioMart :rice aata daal oil 
+
+Blinkit :choclate softdrink icecream chips 
+
+Main class :
+TreeSet | PriorityQeueue  
+al1
+al2
+al3
+al4
+
+Ans)
+import java.util.*;
+class Mobile{
+    String phone;
+    Mobile(String phone){
+        this.phone = phone;
+    }
+}
+class Amazon{
+    String product;
+    Amazon(String product){
+        this.product = product;
+    }
+}
+class Flipkart{
+    String agarbati;
+    Flipkart(String agarbati){
+        this.agarbati = agarbati;
+    }
+}
+class Joinmart{
+    String rashan;
+    Joinmart(String rashan){
+        this.rashan = rashan;
+    }
+}
+class Blinkit{
+    String items;
+    Blinkit(String items){
+        this.items = items;
+    }
+}
+
+
+// second file
+public class Exc{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name of phone");
+        String phone = sc.nextLine();
+        Mobile k = new Mobile(phone);
+        TreeSet<Mobile> al1 = new TreeSet<>();
+        al1.add(k);
+        for(Mobile o:al1){
+            System.out.println(o.phone+" ");
+        }
+        System.out.println("Enter the product");
+        String product = sc.nextLine();
+        Amazon i = new Amazon(product);
+        TreeSet<Amazon> al2 = new TreeSet<>();
+        al2.add(i);
+        for(Amazon l:al2){
+            System.out.println(l.product);
+        }
+        System.out.println("Enter the name agarbati");
+        String agarbati = sc.nextLine();
+        Flipkart o = new Flipkart(agarbati);
+        TreeSet<Flipkart> al3 = new TreeSet<>();
+        al3.add(o);
+        for(Flipkart e:al3){
+            System.out.println(e.agarbati);
+        }
+        System.out.println("Enter the rashan");
+        String rashan = sc.nextLine();
+        Joinmart p = new Joinmart(rashan);
+        TreeSet<Joinmart> al4 = new TreeSet<>();
+        al4.add(p);
+        for(Joinmart n:al4){
+            System.out.println(n.rashan);
+        }
+        System.out.println("Enter the item");
+        String item = sc.nextLine();
+        Blinkit l = new Blinkit(item);
+        TreeSet<Blinkit> al5 = new TreeSet<>();
+        al5.add(l);
+        for(Blinkit a:al5){
+            System.out.println(a.items);
+        }
+    }
+}
+
+through priorityqueue
+
+import java.util.*;
+class Mobile{
+    String phone;
+    Mobile(String phone){
+        this.phone = phone;
+    }
+}
+class Amazon{
+    String product;
+    Amazon(String product){
+        this.product = product;
+    }
+}
+class Flipkart{
+    String agarbati;
+    Flipkart(String agarbati){
+        this.agarbati = agarbati;
+    }
+}
+class Joinmart{
+    String rashan;
+    Joinmart(String rashan){
+        this.rashan = rashan;
+    }
+}
+class Blinkit{
+    String items;
+    Blinkit(String items){
+        this.items = items;
+    }
+}
+
+
+// second file
+public class Exc{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name of phone");
+        String phone = sc.nextLine();
+        Mobile k = new Mobile(phone);
+        PriorityQueue<Mobile> al1 = new PriorityQueue<>();
+        al1.add(k);
+        for(Mobile o:al1){
+            System.out.println(o.phone+" ");
+        }
+        System.out.println("Enter the product");
+        String product = sc.nextLine();
+        Amazon i = new Amazon(product);
+        PriorityQueue<Amazon> al2 = new PriorityQueue<>();
+        al2.add(i);
+        for(Amazon l:al2){
+            System.out.println(l.product);
+        }
+        System.out.println("Enter the name agarbati");
+        String agarbati = sc.nextLine();
+        Flipkart o = new Flipkart(agarbati);
+        PriorityQueue<Flipkart> al3 = new PriorityQueue<>();
+        al3.add(o);
+        for(Flipkart e:al3){
+            System.out.println(e.agarbati);
+        }
+        System.out.println("Enter the rashan");
+        String rashan = sc.nextLine();
+        Joinmart p = new Joinmart(rashan);
+        PriorityQueue<Joinmart> al4 = new PriorityQueue<>();
+        al4.add(p);
+        for(Joinmart n:al4){
+            System.out.println(n.rashan);
+        }
+        System.out.println("Enter the item");
+        String item = sc.nextLine();
+        Blinkit l = new Blinkit(item);
+        PriorityQueue<Blinkit> al5 = new PriorityQueue<>();
+        al5.add(l);
+        for(Blinkit a:al5){
+            System.out.println(a.items);
+        }
+    }
+}
+
+--------------------------------------------------------
+TreeSet | PriorityQeueue  
+al1
+Student 
+name
+fname
+mname
+class
+year
+address
+number
+bloodgroup 
+
+
+al2
+Employe 
+empname
+id
+empfname
+empmname
+company
+salary
+
+Ans)
+import java.util.*;
+import java.lang.Iterable;
+class A{
+    String name;
+    String fname;
+    String mname;
+    int classs;
+    int year;
+    String address;
+    int number;
+    String blood;
+    A(String name,String fname,String mname,int classs,int year,String address,int number,String blood){
+        this.name = name;
+        this.fname = fname;
+        this.mname = mname;
+        this.classs = classs;
+        this.year = year;
+        this.address = address;
+        this.number = number;
+        this.blood = blood;        
+    }
+}
+class B{
+    String empname;
+    int id;
+    String empfname;
+    String empmname;
+    String company;
+    int salary;
+    B(String empname,int id,String empfname,String empmname,String company,int salary){
+        this.empname = empname;
+        this.id = id;
+        this.empfname = empfname;
+        this.empmname = empmname;
+        this.company = company;
+        this.salary = salary;
+    }
+}
+public class Exc{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name");
+        String name = sc.nextLine();
+        System.out.println("Enter the fname");
+        String fname = sc.nextLine();
+        System.out.println("Enter the mname");
+        String mname = sc.nextLine();
+        System.out.println("Enter the class");
+        int classs = sc.nextInt();
+        System.out.println("Enter the year");
+        int year = sc.nextInt();
+        System.out.println("Enter the address");
+        String address = sc.nextLine();
+        sc.nextLine();
+        System.out.println("Enter the number");
+        int number = sc.nextInt();
+        System.out.println("Enter the blood group");
+        String blood = sc.nextLine();
+        sc.nextLine();
+        A k = new A(name, fname, mname, classs, year, address, number, blood);
+        PriorityQueue<A> ll = new PriorityQueue<>();
+        ll.add(k);
+        for(A p:ll){
+            System.out.print(p.name+" ");
+            System.out.print(p.fname+" ");
+            System.out.print(p.mname+" ");
+            System.out.print(p.classs+" ");
+            System.out.print(p.year+" ");
+            System.out.print(p.address+" ");
+            System.out.print(p.number+" ");
+            System.out.print(p.blood+" ");
+        }
+        System.out.println("ENter the name of employee");
+        String empname = sc.nextLine();
+        System.out.println("Enter the if");
+        int id = sc.nextInt();
+        System.out.println("Enter the fname");
+        String empfname = sc.nextLine();
+        System.out.println("Enter the mname");
+        String empmname = sc.nextLine();
+        System.out.println("Enter the name of the company");
+        String company = sc.nextLine();
+        System.out.println("Enter the salary");
+        int salary = sc.nextInt();
+        B i = new B(empname, number, fname, mname, company, salary);
+        PriorityQueue<B> li = new PriorityQueue<>();
+        li.add(i);
+        for(B l:li){
+            System.out.print(l.empname+" ");
+            System.out.print(l.id+" ");
+            System.out.print(l.empfname+" ");
+            System.out.print(l.empmname+" ");
+            System.out.print(l.company+" ");
+            System.out.print(l.salary+" ");
+        }
+    }
+}
+
+
+--------------------------------------------------
+user input wrapper class 
+
+Book :through TreeSet | PriorityQeueue  
+ : user input 
+int id;  
+String name,author,publisher;  
+int quantity;  
+
+Ans)
+import java.util.*;
+import java.lang.Iterable;
+class A{
+    int id;
+    String name;
+    String auther;
+    String publister;
+    int quantity;
+    A(int id,String name,String auther,String publister,int quantity){
+        this.id = id;
+        this.name = name;
+        this.auther = auther;
+        this.publister = publister;
+        this.quantity = quantity;
+    }
+}
+public class Exc{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the ID ");
+        int id = sc.nextInt();
+        System.out.println("Enter the name ");
+        String name = sc.nextLine();
+        sc.nextLine();
+        System.out.println("Enter the auther");
+        String auther = sc.nextLine();
+        System.out.println("Enter the publiher");
+        String publish = sc.nextLine();
+        System.out.println("Enter the quantity");
+        int quantity = sc.nextInt();
+        A k = new A(id, name, auther, publish, quantity);
+        PriorityQueue<A> ll = new PriorityQueue<>();
+        ll.add(k);
+        for(A p:ll){
+            System.out.print(p.id+" ");
+            System.out.print(p.name+" ");
+            System.out.print(p.auther+" ");
+            System.out.print(p.publister+" ");
+            System.out.print(p.quantity+" ");
+        }
+    }
+}
+
+-----------------------------------------------
+arraylist +treeset 
+Ans)
+import java.util.*;
+
+public class Exc {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(56);
+        al.add(13);
+        al.add(167);
+
+        TreeSet<String> al1 = new TreeSet(al);
+        al1.add("hello");
+        al1.add("dfkj");
+        System.out.println(al1);
+
+    }
+}
+
+// we can not add arraylist and treeset together because tree set only works on generic classes
+
+
+treeset +arraylist 
+Ans)
+import java.util.*;
+
+public class Exc {
+    public static void main(String[] args) {
+        TreeSet<Integer> al = new TreeSet<Integer>();
+        al.add(56);
+        al.add(13);
+        al.add(167);
+
+        ArrayList<String> al1 = new ArrayList(al);
+        al1.add("hello");
+        al1.add("dfkj");
+        System.out.println(al1);
+
+    }
+}
+
+-----------------------------------------------------
+
+priorityqueue +arraylist 
+
+Ans)
+import java.util.*;
+
+public class Exc {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> al = new PriorityQueue<Integer>();
+        al.add(56);
+        al.add(13);
+        al.add(167);
+
+        ArrayList<String> al1 = new ArrayList(al);
+        al1.add("hello");
+        al1.add("dfkj");
+        System.out.println(al1);
+
+    }
+}
+
+-----------------------------------------------------
+
+arraylist +priorityqueue
+Ans)
+import java.util.*;
+
+public class Exc {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(56);
+        al.add(13);
+        al.add(167);
+
+        PriorityQueue<String> al1 = new PriorityQueue(al);
+        al1.add("hello");
+        al1.add("dfkj");
+        System.out.println(al1);
+
+    }
+}
+
+//we can not add arraylist to priorityqueue because priorityqueue is a part of treeset
+---------------------------------------------------------
+priorityqueue + priorityqueue
+Ans)
+import java.util.*;
+
+public class Exc {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> al = new PriorityQueue<Integer>();
+        al.add(56);
+        al.add(13);
+        al.add(167);
+
+        PriorityQueue<String> al1 = new PriorityQueue(al);
+        al1.add("hello");
+        al1.add("dfkj");
+        System.out.println(al1);
+
+    }
+}
+
+//we can add priority queue with priority queue but it can only happen when both have the same type of data
+
+-----------------------------------------------------------
+
+treeset +priorityqueue
+Ans)
+import java.util.*;
+
+public class Exc {
+    public static void main(String[] args) {
+        TreeSet<Integer> al = new TreeSet<Integer>();
+        al.add(56);
+        al.add(13);
+        al.add(167);
+
+        PriorityQueue<String> al1 = new PriorityQueue(al);
+        al1.add("hello");
+        al1.add("dfkj");
+        System.out.println(al1);
+
+    }
+}
+
+// It can only happen when both have same type of data
+
+-----------------------------------------------------------------
+
+priorityqueue +treeset
+
+Ans)
+import java.util.*;
+
+public class Exc {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> al = new PriorityQueue<Integer>();
+        al.add(56);
+        al.add(13);
+        al.add(167);
+
+        TreeSet<String> al1 = new TreeSet(al);
+        al1.add("hello");
+        al1.add("dfkj");
+        System.out.println(al1);
+
+    }
+}
+
+//it can only happen when both have same type of data
+
+----------------------------------------------------------------
