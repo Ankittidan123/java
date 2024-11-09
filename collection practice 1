@@ -140,3 +140,40 @@ public class Exc{
 //not possible to add priority queue and hashmap
 
 ---------------------------------------------------------
+
+
+ import java.util.ArrayList;
+
+    class A{
+        
+        String name;
+        String fname;
+        String mname;
+        int roll;
+        A(String name, String fname,String mname,int roll){
+            this.name=name;
+            this.fname=fname;
+            this.mname=mname;
+            this.roll=roll;
+        }
+        public String toString(){
+            return "name"+name+"father"+fname+"mother"+mname+"roll"+roll;
+        }
+
+
+    }
+    public class Pract {
+        public static void main(String[] args) {
+            A aj=new A("ajgreat", "hi", "hu", 012);
+            A kj=new A("ajgreat", "hi", "hu", 012);
+            ArrayList<A> al= new ArrayList<>();
+            al.add(aj);
+            al.add(kj);
+            for(A it:al){
+                System.out.println(it);
+                }
+
+        }
+        
+    }
+===============================================================================================================
