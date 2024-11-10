@@ -1,0 +1,87 @@
+A 
+1----->5
+
+B :2
+
+C :3
+
+D :4
+
+E :5
+
+F :6
+
+work simultaneously 
+
+Ans)
+
+
+import java.util.Scanner;
+class A{
+    void table(int a){
+        for(int i=1; i<=5; i++){
+            System.out.print(i+" ");
+        }
+    }
+}
+class B extends Thread{
+    A k;
+    B(A k) {
+        this.k = k;
+    }
+
+    public void run() {
+        k.table(5);
+    }
+}
+class C extends Thread{
+    A k;
+    C(A k){
+        this.k = k;
+    }
+    public void run(){
+        k.table(3);
+    }
+}
+class D extends Thread{
+    A k;
+    D(A k){
+        this.k = k;
+    }
+    public void run(){
+        k.table(4);
+    }
+}
+class E extends Thread{
+    A k;
+    E(A k){
+        this.k = k;
+    }
+    public void run(){
+        k.table(5);
+    }
+}
+class F extends Thread{
+    A k;
+    F(A k){
+        this.k = k;
+    }
+    public void run(){
+        k.table(6);
+    }
+}
+public class Exc{
+    public static void main(String[] args) throws Exception{
+        A first = new A();
+        B second = new B(first);
+        second.start();
+        C third = new C(first);
+        third.start();
+        D fouth = new D(first);
+        fouth.start();
+        E fifth = new E(first);
+        fifth.start();
+        F six = new F(first);
+        six.start();
+    }
+}
