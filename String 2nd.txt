@@ -1,0 +1,463 @@
+java is programming language :
+
+	duplicate character :which 
+	index 
+	count 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "java is programming language";
+        char a[] = s.toCharArray();
+        int count=0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] == a[j]) {
+                    count++;
+                    System.out.print(a[i] +" ");
+                    System.out.println(i+" ");
+                }
+            }
+        }
+        System.out.println("count :"+count);
+    }
+}
+
+// javap java.lang.String
+
+
+---------------------------------------------------------------
+java is programming language :
+
+	unique character 
+	index 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "java is programming language";
+        char a[] = s.toCharArray();
+        int count=0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] == a[j]) {
+                    a[i]= 0;
+                }
+                
+                } 
+                if(a[i]>0){
+                    System.out.println("unique :"+a[i]+" with index :"+i);
+            }
+        }
+       
+    }
+}
+
+// javap java.lang.String
+
+		
+---------------------------------------------------------------
+java is programming language :
+frequency of every character (every letter):
+j : 1 
+
+a : 5 
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String s= "java is programming language";
+	    char a[]=s.toCharArray();
+		int count[]=new int[a.length];
+		
+		for(int i=0;i<a.length;i++){
+			count[i]=1; 
+			for(int j=i+1;j<a.length;j++){
+				if(a[i]==a[j]){
+					count[i]++;
+					a[j]='0';
+				}
+			}
+		}
+		for(int i=0;i<a.length;i++){
+			if(a[i]!= '0' ){
+			System.out.println(a[i]+" - "+count[i]);	
+			}
+		}
+	    }
+	
+	}
+
+
+
+---------------------------------------------------------------
+words count : 
+public class Main
+{
+	public static void main(String[] args) {
+	    String s= "java is programming language";
+	    char a[]=s.toCharArray();
+		int count=0;
+		
+		for(int i=0;i<a.length;i++){
+			count++; 
+			
+		}
+		System.out.println(count);
+	    }
+	
+	}
+
+
+
+
+-------------------------------------------------
+java is programming language 
+first word and last word find 
+first word swap with last word 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "java is programming language";
+                String[] a = s.split(" ");
+                System.out.println(a[0]);
+                System.out.println(a[a.length-1]);
+        
+        String temp = a[0];
+        a[0] = a[a.length - 1];
+        a[a.length - 1] = temp;
+        
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}
+
+-------------------------------------------------
+how are you :
+
+you are how 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "how are you";
+        String[] a = s.split(" ");
+        
+        // Loop from the last index to the first index
+        for (int i = a.length - 1; i >= 0; i--) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}
+
+-------------------------------------------------
+how are you :remove white space 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "how are you";
+       char a[]=s.toCharArray();
+                for (int i = 0;i<a.length; i++) {
+            if(a[i]!=' '){
+                System.out.print(a[i]);
+            }
+        }
+    }
+}
+
+-------------------------------------------------
+how are you :remove duplicate characters 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "how are you";
+       char a[]=s.toCharArray();
+                for (int i = 0;i<a.length; i++) {
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    a[i]= '0';
+                }
+            }
+            if(a[i]!='0' && a[i]!=' '){
+                System.out.print(a[i]+" ");
+            }
+            }
+        }
+    }
+
+
+-------------------------------------------------
+how are you :unique element 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "how are you";
+       char a[]=s.toCharArray();
+                for (int i = 0;i<a.length; i++) {
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    a[i]= '0';
+                }
+            }
+            if(a[i]!='0' && a[i]!=' '){
+                System.out.print(a[i]+" ");
+            }
+            }
+        }
+    }
+
+-------------------------------------------------
+how are you :unique element :count 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "how are you";
+       char a[]=s.toCharArray();
+       int count=0;
+                for (int i = 0;i<a.length; i++) {
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    a[i]= '0';
+                }
+            }
+            if(a[i]!='0' && a[i]!=' '){
+                count++;
+                System.out.print(a[i]+" ");
+            }
+            
+            }
+            System.out.println(count);
+        }
+    }
+-------------------------------------------------
+palindrome 
+ 
+public class Main {
+    public static void main(String[] args) {
+        String s = "my eye is on you";
+        String[] a = s.split(" ");
+        
+        for (int i = 0; i < a.length; i++) {
+            String temp = a[i];
+            String sum = ""; 
+            
+            for (int j = temp.length() - 1; j >= 0; j--) {
+                sum=sum+temp.charAt(j);
+            }
+            
+            if (temp.equals(sum)) {
+                System.out.println(temp + " is a palindrome.");
+            } else {
+                System.out.println(temp + " is not a palindrome.");
+            }
+        }
+    }
+}
+
+-------------------------------------------------
+java is a programming language and it is a platform indepdent :
+
+duplicate words 
+count 
+position 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "java is a programming language and it is a platform independent";
+        
+        String[] a = s.split(" ");
+        for (int i = 0; i < a.length; i++) {
+            int count = 1; 
+            
+            if (a[i] == null) {
+                continue;
+            }
+            
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i].equals(a[j])) {
+                    a[j] = null;
+                    count++; 
+                }
+            }
+            
+            if (count > 1) {
+                System.out.println(a[i] + "-" + count + " times.");
+            }
+        }
+    }
+}
+
+
+-------------------------------------------------
+
+java is a programming language and it is a platform indepdent :
+vowel :8
+consoant :4
+
+which one is maximum vowel and consoant 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "java is a programming language and it is a platform independent";
+        
+        char a[]=s.toCharArray();
+        String vowal="";
+        String consoant="";
+        for(int i=0;i<a.length;i++){
+            if (a[i] == 'i' || a[i] == 'o' || a[i] == 'a' || a[i] == 'e' || a[i] == 'u') { 
+                vowal=vowal+a[i];
+            } else if (a[i] == ' ') {
+
+            } else {
+                consoant=consoant+a[i];
+            }
+        }
+      
+        System.out.println("vowels :"+(vowal.length()));
+        System.out.println("consonents :"+(consoant.length()));
+
+        if(vowal.length() > consoant.length()){
+            System.out.println("vowal is greater ");
+        }
+        else{
+            System.out.println("consoant is greater");
+        }
+       
+    }
+}
+
+-------------------------------------------------
+find longest substring 
+
+java is a programming language : 
+
+programming 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "java is programming language";
+        String a[] = s.split(" ");  
+        int max = 0;         
+        String longest = "";    
+        for (int i = 0; i < a.length; i++) {
+            if (a[i].length() > max) {
+                max = a[i].length();  
+                longest = a[i];          
+            }
+        }
+
+        System.out.println(longest + " : is the longest substring");
+    }
+}
+
+-------------------------------------------------
+java is a programming language :
+count every character (letter)
+
+which one maximum time count 
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "java is programming language";
+        char a[] = s.toCharArray();  
+        int max = 0;                
+        char most = '0';            
+        
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == ' ') 
+            continue; 
+
+            int count = 1;
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] == a[j]) {
+                    count++;  
+                    a[j] = ' '; 
+                }
+            }
+            
+            if (count > max) {
+                max = count;
+                most = a[i];
+            }
+        }
+        System.out.println(most+" is repeated word :"+max);
+
+    }}
+-------------------------------------------------
+apple and banana is very healthy fruit and apple is very very good and banana is not good 
+
+frequency every word 
+maximum frequency 
+-------------------------------------------------
+java is programming language 
+
+words :
+java :count :4 
+is :2 
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String s= "java is programming language";
+	    String a[]=s.split(" ");
+	    for(int i=0;i<a.length;i++){
+		   char c[] =  a[i].toCharArray();
+	        int count=0;
+			int countt=0;
+			
+
+	        for(int j=0;j<c.length;j++){
+	            count++;
+
+				}
+				System.out.println(a[i]+" count :"+count);
+	        }
+			// System.out.println(count);
+			// System.out.println(countt);
+	    }
+	
+	}
+
+
+
+-------------------------------------------------
+java is programming language 
+
+java :
+	duplicate :which and count 
+
+
+
+
+=============================================================
+
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String s= "java is programming language";
+	    String a[]=s.split(" ");
+	    for(int i=0;i<a.length;i++){
+		   char c[] =  a[i].toCharArray();
+	        int count=0;
+			int countt=0;
+			
+
+	        for(int j=0;j<c.length;j++){
+	            for(int k=j+1;k<c.length;k++){
+					if(c[j]==c[k]){
+						count++;
+					}
+					else {
+						countt++;
+					}
+
+				}
+	        }
+			System.out.println(count);
+			System.out.println(countt);
+	    }
+	
+	}
+}
+
