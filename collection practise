@@ -1,0 +1,218 @@
+public class Exc{  
+    
+    public static void main(String[] args) {
+        System.out.println(20&15);
+        System.out.println(30&20);
+        System.out.println(80&25);
+        System.out.println(20|15);
+        System.out.println(30|20);
+        System.out.println(80|25);
+    }
+}
+
+output
+
+4
+20
+16
+31
+30
+89
+
+------------------------------------------------------------
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        HashMap<String,Integer> hm = new HashMap<>();
+        hm.put("Java full stack", 150);
+        hm.put("Python full stack", 150);
+        hm.put("Ui full stack", 80);
+        for(Map.Entry<String,Integer> v:hm.entrySet()){
+            System.out.println(v.getKey()+" "+v.getValue());
+        }
+    }
+}
+---------------------------------------------------------------
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        LinkedHashMap<String,Integer> hm = new LinkedHashMap<>();
+        hm.put("Java full stack", 150);
+        hm.put("Python full stack", 150);
+        hm.put("Ui full stack", 80);
+        for(Map.Entry<String,Integer> v:hm.entrySet()){
+            System.out.println(v.getKey()+" "+v.getValue());
+        }
+    }
+}
+
+---------------------------------------------------------------
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        TreeMap<String,Integer> hm = new TreeMap<>();
+        hm.put("Java full stack", 150);
+        hm.put("Python full stack", 150);
+        hm.put("Ui full stack", 80);
+        for(Map.Entry<String,Integer> v:hm.entrySet()){
+            System.out.println(v.getKey()+" "+v.getValue());
+        }
+    }
+}
+----------------------------------------------------------------
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        HashSet<String> hm = new HashSet<>();
+        hm.add("Java");
+        hm.add("Angular");
+        hm.add("ReactJS");
+        hm.add("Javascript");
+        hm.add("Python");
+        for(String i:hm){
+            System.out.println(i);
+        }
+    }
+}
+
+------------------------------------------------------------
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        LinkedHashSet<String> hm = new LinkedHashSet<>();
+        hm.add("Java");
+        hm.add("Angular");
+        hm.add("ReactJS");
+        hm.add("Javascript");
+        hm.add("Python");
+        for(String i:hm){
+            System.out.println(i);
+        }
+    }
+}
+
+
+---------------------------------------------------------------
+
+
+import java.util.TreeSet;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        TreeSet<String> hm = new TreeSet<>();
+        hm.add("Java");
+        hm.add("Angular");
+        hm.add("ReactJS");
+        hm.add("Javascript");
+        hm.add("Python");
+        for(String i:hm){
+            System.out.println(i);
+        }
+    }
+}
+
+--------------------------------------------------------------
+
+
+import java.util.TreeSet;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        TreeSet<String> hm = new TreeSet<>();
+        hm.add("ProductID");
+        hm.add("ProductName");
+        hm.add("ProductPrice");
+        for(String i:hm){
+            System.out.println(i);
+        }
+    }
+}
+-----------------------------------------------------------
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Exc{  
+    
+    public static void main(String[] args) {
+        HashSet<String> hm = new HashSet<>();
+        hm.add("Java");
+        hm.add("Angular");
+        hm.add("ReactJS");
+        hm.add("Javascript");
+        hm.add("Python");
+        for(String i:hm){
+            System.out.println(i);
+        }
+    }
+}
+
+
+-------------------------------------------------------------
+
+import java.util.LinkedHashSet;
+
+public class Exc {
+    public static void main(String[] args) {
+        LinkedHashSet<String> lhs = new LinkedHashSet<>();
+        lhs.add("Java");
+        lhs.add("Angular");
+        lhs.add("ReactJS");
+        lhs.add("Javascript");
+        lhs.add("Python");
+        for (String i : lhs) {
+            System.out.println(i);
+        }
+    }
+}
+
+---------------------------------------------------------------
+
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
+
+public class Exc {
+    public static void main(String[] args) {
+        TreeSet<String> lhs = new TreeSet<>();
+        lhs.add("Java");
+        lhs.add("Angular");
+        lhs.add("ReactJS");
+        lhs.add("Javascript");
+        lhs.add("Python");
+        for (String i : lhs) {
+            System.out.println(i);
+        }
+    }
+}
+----------------------------------------------------------
