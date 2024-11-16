@@ -1,0 +1,158 @@
+1)
+Count Vowels and Consonants
+
+Write a program that counts the number of vowels and consonants in a given string.
+Example: For "Hello World", the program should output 3 vowels and 7 consonants.
+
+public class Main {
+    public static void main(String[] args) {
+        String s="hello world";
+        char a[]=s.toCharArray();
+        int count=0;
+        int countt=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]=='a' || a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u'){
+                count++;
+            }
+            else if(a[i]==' '){
+                continue;
+            }
+            else{
+                countt++;
+            }
+                }
+                System.out.println("vowels are :"+count);
+                System.out.println("consonents are :"+countt);
+            }
+        }
+    
+
+=====================================================================================
+
+2)
+Find Duplicates in a String
+
+Write a Java program to find and print all duplicate characters in a given string.
+Example: In the string "programming", the duplicates are g and r.
+
+public class Main {
+    public static void main(String[] args) {
+        String s="programming";
+        char a[]=s.toCharArray();
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    System.out.println("duplicates elements in Sting is :"+a[i]);
+                }
+            }
+        }
+    }
+}
+==============================================================================================
+
+3)
+Reverse Words in a Sentence
+
+Write a program to reverse each word in a sentence, but keep the word order the same.
+Example: Input "Hello World" should output "olleH dlroW".
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "hello world";
+        
+        String a[] = s.split(" ");
+        
+        for (int i = 0; i < a.length; i++) {
+            char c[] = a[i].toCharArray();
+            
+            for (int j = c.length - 1; j >= 0; j--) {
+                System.out.print(c[j]+" ");
+            }
+            
+        
+        }
+    }
+}
+==========================================================================================================
+
+4)
+Remove a Specific Character
+
+Write a Java function that removes all occurrences of a specific character from a given string.
+Example: Remove "l" from "Hello World" to get "Heo Word".
+
+public class Main {
+    public static void main(String[] args) {
+        String s="hello world";
+        char a[]=s.toCharArray();
+        for(int i=0;i<a.length;i++){
+            if(a[i]=='l'){
+                continue;
+            }
+            System.out.print(a[i]+" ");
+            
+        }
+    }
+}
+==============================================================================
+
+5)
+Frequency of Characters
+
+Write a program to count the frequency of each character in a given string.
+Example: For "apple", the output should show a:1, p:2, l:1, e:1.
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String s= "apple";
+	    char a[]=s.toCharArray();
+		int count[]=new int[a.length];
+		
+		for(int i=0;i<a.length;i++){
+			count[i]=1; 
+			for(int j=i+1;j<a.length;j++){
+				if(a[i]==a[j]){
+					count[i]++;
+					a[j]='0';
+				}
+			}
+		}
+		for(int i=0;i<a.length;i++){
+			if(a[i]!= '0' ){
+			System.out.println(a[i]+" - "+count[i]);	
+			}
+		}
+	    }
+	
+	}
+====================================================================
+
+6)
+Longest Substring Without Repeating Characters
+
+Write a Java program to find the length of the longest substring in a string without repeating characters.
+Example: For "abcabcbb", the output should be 3, as the longest substring without repeating characters is "abc".
+
+7)
+Count Words in a String
+
+Write a program to count the number of words in a given string.
+Example: For "Hello, how are you?", the output should be 4.
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String s= "Hello, how are you?";
+	    String a[]=s.split(" ");
+        int count=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]!=" "){
+                count++;
+            }
+        }
+        System.out.println(count);
+	    }
+	
+	}
+============================================================================
