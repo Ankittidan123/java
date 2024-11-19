@@ -1,0 +1,39 @@
+Abstract Class and Wrapper Class
+Abstract Class: A class that cannot be instantiated directly. It can have abstract methods (without implementation) and concrete methods (with implementation). Example: abstract class Animal { abstract void sound(); }
+Wrapper Class: A class in Java that wraps a primitive data type (like int, char) into an object. Example: Integer wraps int, Character wraps char.
+9. Static
+Static is a keyword in Java used for variables and methods that belong to the class rather than to instances of the class (objects). A static variable is shared by all instances of the class. Example: static int counter;
+10. Stack and Heap
+Stack: A part of memory where method calls, local variables, and method execution states are stored. It follows the Last In First Out (LIFO) principle.
+Heap: The part of memory where objects are stored. It is dynamically managed and has more space than the stack.
+11. Class Loader
+A class loader in Java is responsible for loading classes into the JVM (Java Virtual Machine) during runtime. There are different types of class loaders, such as the bootstrap class loader and extension class loader.
+12. What is OOP?
+OOP (Object-Oriented Programming) is a programming paradigm that organizes software design around objects (instances of classes) and the interactions between them. It is based on principles like encapsulation, inheritance, polymorphism, and abstraction.
+13. Polymorphism
+Polymorphism means "many forms." In Java, it allows objects to be treated as instances of their parent class, enabling method overriding and method overloading. The same method or object can behave differently based on the context.
+14. Interface
+An interface in Java is a contract that a class must follow by implementing the methods defined in the interface. It can have abstract methods (methods without a body). Example: interface Animal { void sound(); }
+15. Object Class and Methods
+Object class is the root class of every class in Java. It is the superclass of all classes. It provides basic methods like toString(), equals(), and hashCode() that can be overridden by subclasses.
+16. System.out.println()
+System.out.println() is a method in Java used to print text or values to the console. It adds a new line after printing the text. Example: System.out.println("Hello World");
+17. String, StringBuilder, StringBuffer
+String: Immutable, meaning once created, its value cannot be changed.
+StringBuilder: Mutable, designed for efficient string manipulation when the string is being modified frequently.
+StringBuffer: Similar to StringBuilder, but it is synchronized (thread-safe), which makes it slower than StringBuilder.
+18. Final, Finally, Finalize
+Final: A keyword used to make a variable constant, prevent method overriding, or prevent inheritance.
+Finally: A block of code that always executes after the try-catch block, regardless of whether an exception occurs or not.
+Finalize: A method in the Object class that is called by the garbage collector before an object is removed from memory.
+19. Garbage Collection
+Garbage Collection is the process by which Java automatically frees memory by deleting objects that are no longer in use, thus preventing memory leaks.
+20. Features of Java
+Java is platform-independent, object-oriented, robust, secure, multithreaded, and portable. These features make Java a popular programming language.
+21. Robust Programming
+Robust programming refers to writing code that is reliable, handles errors gracefully, and can handle unexpected situations (like exceptions) without crashing.
+22. Architectural Explanation
+The architecture of Java involves components like:
+Java Virtual Machine (JVM): Executes Java bytecode.
+Java Development Kit (JDK): A complete development environment for building Java applications.
+Java Runtime Environment (JRE): Provides the libraries and JVM needed to run Java programs.
